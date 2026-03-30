@@ -35,12 +35,13 @@ def extract_body(request):
     """
     Extract request body (JSON) from Postman request object.
     """
-    body = {}
+    body = ""
     if 'body' in request and request['body'].get('mode') == 'raw':
         try:
-            body = json.loads(request['body'].get('raw', '{}'))
+            data = json.loads(request['body'].get('raw', '{}'))
+            body = json.dumps(data, indent=2)
         except json.JSONDecodeError:
-            body = {"raw": request['body'].get('raw')}
+            body = request['body'].get('raw', '')
     return body
 
 def extract_response(responses):
@@ -50,10 +51,11 @@ def extract_response(responses):
     for r in responses:
         if r.get('code') in [200, 201]:
             try:
-                return json.loads(r.get('body', '{}'))
+                data = json.loads(r.get('body', '{}'))
+                return json.dumps(data, indent=2)
             except json.JSONDecodeError:
-                return {"raw": r.get('body')}
-    return {}
+                return r.get('body', '')
+    return "{}"
 
 def flatten_items(postman_items):
     """

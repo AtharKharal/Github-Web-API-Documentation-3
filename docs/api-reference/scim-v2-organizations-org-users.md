@@ -21,34 +21,34 @@
     
     ```json
     {
-  "active": true,
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "id": "edefdfedf-050c-11e7-8d32",
+  "externalId": "a7d0f98382",
+  "userName": "mona.octocat@okta.example.com",
   "displayName": "Monalisa Octocat",
+  "name": {
+    "givenName": "Monalisa",
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat"
+  },
   "emails": [
     {
-      "primary": true,
-      "value": "mona.octocat@okta.example.com"
+      "value": "mona.octocat@okta.example.com",
+      "primary": true
     },
     {
       "value": "monalisa@octocat.github.com"
     }
   ],
-  "externalId": "a7d0f98382",
-  "id": "edefdfedf-050c-11e7-8d32",
+  "active": true,
   "meta": {
+    "resourceType": "User",
     "created": "2017-03-09T16:11:13-05:00",
     "lastModified": "2017-03-09T16:11:13-05:00",
-    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
-    "resourceType": "User"
-  },
-  "name": {
-    "familyName": "Octocat",
-    "formatted": "Monalisa Octocat",
-    "givenName": "Monalisa"
-  },
-  "schemas": [
-    "urn:ietf:params:scim:schemas:core:2.0:User"
-  ],
-  "userName": "mona.octocat@okta.example.com"
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32"
+  }
 }
     ```
 
@@ -78,30 +78,30 @@ You must at least provide the required values for the user: `userName`, `name`, 
     
     ```json
     {
-  "active": "\u003cboolean\u003e",
-  "displayName": "\u003cstring\u003e",
+  "userName": "<string>",
+  "name": {
+    "givenName": "<string>",
+    "familyName": "<string>",
+    "formatted": "<string>"
+  },
   "emails": [
     {
-      "primary": "\u003cboolean\u003e",
-      "type": "\u003cstring\u003e",
-      "value": "\u003cstring\u003e"
+      "value": "<string>",
+      "type": "<string>",
+      "primary": "<boolean>"
     }
   ],
-  "externalId": "\u003cstring\u003e",
-  "groups": [
-    "\u003cstring\u003e",
-    "\u003cstring\u003e"
-  ],
-  "name": {
-    "familyName": "\u003cstring\u003e",
-    "formatted": "\u003cstring\u003e",
-    "givenName": "\u003cstring\u003e"
-  },
   "schemas": [
-    "\u003cstring\u003e",
-    "\u003cstring\u003e"
+    "<string>",
+    "<string>"
   ],
-  "userName": "\u003cstring\u003e"
+  "displayName": "<string>",
+  "externalId": "<string>",
+  "groups": [
+    "<string>",
+    "<string>"
+  ],
+  "active": "<boolean>"
 }
     ```
     
@@ -110,34 +110,34 @@ You must at least provide the required values for the user: `userName`, `name`, 
     
     ```json
     {
-  "active": true,
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "id": "edefdfedf-050c-11e7-8d32",
+  "externalId": "a7d0f98382",
+  "userName": "mona.octocat@okta.example.com",
   "displayName": "Monalisa Octocat",
+  "name": {
+    "givenName": "Monalisa",
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat"
+  },
   "emails": [
     {
-      "primary": true,
-      "value": "mona.octocat@okta.example.com"
+      "value": "mona.octocat@okta.example.com",
+      "primary": true
     },
     {
       "value": "monalisa@octocat.github.com"
     }
   ],
-  "externalId": "a7d0f98382",
-  "id": "edefdfedf-050c-11e7-8d32",
+  "active": true,
   "meta": {
+    "resourceType": "User",
     "created": "2017-03-09T16:11:13-05:00",
     "lastModified": "2017-03-09T16:11:13-05:00",
-    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
-    "resourceType": "User"
-  },
-  "name": {
-    "familyName": "Octocat",
-    "formatted": "Monalisa Octocat",
-    "givenName": "Monalisa"
-  },
-  "schemas": [
-    "urn:ietf:params:scim:schemas:core:2.0:User"
-  ],
-  "userName": "mona.octocat@okta.example.com"
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32"
+  }
 }
     ```
 
@@ -180,20 +180,20 @@ You must at least provide the required values for the user: `userName`, `name`, 
     {
   "Operations": [
     {
-      "op": "\u003cstring\u003e",
-      "path": "\u003cstring\u003e",
+      "op": "<string>",
+      "path": "<string>",
       "value": {
-        "active": "\u003cboolean\u003e",
-        "externalId": "\u003cstring\u003e",
-        "familyName": "\u003cstring\u003e",
-        "givenName": "\u003cstring\u003e",
-        "userName": "\u003cstring\u003e"
+        "active": "<boolean>",
+        "userName": "<string>",
+        "externalId": "<string>",
+        "givenName": "<string>",
+        "familyName": "<string>"
       }
     }
   ],
   "schemas": [
-    "\u003cstring\u003e",
-    "\u003cstring\u003e"
+    "<string>",
+    "<string>"
   ]
 }
     ```
@@ -203,34 +203,34 @@ You must at least provide the required values for the user: `userName`, `name`, 
     
     ```json
     {
-  "active": true,
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "id": "edefdfedf-050c-11e7-8d32",
+  "externalId": "a7d0f98382",
+  "userName": "mona.octocat@okta.example.com",
   "displayName": "Monalisa Octocat",
+  "name": {
+    "givenName": "Monalisa",
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat"
+  },
   "emails": [
     {
-      "primary": true,
-      "value": "mona.octocat@okta.example.com"
+      "value": "mona.octocat@okta.example.com",
+      "primary": true
     },
     {
       "value": "monalisa@octocat.github.com"
     }
   ],
-  "externalId": "a7d0f98382",
-  "id": "edefdfedf-050c-11e7-8d32",
+  "active": true,
   "meta": {
+    "resourceType": "User",
     "created": "2017-03-09T16:11:13-05:00",
     "lastModified": "2017-03-09T16:11:13-05:00",
-    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
-    "resourceType": "User"
-  },
-  "name": {
-    "familyName": "Octocat",
-    "formatted": "Monalisa Octocat",
-    "givenName": "Monalisa"
-  },
-  "schemas": [
-    "urn:ietf:params:scim:schemas:core:2.0:User"
-  ],
-  "userName": "mona.octocat@okta.example.com"
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32"
+  }
 }
     ```
 
@@ -305,41 +305,41 @@ To filter results for for the identity with the email `octocat@github.com`, you 
     
     ```json
     {
-  "Resources": [
-    {
-      "active": true,
-      "displayName": "Mona Octocat",
-      "emails": [
-        {
-          "primary": true,
-          "value": "octocat@github.com"
-        }
-      ],
-      "externalId": "00u1dhhb1fkIGP7RL1d8",
-      "id": "5fc0c238-1112-11e8-8e45-920c87bdbd75",
-      "meta": {
-        "created": "2018-02-13T15:05:24.000-08:00",
-        "lastModified": "2018-02-13T15:05:55.000-08:00",
-        "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/5fc0c238-1112-11e8-8e45-920c87bdbd75",
-        "resourceType": "User"
-      },
-      "name": {
-        "familyName": "Octocat",
-        "formatted": "Mona Octocat",
-        "givenName": "Mona"
-      },
-      "schemas": [
-        "urn:ietf:params:scim:schemas:core:2.0:User"
-      ],
-      "userName": "octocat@github.com"
-    }
-  ],
-  "itemsPerPage": 1,
   "schemas": [
     "urn:ietf:params:scim:api:messages:2.0:ListResponse"
   ],
+  "totalResults": 1,
+  "itemsPerPage": 1,
   "startIndex": 1,
-  "totalResults": 1
+  "Resources": [
+    {
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User"
+      ],
+      "id": "5fc0c238-1112-11e8-8e45-920c87bdbd75",
+      "externalId": "00u1dhhb1fkIGP7RL1d8",
+      "userName": "octocat@github.com",
+      "displayName": "Mona Octocat",
+      "name": {
+        "givenName": "Mona",
+        "familyName": "Octocat",
+        "formatted": "Mona Octocat"
+      },
+      "emails": [
+        {
+          "value": "octocat@github.com",
+          "primary": true
+        }
+      ],
+      "active": true,
+      "meta": {
+        "resourceType": "User",
+        "created": "2018-02-13T15:05:24.000-08:00",
+        "lastModified": "2018-02-13T15:05:55.000-08:00",
+        "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/5fc0c238-1112-11e8-8e45-920c87bdbd75"
+      }
+    }
+  ]
 }
     ```
 
@@ -364,30 +364,30 @@ To filter results for for the identity with the email `octocat@github.com`, you 
     
     ```json
     {
-  "active": "\u003cboolean\u003e",
-  "displayName": "\u003cstring\u003e",
+  "userName": "<string>",
+  "name": {
+    "givenName": "<string>",
+    "familyName": "<string>",
+    "formatted": "<string>"
+  },
   "emails": [
     {
-      "primary": "\u003cboolean\u003e",
-      "type": "\u003cstring\u003e",
-      "value": "\u003cstring\u003e"
+      "value": "<string>",
+      "primary": "<boolean>",
+      "type": "<string>"
     }
   ],
-  "externalId": "\u003cstring\u003e",
-  "groups": [
-    "\u003cstring\u003e",
-    "\u003cstring\u003e"
-  ],
-  "name": {
-    "familyName": "\u003cstring\u003e",
-    "formatted": "\u003cstring\u003e",
-    "givenName": "\u003cstring\u003e"
-  },
+  "displayName": "<string>",
   "schemas": [
-    "\u003cstring\u003e",
-    "\u003cstring\u003e"
+    "<string>",
+    "<string>"
   ],
-  "userName": "\u003cstring\u003e"
+  "externalId": "<string>",
+  "groups": [
+    "<string>",
+    "<string>"
+  ],
+  "active": "<boolean>"
 }
     ```
     
@@ -396,34 +396,34 @@ To filter results for for the identity with the email `octocat@github.com`, you 
     
     ```json
     {
-  "active": true,
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "id": "edefdfedf-050c-11e7-8d32",
+  "externalId": "a7d0f98382",
+  "userName": "mona.octocat@okta.example.com",
   "displayName": "Monalisa Octocat",
+  "name": {
+    "givenName": "Monalisa",
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat"
+  },
   "emails": [
     {
-      "primary": true,
-      "value": "mona.octocat@okta.example.com"
+      "value": "mona.octocat@okta.example.com",
+      "primary": true
     },
     {
       "value": "monalisa@octocat.github.com"
     }
   ],
-  "externalId": "a7d0f98382",
-  "id": "edefdfedf-050c-11e7-8d32",
+  "active": true,
   "meta": {
+    "resourceType": "User",
     "created": "2017-03-09T16:11:13-05:00",
     "lastModified": "2017-03-09T16:11:13-05:00",
-    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
-    "resourceType": "User"
-  },
-  "name": {
-    "familyName": "Octocat",
-    "formatted": "Monalisa Octocat",
-    "givenName": "Monalisa"
-  },
-  "schemas": [
-    "urn:ietf:params:scim:schemas:core:2.0:User"
-  ],
-  "userName": "mona.octocat@okta.example.com"
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32"
+  }
 }
     ```
 

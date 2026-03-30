@@ -12,9 +12,9 @@
     
     ```json
     {
-  "context": "\u003cstring\u003e",
+  "text": "<string>",
   "mode": "markdown",
-  "text": "\u003cstring\u003e"
+  "context": "<string>"
 }
     ```
     
@@ -22,9 +22,7 @@
     #### Response Example
     
     ```json
-    {
-  "raw": ""
-}
+    
     ```
 
     
@@ -40,16 +38,14 @@
     #### Request Body
     
     ```json
-    "\u003cstring\u003e"
+    "<string>"
     ```
     
 
     #### Response Example
     
     ```json
-    {
-  "raw": "anim"
-}
+    anim
     ```
 
     

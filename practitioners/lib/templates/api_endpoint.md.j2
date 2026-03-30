@@ -16,14 +16,14 @@
     #### Request Body
     
     ```json
-    {{ item.request_body | tojson(indent=2) }}
+    {{ item.request_body }}
     ```
     {% endif %}
 
     #### Response Example
     
     ```json
-    {{ item.response_body | tojson(indent=2) }}
+    {{ item.response_body }}
     ```
 
     {% if item.notes %}

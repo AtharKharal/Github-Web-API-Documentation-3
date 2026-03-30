@@ -21,33 +21,33 @@
     
     ```json
     {
-  "author_association": "collaborator",
-  "body": "Just commenting for the sake of commenting",
-  "created_at": "2011-04-18T23:23:56Z",
   "id": 1,
   "node_id": "MDExOkdpc3RDb21tZW50MQ==",
-  "updated_at": "2011-04-18T23:23:56Z",
   "url": "https://api.github.com/gists/a6db0bec360bb87e9418/comments/1",
+  "body": "Just commenting for the sake of commenting",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
-  }
+    "site_admin": false
+  },
+  "created_at": "2011-04-18T23:23:56Z",
+  "updated_at": "2011-04-18T23:23:56Z",
+  "author_association": "collaborator"
 }
     ```
 
@@ -73,7 +73,7 @@
     
     ```json
     {
-  "body": "\u003cstring\u003e"
+  "body": "<string>"
 }
     ```
     
@@ -82,33 +82,33 @@
     
     ```json
     {
-  "author_association": "collaborator",
-  "body": "Just commenting for the sake of commenting",
-  "created_at": "2011-04-18T23:23:56Z",
   "id": 1,
   "node_id": "MDExOkdpc3RDb21tZW50MQ==",
-  "updated_at": "2011-04-18T23:23:56Z",
   "url": "https://api.github.com/gists/a6db0bec360bb87e9418/comments/1",
+  "body": "Just commenting for the sake of commenting",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
-  }
+    "site_admin": false
+  },
+  "created_at": "2011-04-18T23:23:56Z",
+  "updated_at": "2011-04-18T23:23:56Z",
+  "author_association": "collaborator"
 }
     ```
 
@@ -162,33 +162,33 @@
     ```json
     [
   {
-    "author_association": "collaborator",
-    "body": "Just commenting for the sake of commenting",
-    "created_at": "2011-04-18T23:23:56Z",
     "id": 1,
     "node_id": "MDExOkdpc3RDb21tZW50MQ==",
-    "updated_at": "2011-04-18T23:23:56Z",
     "url": "https://api.github.com/gists/a6db0bec360bb87e9418/comments/1",
+    "body": "Just commenting for the sake of commenting",
     "user": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
       "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
       "followers_url": "https://api.github.com/users/octocat/followers",
       "following_url": "https://api.github.com/users/octocat/following{/other_user}",
       "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
       "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
       "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
       "type": "User",
-      "url": "https://api.github.com/users/octocat"
-    }
+      "site_admin": false
+    },
+    "created_at": "2011-04-18T23:23:56Z",
+    "updated_at": "2011-04-18T23:23:56Z",
+    "author_association": "collaborator"
   }
 ]
     ```
@@ -214,7 +214,7 @@
     
     ```json
     {
-  "body": "\u003cstring\u003e"
+  "body": "<string>"
 }
     ```
     
@@ -223,33 +223,33 @@
     
     ```json
     {
-  "author_association": "collaborator",
-  "body": "Just commenting for the sake of commenting",
-  "created_at": "2011-04-18T23:23:56Z",
   "id": 1,
   "node_id": "MDExOkdpc3RDb21tZW50MQ==",
-  "updated_at": "2011-04-18T23:23:56Z",
   "url": "https://api.github.com/gists/a6db0bec360bb87e9418/comments/1",
+  "body": "Just commenting for the sake of commenting",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
-  }
+    "site_admin": false
+  },
+  "created_at": "2011-04-18T23:23:56Z",
+  "updated_at": "2011-04-18T23:23:56Z",
+  "author_association": "collaborator"
 }
     ```
 
@@ -278,10 +278,10 @@
     ```json
     [
   {
-    "created_at": "2011-04-14T16:00:49Z",
+    "url": "https://api.github.com/gists/dee9c42e4998ce2ea439",
     "id": "dee9c42e4998ce2ea439",
-    "updated_at": "2011-04-14T16:00:49Z",
-    "url": "https://api.github.com/gists/dee9c42e4998ce2ea439"
+    "created_at": "2011-04-14T16:00:49Z",
+    "updated_at": "2011-04-14T16:00:49Z"
   }
 ]
     ```
@@ -308,51 +308,51 @@
     
     ```json
     {
-  "comments": 0,
-  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-  "created_at": "2010-04-14T02:15:15Z",
-  "description": "Hello World Examples",
-  "files": {
-    "hello_world.rb": {
-      "filename": "hello_world.rb",
-      "language": "Ruby",
-      "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
-      "size": 167,
-      "type": "application/x-ruby"
-    }
-  },
+  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
   "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+  "id": "aa5a315d61ae9438b18d",
+  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
   "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-  "id": "aa5a315d61ae9438b18d",
-  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+  "files": {
+    "hello_world.rb": {
+      "filename": "hello_world.rb",
+      "type": "application/x-ruby",
+      "language": "Ruby",
+      "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
+      "size": 167
+    }
+  },
+  "public": true,
+  "created_at": "2010-04-14T02:15:15Z",
+  "updated_at": "2011-06-20T11:34:15Z",
+  "description": "Hello World Examples",
+  "comments": 0,
+  "user": null,
+  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
   "owner": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
+    "site_admin": false
   },
-  "public": true,
-  "truncated": false,
-  "updated_at": "2011-06-20T11:34:15Z",
-  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
-  "user": null
+  "truncated": false
 }
     ```
 
@@ -450,19 +450,19 @@
     
     ```json
     {
-  "comments": 0,
-  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-  "created_at": "2010-04-14T02:15:15Z",
-  "description": "Hello World Examples",
+  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
   "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+  "id": "aa5a315d61ae9438b18d",
+  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
   "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-  "id": "aa5a315d61ae9438b18d",
-  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+  "created_at": "2010-04-14T02:15:15Z",
   "updated_at": "2011-06-20T11:34:15Z",
-  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d"
+  "description": "Hello World Examples",
+  "comments": 0,
+  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/"
 }
     ```
 
@@ -494,19 +494,19 @@
     
     ```json
     {
-  "comments": 0,
-  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-  "created_at": "2010-04-14T02:15:15Z",
-  "description": "Hello World Examples",
+  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
   "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+  "id": "aa5a315d61ae9438b18d",
+  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
   "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-  "id": "aa5a315d61ae9438b18d",
-  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+  "created_at": "2010-04-14T02:15:15Z",
   "updated_at": "2011-06-20T11:34:15Z",
-  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d"
+  "description": "Hello World Examples",
+  "comments": 0,
+  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/"
 }
     ```
 
@@ -559,34 +559,34 @@
     ```json
     [
   {
-    "change_status": {
-      "additions": 180,
-      "deletions": 0,
-      "total": 180
-    },
-    "committed_at": "2010-04-14T02:15:15Z",
     "url": "https://api.github.com/gists/aa5a315d61ae9438b18d/57a7f021a713b1c5a6a199b54cc514735d2d462f",
+    "version": "57a7f021a713b1c5a6a199b54cc514735d2d462f",
     "user": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
       "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
       "followers_url": "https://api.github.com/users/octocat/followers",
       "following_url": "https://api.github.com/users/octocat/following{/other_user}",
       "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
       "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
       "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
       "type": "User",
-      "url": "https://api.github.com/users/octocat"
+      "site_admin": false
     },
-    "version": "57a7f021a713b1c5a6a199b54cc514735d2d462f"
+    "change_status": {
+      "deletions": 0,
+      "additions": 180,
+      "total": 180
+    },
+    "committed_at": "2010-04-14T02:15:15Z"
   }
 ]
     ```
@@ -614,19 +614,19 @@
     
     ```json
     {
-  "comments": 0,
-  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-  "created_at": "2010-04-14T02:15:15Z",
-  "description": "Hello World Examples",
+  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d/57a7f021a713b1c5a6a199b54cc514735d2d462f",
   "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+  "id": "aa5a315d61ae9438b18d",
+  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
   "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-  "id": "aa5a315d61ae9438b18d",
-  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+  "created_at": "2010-04-14T02:15:15Z",
   "updated_at": "2011-06-20T11:34:15Z",
-  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d/57a7f021a713b1c5a6a199b54cc514735d2d462f"
+  "description": "Hello World Examples",
+  "comments": 0,
+  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/"
 }
     ```
 
@@ -655,51 +655,51 @@
     ```json
     [
   {
-    "comments": 0,
-    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-    "created_at": "2010-04-14T02:15:15Z",
-    "description": "Hello World Examples",
-    "files": {
-      "hello_world.rb": {
-        "filename": "hello_world.rb",
-        "language": "Ruby",
-        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
-        "size": 167,
-        "type": "application/x-ruby"
-      }
-    },
+    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
     "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+    "id": "aa5a315d61ae9438b18d",
+    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
     "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-    "id": "aa5a315d61ae9438b18d",
-    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+    "files": {
+      "hello_world.rb": {
+        "filename": "hello_world.rb",
+        "type": "application/x-ruby",
+        "language": "Ruby",
+        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
+        "size": 167
+      }
+    },
+    "public": true,
+    "created_at": "2010-04-14T02:15:15Z",
+    "updated_at": "2011-06-20T11:34:15Z",
+    "description": "Hello World Examples",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
     "owner": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
       "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
       "followers_url": "https://api.github.com/users/octocat/followers",
       "following_url": "https://api.github.com/users/octocat/following{/other_user}",
       "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
       "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
       "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
       "type": "User",
-      "url": "https://api.github.com/users/octocat"
+      "site_admin": false
     },
-    "public": true,
-    "truncated": false,
-    "updated_at": "2011-06-20T11:34:15Z",
-    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
-    "user": null
+    "truncated": false
   }
 ]
     ```
@@ -720,8 +720,8 @@
     
     ```json
     {
-  "description": "\u003cstring\u003e",
-  "files": "\u003cobject\u003e",
+  "files": "<object>",
+  "description": "<string>",
   "public": false
 }
     ```
@@ -731,19 +731,19 @@
     
     ```json
     {
-  "comments": 0,
-  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-  "created_at": "2010-04-14T02:15:15Z",
-  "description": "Hello World Examples",
+  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
   "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+  "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+  "id": "aa5a315d61ae9438b18d",
+  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
   "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
   "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-  "id": "aa5a315d61ae9438b18d",
-  "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+  "created_at": "2010-04-14T02:15:15Z",
   "updated_at": "2011-06-20T11:34:15Z",
-  "url": "https://api.github.com/gists/aa5a315d61ae9438b18d"
+  "description": "Hello World Examples",
+  "comments": 0,
+  "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/"
 }
     ```
 
@@ -774,51 +774,51 @@ Note: With [pagination](https://developer.github.com/v3/#pagination), you can fe
     ```json
     [
   {
-    "comments": 0,
-    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-    "created_at": "2010-04-14T02:15:15Z",
-    "description": "Hello World Examples",
-    "files": {
-      "hello_world.rb": {
-        "filename": "hello_world.rb",
-        "language": "Ruby",
-        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
-        "size": 167,
-        "type": "application/x-ruby"
-      }
-    },
+    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
     "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+    "id": "aa5a315d61ae9438b18d",
+    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
     "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-    "id": "aa5a315d61ae9438b18d",
-    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+    "files": {
+      "hello_world.rb": {
+        "filename": "hello_world.rb",
+        "type": "application/x-ruby",
+        "language": "Ruby",
+        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
+        "size": 167
+      }
+    },
+    "public": true,
+    "created_at": "2010-04-14T02:15:15Z",
+    "updated_at": "2011-06-20T11:34:15Z",
+    "description": "Hello World Examples",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
     "owner": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
       "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
       "followers_url": "https://api.github.com/users/octocat/followers",
       "following_url": "https://api.github.com/users/octocat/following{/other_user}",
       "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
       "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
       "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
       "type": "User",
-      "url": "https://api.github.com/users/octocat"
+      "site_admin": false
     },
-    "public": true,
-    "truncated": false,
-    "updated_at": "2011-06-20T11:34:15Z",
-    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
-    "user": null
+    "truncated": false
   }
 ]
     ```
@@ -848,51 +848,51 @@ Note: With [pagination](https://developer.github.com/v3/#pagination), you can fe
     ```json
     [
   {
-    "comments": 0,
-    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
-    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
-    "created_at": "2010-04-14T02:15:15Z",
-    "description": "Hello World Examples",
-    "files": {
-      "hello_world.rb": {
-        "filename": "hello_world.rb",
-        "language": "Ruby",
-        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
-        "size": 167,
-        "type": "application/x-ruby"
-      }
-    },
+    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
     "forks_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/forks",
+    "commits_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/commits",
+    "id": "aa5a315d61ae9438b18d",
+    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
     "git_pull_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "git_push_url": "https://gist.github.com/aa5a315d61ae9438b18d.git",
     "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",
-    "id": "aa5a315d61ae9438b18d",
-    "node_id": "MDQ6R2lzdGFhNWEzMTVkNjFhZTk0MzhiMThk",
+    "files": {
+      "hello_world.rb": {
+        "filename": "hello_world.rb",
+        "type": "application/x-ruby",
+        "language": "Ruby",
+        "raw_url": "https://gist.githubusercontent.com/octocat/6cad326836d38bd3a7ae/raw/db9c55113504e46fa076e7df3a04ce592e2e86d8/hello_world.rb",
+        "size": 167
+      }
+    },
+    "public": true,
+    "created_at": "2010-04-14T02:15:15Z",
+    "updated_at": "2011-06-20T11:34:15Z",
+    "description": "Hello World Examples",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
     "owner": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
       "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
       "followers_url": "https://api.github.com/users/octocat/followers",
       "following_url": "https://api.github.com/users/octocat/following{/other_user}",
       "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
       "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
       "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
       "type": "User",
-      "url": "https://api.github.com/users/octocat"
+      "site_admin": false
     },
-    "public": true,
-    "truncated": false,
-    "updated_at": "2011-06-20T11:34:15Z",
-    "url": "https://api.github.com/gists/aa5a315d61ae9438b18d",
-    "user": null
+    "truncated": false
   }
 ]
     ```

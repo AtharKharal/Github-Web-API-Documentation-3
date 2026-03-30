@@ -20,18 +20,18 @@
     
     ```json
     {
+  "id": 1,
+  "url": "https://api.github.com/applications/grants/1",
   "app": {
-    "client_id": "abcde12345fghij67890",
+    "url": "http://my-github-app.com",
     "name": "my github app",
-    "url": "http://my-github-app.com"
+    "client_id": "abcde12345fghij67890"
   },
   "created_at": "2011-09-06T17:26:27Z",
-  "id": 1,
+  "updated_at": "2011-09-06T20:39:23Z",
   "scopes": [
     "public_repo"
-  ],
-  "updated_at": "2011-09-06T20:39:23Z",
-  "url": "https://api.github.com/applications/grants/1"
+  ]
 }
     ```
 
@@ -87,18 +87,18 @@ You can use this API to list the set of OAuth applications that have been grante
     ```json
     [
   {
+    "id": 1,
+    "url": "https://api.github.com/applications/grants/1",
     "app": {
-      "client_id": "abcde12345fghij67890",
+      "url": "http://my-github-app.com",
       "name": "my github app",
-      "url": "http://my-github-app.com"
+      "client_id": "abcde12345fghij67890"
     },
     "created_at": "2011-09-06T17:26:27Z",
-    "id": 1,
+    "updated_at": "2011-09-06T20:39:23Z",
     "scopes": [
       "public_repo"
-    ],
-    "updated_at": "2011-09-06T20:39:23Z",
-    "url": "https://api.github.com/applications/grants/1"
+    ]
   }
 ]
     ```
@@ -124,7 +124,7 @@ You can use this API to list the set of OAuth applications that have been grante
     
     ```json
     {
-  "access_token": "\u003cstring\u003e"
+  "access_token": "<string>"
 }
     ```
     
@@ -133,43 +133,43 @@ You can use this API to list the set of OAuth applications that have been grante
     
     ```json
     {
-  "app": {
-    "client_id": "abcde12345fghij67890",
-    "name": "my github app",
-    "url": "http://my-github-app.com"
-  },
-  "created_at": "2011-09-06T17:26:27Z",
-  "fingerprint": "jklmnop12345678",
-  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
   "id": 1,
-  "note": "optional note",
-  "note_url": "http://optional/note/url",
+  "url": "https://api.github.com/authorizations/1",
   "scopes": [
     "public_repo"
   ],
   "token": "abcdefgh12345678",
   "token_last_eight": "12345678",
+  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
+  "app": {
+    "url": "http://my-github-app.com",
+    "name": "my github app",
+    "client_id": "abcde12345fghij67890"
+  },
+  "note": "optional note",
+  "note_url": "http://optional/note/url",
   "updated_at": "2011-09-06T20:39:23Z",
-  "url": "https://api.github.com/authorizations/1",
+  "created_at": "2011-09-06T17:26:27Z",
+  "fingerprint": "jklmnop12345678",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
+    "site_admin": false
   }
 }
     ```
@@ -195,7 +195,7 @@ You can use this API to list the set of OAuth applications that have been grante
     
     ```json
     {
-  "access_token": "\u003cstring\u003e"
+  "access_token": "<string>"
 }
     ```
     
@@ -204,43 +204,43 @@ You can use this API to list the set of OAuth applications that have been grante
     
     ```json
     {
-  "app": {
-    "client_id": "abcde12345fghij67890",
-    "name": "my github app",
-    "url": "http://my-github-app.com"
-  },
-  "created_at": "2011-09-06T17:26:27Z",
-  "fingerprint": "jklmnop12345678",
-  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
   "id": 1,
-  "note": "optional note",
-  "note_url": "http://optional/note/url",
+  "url": "https://api.github.com/authorizations/1",
   "scopes": [
     "public_repo"
   ],
   "token": "abcdefgh12345678",
   "token_last_eight": "12345678",
+  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
+  "app": {
+    "url": "http://my-github-app.com",
+    "name": "my github app",
+    "client_id": "abcde12345fghij67890"
+  },
+  "note": "optional note",
+  "note_url": "http://optional/note/url",
   "updated_at": "2011-09-06T20:39:23Z",
-  "url": "https://api.github.com/authorizations/1",
+  "created_at": "2011-09-06T17:26:27Z",
+  "fingerprint": "jklmnop12345678",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
+    "site_admin": false
   }
 }
     ```
@@ -266,7 +266,7 @@ You can use this API to list the set of OAuth applications that have been grante
     
     ```json
     {
-  "access_token": "\u003cstring\u003e"
+  "access_token": "<string>"
 }
     ```
     
@@ -302,43 +302,43 @@ OAuth applications can use a special API method for checking OAuth token validit
     
     ```json
     {
-  "app": {
-    "client_id": "abcde12345fghij67890",
-    "name": "my github app",
-    "url": "http://my-github-app.com"
-  },
-  "created_at": "2011-09-06T17:26:27Z",
-  "fingerprint": "jklmnop12345678",
-  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
   "id": 1,
-  "note": "optional note",
-  "note_url": "http://optional/note/url",
+  "url": "https://api.github.com/authorizations/1",
   "scopes": [
     "public_repo"
   ],
   "token": "abcdefgh12345678",
   "token_last_eight": "12345678",
+  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
+  "app": {
+    "url": "http://my-github-app.com",
+    "name": "my github app",
+    "client_id": "abcde12345fghij67890"
+  },
+  "note": "optional note",
+  "note_url": "http://optional/note/url",
   "updated_at": "2011-09-06T20:39:23Z",
-  "url": "https://api.github.com/authorizations/1",
+  "created_at": "2011-09-06T17:26:27Z",
+  "fingerprint": "jklmnop12345678",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
+    "site_admin": false
   }
 }
     ```
@@ -368,43 +368,43 @@ OAuth applications can use this API method to reset a valid OAuth token without 
     
     ```json
     {
-  "app": {
-    "client_id": "abcde12345fghij67890",
-    "name": "my github app",
-    "url": "http://my-github-app.com"
-  },
-  "created_at": "2011-09-06T17:26:27Z",
-  "fingerprint": "jklmnop12345678",
-  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
   "id": 1,
-  "note": "optional note",
-  "note_url": "http://optional/note/url",
+  "url": "https://api.github.com/authorizations/1",
   "scopes": [
     "public_repo"
   ],
   "token": "abcdefgh12345678",
   "token_last_eight": "12345678",
+  "hashed_token": "25f94a2a5c7fbaf499c665bc73d67c1c87e496da8985131633ee0a95819db2e8",
+  "app": {
+    "url": "http://my-github-app.com",
+    "name": "my github app",
+    "client_id": "abcde12345fghij67890"
+  },
+  "note": "optional note",
+  "note_url": "http://optional/note/url",
   "updated_at": "2011-09-06T20:39:23Z",
-  "url": "https://api.github.com/authorizations/1",
+  "created_at": "2011-09-06T17:26:27Z",
+  "fingerprint": "jklmnop12345678",
   "user": {
+    "login": "octocat",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
     "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/octocat",
+    "html_url": "https://github.com/octocat",
     "followers_url": "https://api.github.com/users/octocat/followers",
     "following_url": "https://api.github.com/users/octocat/following{/other_user}",
     "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "gravatar_id": "",
-    "html_url": "https://github.com/octocat",
-    "id": 1,
-    "login": "octocat",
-    "node_id": "MDQ6VXNlcjE=",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "site_admin": false,
     "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
     "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url": "https://api.github.com/users/octocat/orgs",
+    "repos_url": "https://api.github.com/users/octocat/repos",
+    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/octocat/received_events",
     "type": "User",
-    "url": "https://api.github.com/users/octocat"
+    "site_admin": false
   }
 }
     ```
@@ -458,7 +458,7 @@ Deleting an OAuth application's grant will also delete all OAuth tokens associat
     
     ```json
     {
-  "access_token": "\u003cstring\u003e"
+  "access_token": "<string>"
 }
     ```
     

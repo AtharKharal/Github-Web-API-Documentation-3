@@ -22,12 +22,12 @@ Note that subscriptions are only generated if a user is participating in a conve
     
     ```json
     {
-  "created_at": "2012-10-06T21:34:12Z",
+  "subscribed": true,
   "ignored": false,
   "reason": null,
-  "subscribed": true,
-  "thread_url": "https://api.github.com/notifications/threads/1",
-  "url": "https://api.github.com/notifications/threads/1/subscription"
+  "created_at": "2012-10-06T21:34:12Z",
+  "url": "https://api.github.com/notifications/threads/1/subscription",
+  "thread_url": "https://api.github.com/notifications/threads/1"
 }
     ```
 
@@ -65,12 +65,12 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     
     ```json
     {
-  "created_at": "2012-10-06T21:34:12Z",
+  "subscribed": true,
   "ignored": false,
   "reason": null,
-  "subscribed": true,
-  "thread_url": "https://api.github.com/notifications/threads/1",
-  "url": "https://api.github.com/notifications/threads/1/subscription"
+  "created_at": "2012-10-06T21:34:12Z",
+  "url": "https://api.github.com/notifications/threads/1/subscription",
+  "thread_url": "https://api.github.com/notifications/threads/1"
 }
     ```
 
@@ -121,9 +121,36 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     ```json
     {
   "id": "1",
-  "last_read_at": "2014-11-07T22:01:45Z",
-  "reason": "subscribed",
   "repository": {
+    "id": 1296269,
+    "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
+    "name": "Hello-World",
+    "full_name": "octocat/Hello-World",
+    "owner": {
+      "login": "octocat",
+      "id": 1,
+      "node_id": "MDQ6VXNlcjE=",
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/octocat",
+      "html_url": "https://github.com/octocat",
+      "followers_url": "https://api.github.com/users/octocat/followers",
+      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+      "organizations_url": "https://api.github.com/users/octocat/orgs",
+      "repos_url": "https://api.github.com/users/octocat/repos",
+      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/octocat/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "private": false,
+    "html_url": "https://github.com/octocat/Hello-World",
+    "description": "This your first repo!",
+    "fork": false,
+    "url": "https://api.github.com/repos/octocat/Hello-World",
     "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
     "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
     "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
@@ -135,19 +162,13 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
     "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
     "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
-    "description": "This your first repo!",
     "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
     "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
-    "fork": false,
     "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
-    "full_name": "octocat/Hello-World",
     "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
     "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
     "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
     "git_url": "git:github.com/octocat/Hello-World.git",
-    "hooks_url": "http://api.github.com/repos/octocat/Hello-World/hooks",
-    "html_url": "https://github.com/octocat/Hello-World",
-    "id": 1296269,
     "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
     "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
     "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
@@ -156,30 +177,7 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
     "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
     "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
-    "name": "Hello-World",
-    "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
     "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
-    "owner": {
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "gravatar_id": "",
-      "html_url": "https://github.com/octocat",
-      "id": 1,
-      "login": "octocat",
-      "node_id": "MDQ6VXNlcjE=",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "site_admin": false,
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "type": "User",
-      "url": "https://api.github.com/users/octocat"
-    },
-    "private": false,
     "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
     "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
     "ssh_url": "git@github.com:octocat/Hello-World.git",
@@ -190,16 +188,18 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
     "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
     "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
-    "url": "https://api.github.com/repos/octocat/Hello-World"
+    "hooks_url": "http://api.github.com/repos/octocat/Hello-World/hooks"
   },
   "subject": {
-    "latest_comment_url": "https://api.github.com/repos/octokit/octokit.rb/issues/comments/123",
     "title": "Greetings",
-    "type": "Issue",
-    "url": "https://api.github.com/repos/octokit/octokit.rb/issues/123"
+    "url": "https://api.github.com/repos/octokit/octokit.rb/issues/123",
+    "latest_comment_url": "https://api.github.com/repos/octokit/octokit.rb/issues/comments/123",
+    "type": "Issue"
   },
+  "reason": "subscribed",
   "unread": true,
   "updated_at": "2014-11-07T22:01:45Z",
+  "last_read_at": "2014-11-07T22:01:45Z",
   "url": "https://api.github.com/notifications/threads/1"
 }
     ```
@@ -257,9 +257,36 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     [
   {
     "id": "1",
-    "last_read_at": "2014-11-07T22:01:45Z",
-    "reason": "subscribed",
     "repository": {
+      "id": 1296269,
+      "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
+      "name": "Hello-World",
+      "full_name": "octocat/Hello-World",
+      "owner": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "private": false,
+      "html_url": "https://github.com/octocat/Hello-World",
+      "description": "This your first repo!",
+      "fork": false,
+      "url": "https://api.github.com/repos/octocat/Hello-World",
       "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
       "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
       "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
@@ -271,19 +298,13 @@ Unsubscribing from a conversation in a repository that you are not watching is f
       "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
       "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
       "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
-      "description": "This your first repo!",
       "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
       "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
-      "fork": false,
       "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
-      "full_name": "octocat/Hello-World",
       "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
       "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
       "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
       "git_url": "git:github.com/octocat/Hello-World.git",
-      "hooks_url": "http://api.github.com/repos/octocat/Hello-World/hooks",
-      "html_url": "https://github.com/octocat/Hello-World",
-      "id": 1296269,
       "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
       "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
       "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
@@ -292,30 +313,7 @@ Unsubscribing from a conversation in a repository that you are not watching is f
       "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
       "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
       "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
-      "name": "Hello-World",
-      "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
       "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
-      "owner": {
-        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-        "followers_url": "https://api.github.com/users/octocat/followers",
-        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-        "gravatar_id": "",
-        "html_url": "https://github.com/octocat",
-        "id": 1,
-        "login": "octocat",
-        "node_id": "MDQ6VXNlcjE=",
-        "organizations_url": "https://api.github.com/users/octocat/orgs",
-        "received_events_url": "https://api.github.com/users/octocat/received_events",
-        "repos_url": "https://api.github.com/users/octocat/repos",
-        "site_admin": false,
-        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-        "type": "User",
-        "url": "https://api.github.com/users/octocat"
-      },
-      "private": false,
       "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
       "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
       "ssh_url": "git@github.com:octocat/Hello-World.git",
@@ -326,16 +324,18 @@ Unsubscribing from a conversation in a repository that you are not watching is f
       "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
       "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
       "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
-      "url": "https://api.github.com/repos/octocat/Hello-World"
+      "hooks_url": "http://api.github.com/repos/octocat/Hello-World/hooks"
     },
     "subject": {
-      "latest_comment_url": "https://api.github.com/repos/octokit/octokit.rb/issues/comments/123",
       "title": "Greetings",
-      "type": "Issue",
-      "url": "https://api.github.com/repos/octokit/octokit.rb/issues/123"
+      "url": "https://api.github.com/repos/octokit/octokit.rb/issues/123",
+      "latest_comment_url": "https://api.github.com/repos/octokit/octokit.rb/issues/comments/123",
+      "type": "Issue"
     },
+    "reason": "subscribed",
     "unread": true,
     "updated_at": "2014-11-07T22:01:45Z",
+    "last_read_at": "2014-11-07T22:01:45Z",
     "url": "https://api.github.com/notifications/threads/1"
   }
 ]
@@ -355,8 +355,8 @@ Unsubscribing from a conversation in a repository that you are not watching is f
     
     ```json
     {
-  "last_read_at": "\u003cdateTime\u003e",
-  "read": "\u003cboolean\u003e"
+  "last_read_at": "<dateTime>",
+  "read": "<boolean>"
 }
     ```
     
