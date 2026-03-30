@@ -241,7 +241,7 @@
 
     **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key.
 
-Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
+    Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
 
     
     #### Parameters
@@ -546,10 +546,7 @@ Be aware that the `id` of a pull request returned from "Issues" endpoints will b
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `affiliation` | `string` | Yes | Filters the collaborators by their affiliation. Can be one of:  
-\* `outside`: Outside collaborators of a project that are not a member of the project's organization.  
-\* `direct`: Collaborators with permissions to a project, regardless of organization membership status.  
-\* `all`: All collaborators the authenticated user can see. | `all` |
+    | `affiliation` | `string` | Yes | Filters the collaborators by their affiliation. Can be one of:  <br>\* `outside`: Outside collaborators of a project that are not a member of the project's organization.  <br>\* `direct`: Collaborators with permissions to a project, regardless of organization membership status.  <br>\* `all`: All collaborators the authenticated user can see. | `all` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:project_id` | `string` | Yes | (Required)  | `<integer>` |

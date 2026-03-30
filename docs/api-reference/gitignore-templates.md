@@ -29,7 +29,7 @@
 === "GET Get a gitignore template"
 
     The API also allows fetching the source of a single template.
-Use the raw [media type](https://developer.github.com/v3/media/) to get the raw contents.
+    Use the raw [media type](https://developer.github.com/v3/media/) to get the raw contents.
 
     
     #### Parameters

@@ -5,7 +5,7 @@
 
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
-Gets a specific self-hosted runner for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    Gets a specific self-hosted runner for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
 
     
     #### Parameters
@@ -37,7 +37,7 @@ Gets a specific self-hosted runner for an organization. You must authenticate us
 
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
-Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
 
     
     #### Parameters
@@ -64,7 +64,7 @@ Forces the removal of a self-hosted runner from an organization. You can use thi
 
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
-Lists all self-hosted runners for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    Lists all self-hosted runners for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
 
     
     #### Parameters
@@ -108,7 +108,7 @@ Lists all self-hosted runners for an organization. You must authenticate using a
 
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
-Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
 
     
     #### Parameters
@@ -166,16 +166,16 @@ Lists binaries for the runner application that you can download and run. You mus
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
 
-Returns a token that you can pass to the `config` script. The token expires after one hour. You must authenticate
-using an access token with the `admin:org` scope to use this endpoint.
+    Returns a token that you can pass to the `config` script. The token expires after one hour. You must authenticate
+    using an access token with the `admin:org` scope to use this endpoint.
 
-#### Example using registration token
+    #### Example using registration token
 
-Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
+    Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
 
-```
-./config.sh --url https://github.com/octo-org --token TOKEN
-```
+    ```
+    ./config.sh --url https://github.com/octo-org --token TOKEN
+    ```
 
     
     #### Parameters
@@ -205,18 +205,18 @@ Configure your self-hosted runner, replacing `TOKEN` with the registration token
     **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
 
 
-Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The
-token expires after one hour. You must authenticate using an access token with the `admin:org` scope to use this
-endpoint.
+    Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The
+    token expires after one hour. You must authenticate using an access token with the `admin:org` scope to use this
+    endpoint.
 
-#### Example using remove token
+    #### Example using remove token
 
-To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token provided by this
-endpoint.
+    To remove your self-hosted runner from an organization, replace `TOKEN` with the remove token provided by this
+    endpoint.
 
-```
-./config.sh remove --token TOKEN
-```
+    ```
+    ./config.sh remove --token TOKEN
+    ```
 
     
     #### Parameters
@@ -461,80 +461,80 @@ endpoint.
 === "PUT Create or update an organization secret"
 
     Creates or updates an organization secret with an encrypted value. Encrypt your secret using
-[LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). You must authenticate using an access
-token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to
-use this endpoint.
+    [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). You must authenticate using an access
+    token with the `admin:org` scope to use this endpoint. GitHub Apps must have the `secrets` organization permission to
+    use this endpoint.
 
-#### Example encrypting a secret using Node.js
+    #### Example encrypting a secret using Node.js
 
-Encrypt your secret using the [tweetsodium](https://github.com/github/tweetsodium) library.
+    Encrypt your secret using the [tweetsodium](https://github.com/github/tweetsodium) library.
 
-```
-const sodium = require('tweetsodium');
+    ```
+    const sodium = require('tweetsodium');
 
-const key = "base64-encoded-public-key";
-const value = "plain-text-secret";
+    const key = "base64-encoded-public-key";
+    const value = "plain-text-secret";
 
-// Convert the message and key to Uint8Array's (Buffer implements that interface)
-const messageBytes = Buffer.from(value);
-const keyBytes = Buffer.from(key, 'base64');
+    // Convert the message and key to Uint8Array's (Buffer implements that interface)
+    const messageBytes = Buffer.from(value);
+    const keyBytes = Buffer.from(key, 'base64');
 
-// Encrypt using LibSodium.
-const encryptedBytes = sodium.seal(messageBytes, keyBytes);
+    // Encrypt using LibSodium.
+    const encryptedBytes = sodium.seal(messageBytes, keyBytes);
 
-// Base64 the encrypted secret
-const encrypted = Buffer.from(encryptedBytes).toString('base64');
+    // Base64 the encrypted secret
+    const encrypted = Buffer.from(encryptedBytes).toString('base64');
 
-console.log(encrypted);
-```
+    console.log(encrypted);
+    ```
 
 
-#### Example encrypting a secret using Python
+    #### Example encrypting a secret using Python
 
-Encrypt your secret using [pynacl](https://pynacl.readthedocs.io/en/stable/public/#nacl-public-sealedbox) with Python 3.
+    Encrypt your secret using [pynacl](https://pynacl.readthedocs.io/en/stable/public/#nacl-public-sealedbox) with Python 3.
 
-```
-from base64 import b64encode
-from nacl import encoding, public
+    ```
+    from base64 import b64encode
+    from nacl import encoding, public
 
-def encrypt(public_key: str, secret_value: str) -> str:
-  """Encrypt a Unicode string using the public key."""
-  public_key = public.PublicKey(public_key.encode("utf-8"), encoding.Base64Encoder())
-  sealed_box = public.SealedBox(public_key)
-  encrypted = sealed_box.encrypt(secret_value.encode("utf-8"))
-  return b64encode(encrypted).decode("utf-8")
-```
+    def encrypt(public_key: str, secret_value: str) -> str:
+      """Encrypt a Unicode string using the public key."""
+      public_key = public.PublicKey(public_key.encode("utf-8"), encoding.Base64Encoder())
+      sealed_box = public.SealedBox(public_key)
+      encrypted = sealed_box.encrypt(secret_value.encode("utf-8"))
+      return b64encode(encrypted).decode("utf-8")
+    ```
 
-#### Example encrypting a secret using C#
+    #### Example encrypting a secret using C#
 
-Encrypt your secret using the [Sodium.Core](https://www.nuget.org/packages/Sodium.Core/) package.
+    Encrypt your secret using the [Sodium.Core](https://www.nuget.org/packages/Sodium.Core/) package.
 
-```
-var secretValue = System.Text.Encoding.UTF8.GetBytes("mySecret");
-var publicKey = Convert.FromBase64String("2Sg8iYjAxxmI2LvUXpJjkYrMxURPc8r+dB7TJyvvcCU=");
+    ```
+    var secretValue = System.Text.Encoding.UTF8.GetBytes("mySecret");
+    var publicKey = Convert.FromBase64String("2Sg8iYjAxxmI2LvUXpJjkYrMxURPc8r+dB7TJyvvcCU=");
 
-var sealedPublicKeyBox = Sodium.SealedPublicKeyBox.Create(secretValue, publicKey);
+    var sealedPublicKeyBox = Sodium.SealedPublicKeyBox.Create(secretValue, publicKey);
 
-Console.WriteLine(Convert.ToBase64String(sealedPublicKeyBox));
-```
+    Console.WriteLine(Convert.ToBase64String(sealedPublicKeyBox));
+    ```
 
-#### Example encrypting a secret using Ruby
+    #### Example encrypting a secret using Ruby
 
-Encrypt your secret using the [rbnacl](https://github.com/RubyCrypto/rbnacl) gem.
+    Encrypt your secret using the [rbnacl](https://github.com/RubyCrypto/rbnacl) gem.
 
-```ruby
-require "rbnacl"
-require "base64"
+    ```ruby
+    require "rbnacl"
+    require "base64"
 
-key = Base64.decode64("+ZYvJDZMHUfBkJdyq5Zm9SKqeuBQ4sj+6sfjlH4CgG0=")
-public_key = RbNaCl::PublicKey.new(key)
+    key = Base64.decode64("+ZYvJDZMHUfBkJdyq5Zm9SKqeuBQ4sj+6sfjlH4CgG0=")
+    public_key = RbNaCl::PublicKey.new(key)
 
-box = RbNaCl::Boxes::Sealed.from_public_key(public_key)
-encrypted_secret = box.encrypt("my_secret")
+    box = RbNaCl::Boxes::Sealed.from_public_key(public_key)
+    encrypted_secret = box.encrypt("my_secret")
 
-# Print the base64 encoded secret
-puts Base64.strict_encode64(encrypted_secret)
-```
+    # Print the base64 encoded secret
+    puts Base64.strict_encode64(encrypted_secret)
+    ```
 
     
     #### Parameters
@@ -796,7 +796,7 @@ puts Base64.strict_encode64(encrypted_secret)
 
     Listing and deleting credential authorizations is available to organizations with GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products).
 
-An authenticated organization owner with the `read:org` scope can list all credential authorizations for an organization that uses SAML single sign-on (SSO). The credentials are either personal access tokens or SSH keys that organization members have authorized for the organization. For more information, see [About authentication with SAML single sign-on](https://help.github.com/en/articles/about-authentication-with-saml-single-sign-on).
+    An authenticated organization owner with the `read:org` scope can list all credential authorizations for an organization that uses SAML single sign-on (SSO). The credentials are either personal access tokens or SSH keys that organization members have authorized for the organization. For more information, see [About authentication with SAML single sign-on](https://help.github.com/en/articles/about-authentication-with-saml-single-sign-on).
 
     
     #### Parameters
@@ -844,7 +844,7 @@ An authenticated organization owner with the `read:org` scope can list all crede
 
     Listing and deleting credential authorizations is available to organizations with GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products).
 
-An authenticated organization owner with the `admin:org` scope can remove a credential authorization for an organization that uses SAML SSO. Once you remove someone's credential authorization, they will need to create a new personal access token or SSH key and authorize it for the organization they want to access.
+    An authenticated organization owner with the `admin:org` scope can remove a credential authorization for an organization that uses SAML SSO. Once you remove someone's credential authorization, they will need to create a new personal access token or SSH key and authorize it for the organization they want to access.
 
     
     #### Parameters
@@ -1272,7 +1272,7 @@ An authenticated organization owner with the `admin:org` scope can remove a cred
 
     Invite people to an organization by using their GitHub user ID or their email address. In order to create invitations in an organization, the authenticated user must be an organization owner.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -1437,13 +1437,8 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `filter` | `string` | Yes | Filter members returned in the list. Can be one of:  
-\* `2fa_disabled` - Members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled. Available for organization owners.  
-\* `all` - All members the authenticated user can see. | `all` |
-    | `role` | `string` | Yes | Filter members returned by their role. Can be one of:  
-\* `all` - All members of the organization, regardless of role.  
-\* `admin` - Organization owners.  
-\* `member` - Non-owner organization members. | `all` |
+    | `filter` | `string` | Yes | Filter members returned in the list. Can be one of:  <br>\* `2fa_disabled` - Members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled. Available for organization owners.  <br>\* `all` - All members the authenticated user can see. | `all` |
+    | `role` | `string` | Yes | Filter members returned by their role. Can be one of:  <br>\* `all` - All members of the organization, regardless of role.  <br>\* `admin` - Organization owners.  <br>\* `member` - Non-owner organization members. | `all` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:org` | `string` | Yes | (Required)  | `<string>` |
@@ -1550,13 +1545,13 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     Only authenticated organization owners can add a member to the organization or update the member's role.
 
-*   If the authenticated user is _adding_ a member to the organization, the invited user will receive an email inviting them to the organization. The user's [membership status](https://developer.github.com/v3/orgs/members/#get-organization-membership-for-a-user) will be `pending` until they accept the invitation.
-    
-*   Authenticated users can _update_ a user's membership by passing the `role` parameter. If the authenticated user changes a member's role to `admin`, the affected user will receive an email notifying them that they've been made an organization owner. If the authenticated user changes an owner's role to `member`, no email will be sent.
+    *   If the authenticated user is _adding_ a member to the organization, the invited user will receive an email inviting them to the organization. The user's [membership status](https://developer.github.com/v3/orgs/members/#get-organization-membership-for-a-user) will be `pending` until they accept the invitation.
+        
+    *   Authenticated users can _update_ a user's membership by passing the `role` parameter. If the authenticated user changes a member's role to `admin`, the affected user will receive an email notifying them that they've been made an organization owner. If the authenticated user changes an owner's role to `member`, no email will be sent.
 
-**Rate limits**
+    **Rate limits**
 
-To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
+    To prevent abuse, the authenticated user is limited to 50 organization invitations per 24 hour period. If the organization is more than one month old or on a paid plan, the limit is 500 invitations per 24 hour period.
 
     
     #### Parameters
@@ -1630,7 +1625,7 @@ To prevent abuse, the authenticated user is limited to 50 organization invitatio
 
     In order to remove a user's membership with an organization, the authenticated user must be an organization owner.
 
-If the specified user is an active member of the organization, this will remove them from the organization. If the specified user has been invited to the organization, this will cancel their invitation. The specified user will receive an email notification in both cases.
+    If the specified user is an active member of the organization, this will remove them from the organization. If the specified user has been invited to the organization, this will cancel their invitation. The specified user will receive an email notification in both cases.
 
     
     #### Parameters
@@ -1707,12 +1702,12 @@ If the specified user is an active member of the organization, this will remove 
 
     Fetches the status of a migration.
 
-The `state` of a migration can be one of the following values:
+    The `state` of a migration can be one of the following values:
 
-*   `pending`, which means the migration hasn't started yet.
-*   `exporting`, which means the migration is in progress.
-*   `exported`, which means the migration finished successfully.
-*   `failed`, which means the migration failed.
+    *   `pending`, which means the migration hasn't started yet.
+    *   `exporting`, which means the migration is in progress.
+    *   `exported`, which means the migration finished successfully.
+    *   `failed`, which means the migration failed.
 
     
     #### Parameters
@@ -2494,9 +2489,7 @@ The `state` of a migration can be one of the following values:
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `filter` | `string` | Yes | Filter the list of outside collaborators. Can be one of:  
-\* `2fa_disabled`: Outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled.  
-\* `all`: All outside collaborators. | `all` |
+    | `filter` | `string` | Yes | Filter the list of outside collaborators. Can be one of:  <br>\* `2fa_disabled`: Outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled.  <br>\* `all`: All outside collaborators. | `all` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:org` | `string` | Yes | (Required)  | `<string>` |
@@ -2692,7 +2685,7 @@ The `state` of a migration can be one of the following values:
 
     The user can publicize their own membership. (A user cannot publicize the membership for another user.)
 
-Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
+    Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 
     
     #### Parameters
@@ -2936,12 +2929,12 @@ Note that you'll need to set `Content-Length` to zero when calling out to this e
 
     Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
 
-**OAuth scope requirements**
+    **OAuth scope requirements**
 
-When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
+    When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
 
-*   `public_repo` scope or `repo` scope to create a public repository
-*   `repo` scope to create a private repository
+    *   `public_repo` scope or `repo` scope to create a public repository
+    *   `repo` scope to create a private repository
 
     
     #### Parameters
@@ -3112,11 +3105,11 @@ When using [OAuth](https://developer.github.com/apps/building-oauth-apps/underst
 
     **Warning:** The Billing API is currently in public beta and subject to change.
 
-Gets the summary of the free and paid GitHub Actions minutes used.
+    Gets the summary of the free and paid GitHub Actions minutes used.
 
-Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners. Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+    Paid minutes only apply to workflows in private repositories that use GitHub-hosted runners. Minutes used is listed for each GitHub-hosted runner operating system. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
 
-Access tokens must have the `read:org` scope.
+    Access tokens must have the `read:org` scope.
 
     
     #### Parameters
@@ -3151,11 +3144,11 @@ Access tokens must have the `read:org` scope.
 
     **Warning:** The Billing API is currently in public beta and subject to change.
 
-Gets the free and paid storage usued for GitHub Packages in gigabytes.
+    Gets the free and paid storage usued for GitHub Packages in gigabytes.
 
-Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+    Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
 
-Access tokens must have the `read:org` scope.
+    Access tokens must have the `read:org` scope.
 
     
     #### Parameters
@@ -3185,11 +3178,11 @@ Access tokens must have the `read:org` scope.
 
     **Warning:** The Billing API is currently in public beta and subject to change.
 
-Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
+    Gets the estimated paid and estimated total storage used for GitHub Actions and Github Packages.
 
-Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
+    Paid minutes only apply to packages stored for private repositories. For more information, see "[Managing billing for GitHub Packages](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-packages)."
 
-Access tokens must have the `read:org` scope.
+    Access tokens must have the `read:org` scope.
 
     
     #### Parameters
@@ -3219,7 +3212,7 @@ Access tokens must have the `read:org` scope.
 
     List the reactions to a [team discussion comment](https://developer.github.com/v3/teams/discussion_comments/). OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
 
     
     #### Parameters
@@ -3278,7 +3271,7 @@ Access tokens must have the `read:org` scope.
 
     Create a reaction to a [team discussion comment](https://developer.github.com/v3/teams/discussion_comments/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with a `Status: 200 OK` means that you already added the reaction type to this team discussion comment.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions`.
 
     
     #### Parameters
@@ -3340,7 +3333,7 @@ Access tokens must have the `read:org` scope.
 
     **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/comments/:comment_number/reactions/:reaction_id`.
 
-Delete a reaction to a [team discussion comment](https://developer.github.com/v3/teams/discussion_comments/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    Delete a reaction to a [team discussion comment](https://developer.github.com/v3/teams/discussion_comments/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
     
     #### Parameters
@@ -3370,7 +3363,7 @@ Delete a reaction to a [team discussion comment](https://developer.github.com/v3
 
     Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
 
     
     #### Parameters
@@ -3443,7 +3436,7 @@ Delete a reaction to a [team discussion comment](https://developer.github.com/v3
 
     Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
 
     
     #### Parameters
@@ -3524,7 +3517,7 @@ Delete a reaction to a [team discussion comment](https://developer.github.com/v3
 
     Deletes a comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
 
     
     #### Parameters
@@ -3553,7 +3546,7 @@ Delete a reaction to a [team discussion comment](https://developer.github.com/v3
 
     List all comments on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
 
     
     #### Parameters
@@ -3630,9 +3623,9 @@ Delete a reaction to a [team discussion comment](https://developer.github.com/v3
 
     Creates a new comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}/comments`.
 
     
     #### Parameters
@@ -3712,7 +3705,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     List the reactions to a [team discussion](https://developer.github.com/v3/teams/discussions/). OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
 
     
     #### Parameters
@@ -3770,7 +3763,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     Create a reaction to a [team discussion](https://developer.github.com/v3/teams/discussions/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/). A response with a `Status: 200 OK` means that you already added the reaction type to this team discussion.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions`.
 
     
     #### Parameters
@@ -3831,7 +3824,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     **Note:** You can also specify a team or organization with `team_id` and `org_id` using the route `DELETE /organizations/:org_id/team/:team_id/discussions/:discussion_number/reactions/:reaction_id`.
 
-Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/discussions/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+    Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/discussions/). OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
     
     #### Parameters
@@ -3860,7 +3853,7 @@ Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/d
 
     Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
 
     
     #### Parameters
@@ -3937,7 +3930,7 @@ Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/d
 
     Edits the title and body text of a discussion post. Only the parameters you provide are updated. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
 
     
     #### Parameters
@@ -4023,7 +4016,7 @@ Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/d
 
     Delete a discussion from a team's page. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/discussions/{discussion_number}`.
 
     
     #### Parameters
@@ -4051,7 +4044,7 @@ Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/d
 
     List all discussions on a team's page. OAuth access tokens require the `read:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/discussions`.
 
     
     #### Parameters
@@ -4132,9 +4125,9 @@ Delete a reaction to a [team discussion](https://developer.github.com/v3/teams/d
 
     Creates a new discussion post on a team's page. OAuth access tokens require the `write:discussion` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `POST /organizations/{org_id}/team/{team_id}/discussions`.
 
     
     #### Parameters
@@ -4220,11 +4213,11 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     Team members will include the members of child teams.
 
-To get a user's membership with a team, the team must be visible to the authenticated user.
+    To get a user's membership with a team, the team must be visible to the authenticated user.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/memberships/{username}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/memberships/{username}`.
 
-**Note:** The `role` for organization owners returns as `maintainer`. For more information about `maintainer` roles, see [Create a team](https://developer.github.com/v3/teams/#create-a-team).
+    **Note:** The `role` for organization owners returns as `maintainer`. For more information about `maintainer` roles, see [Create a team](https://developer.github.com/v3/teams/#create-a-team).
 
     
     #### Parameters
@@ -4256,15 +4249,15 @@ To get a user's membership with a team, the team must be visible to the authenti
 
     Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Adds an organization member to a team. An authenticated organization owner or team maintainer can add organization members to a team.
+    Adds an organization member to a team. An authenticated organization owner or team maintainer can add organization members to a team.
 
-**Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub](https://help.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/)."
+    **Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub](https://help.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/)."
 
-An organization owner can add someone who is not part of the team's organization to a team. When an organization owner adds someone to a team who is not an organization member, this endpoint will send an invitation to the person via email. This newly-created membership will be in the "pending" state until the person accepts the invitation, at which point the membership will transition to the "active" state and the user will be added as a member of the team.
+    An organization owner can add someone who is not part of the team's organization to a team. When an organization owner adds someone to a team who is not an organization member, this endpoint will send an invitation to the person via email. This newly-created membership will be in the "pending" state until the person accepts the invitation, at which point the membership will transition to the "active" state and the user will be added as a member of the team.
 
-If the user is already a member of the team, this endpoint will update the role of the team member's role. To update the membership of a team member, the authenticated user must be an organization owner or a team maintainer.
+    If the user is already a member of the team, this endpoint will update the role of the team member's role. To update the membership of a team member, the authenticated user must be an organization owner or a team maintainer.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/memberships/{username}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/memberships/{username}`.
 
     
     #### Parameters
@@ -4304,11 +4297,11 @@ If the user is already a member of the team, this endpoint will update the role 
 
     Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-To remove a membership between a user and a team, the authenticated user must have 'admin' permissions to the team or be an owner of the organization that the team is associated with. Removing team membership does not delete the user, it just removes their membership from the team.
+    To remove a membership between a user and a team, the authenticated user must have 'admin' permissions to the team or be an owner of the organization that the team is associated with. Removing team membership does not delete the user, it just removes their membership from the team.
 
-**Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub](https://help.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/)."
+    **Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub](https://help.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/)."
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/memberships/{username}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/memberships/{username}`.
 
     
     #### Parameters
@@ -4336,7 +4329,7 @@ To remove a membership between a user and a team, the authenticated user must ha
 
     Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
 
     
     #### Parameters
@@ -4404,7 +4397,7 @@ To remove a membership between a user and a team, the authenticated user must ha
 
     Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
 
     
     #### Parameters
@@ -4440,7 +4433,7 @@ To remove a membership between a user and a team, the authenticated user must ha
 
     Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. This endpoint removes the project from the team, but does not delete the project.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/projects/{project_id}`.
 
     
     #### Parameters
@@ -4468,7 +4461,7 @@ To remove a membership between a user and a team, the authenticated user must ha
 
     Lists the organization projects for a team.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
 
     
     #### Parameters
@@ -4539,11 +4532,11 @@ To remove a membership between a user and a team, the authenticated user must ha
 
     Checks whether a team has `admin`, `push`, `maintain`, `triage`, or `pull` permission for a repository. Repositories inherited through a parent team will also be checked.
 
-You can also get information about the specified repository, including what permissions the team grants on it, by passing the following custom [media type](https://developer.github.com/v3/media/) via the `application/vnd.github.v3.repository+json` accept header.
+    You can also get information about the specified repository, including what permissions the team grants on it, by passing the following custom [media type](https://developer.github.com/v3/media/) via the `application/vnd.github.v3.repository+json` accept header.
 
-If a team doesn't have permission for the repository, you will receive a `404 Not Found` response status.
+    If a team doesn't have permission for the repository, you will receive a `404 Not Found` response status.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
 
     
     #### Parameters
@@ -4693,9 +4686,9 @@ If a team doesn't have permission for the repository, you will receive a `404 No
 
     To add a repository to a team or update the team's permission on a repository, the authenticated user must have admin access to the repository, and must be able to see the team. The repository must be owned by the organization, or a direct fork of a repository owned by the organization. You will get a `422 Unprocessable Entity` status if you attempt to add a repository to a team that is not owned by the organization. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PUT /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
 
-For more information about the permission levels, see "[Repository permission levels for an organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)".
+    For more information about the permission levels, see "[Repository permission levels for an organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)".
 
     
     #### Parameters
@@ -4732,7 +4725,7 @@ For more information about the permission levels, see "[Repository permission le
 
     If the authenticated user is an organization owner or a team maintainer, they can remove any repositories from the team. To remove a repository from a team as an organization member, the authenticated user must have admin access to the repository and must be able to see the team. This does not delete the repository, it just removes it from the team.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}/repos/{owner}/{repo}`.
 
     
     #### Parameters
@@ -4761,7 +4754,7 @@ For more information about the permission levels, see "[Repository permission le
 
     Lists a team's repositories visible to the authenticated user.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/repos`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/repos`.
 
     
     #### Parameters
@@ -4906,9 +4899,9 @@ For more information about the permission levels, see "[Repository permission le
 
     Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-List IdP groups connected to a team on GitHub.
+    List IdP groups connected to a team on GitHub.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
 
     
     #### Parameters
@@ -4948,9 +4941,9 @@ List IdP groups connected to a team on GitHub.
 
     Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a team, you must include all new and existing groups to avoid replacing existing groups with the new ones. Specifying an empty `groups` array will remove all connections for a team.
+    Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a team, you must include all new and existing groups to avoid replacing existing groups with the new ones. Specifying an empty `groups` array will remove all connections for a team.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}/team-sync/group-mappings`.
 
     
     #### Parameters
@@ -5009,7 +5002,7 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
 
     Gets a team using the team's `slug`. GitHub generates the `slug` from the team `name`.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}`.
 
     
     #### Parameters
@@ -5083,7 +5076,7 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
 
     To edit a team, the authenticated user must either be an organization owner or a team maintainer.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `PATCH /organizations/{org_id}/team/{team_id}`.
 
     
     #### Parameters
@@ -5169,9 +5162,9 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
 
     To delete a team, the authenticated user must be an organization owner or team maintainer.
 
-If you are an organization owner, deleting a parent team will delete all of its child teams as well.
+    If you are an organization owner, deleting a parent team will delete all of its child teams as well.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `DELETE /organizations/{org_id}/team/{team_id}`.
 
     
     #### Parameters
@@ -5198,7 +5191,7 @@ If you are an organization owner, deleting a parent team will delete all of its 
 
     The return hash contains a `role` field which refers to the Organization Invitation role and will be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be `null`.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/invitations`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/invitations`.
 
     
     #### Parameters
@@ -5257,17 +5250,14 @@ If you are an organization owner, deleting a parent team will delete all of its 
 
     Team members will include the members of child teams.
 
-To list members in a team, the team must be visible to the authenticated user.
+    To list members in a team, the team must be visible to the authenticated user.
 
     
     #### Parameters
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `role` | `string` | Yes | Filters members returned by their role in the team. Can be one of:  
-\* `member` - normal members of the team.  
-\* `maintainer` - team maintainers.  
-\* `all` - all members of the team. | `all` |
+    | `role` | `string` | Yes | Filters members returned by their role in the team. Can be one of:  <br>\* `member` - normal members of the team.  <br>\* `maintainer` - team maintainers.  <br>\* `all` - all members of the team. | `all` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:org` | `string` | Yes | (Required)  | `<string>` |
@@ -5311,7 +5301,7 @@ To list members in a team, the team must be visible to the authenticated user.
 
     Lists the child teams of the team specified by `{team_slug}`.
 
-**Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/teams`.
+    **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/teams`.
 
     
     #### Parameters
@@ -5408,7 +5398,7 @@ To list members in a team, the team must be visible to the authenticated user.
 
     To create a team, the authenticated user must be a member or owner of `{org}`. By default, organization members can create teams. Organization owners can limit team creation to organization owners. For more information, see "[Setting team creation permissions](https://help.github.com/en/articles/setting-team-creation-permissions-in-your-organization)."
 
-When you create a new team, you automatically become a team maintainer without explicitly adding yourself to the optional array of `maintainers`. For more information, see "[About teams](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams)".
+    When you create a new team, you automatically become a team maintainer without explicitly adding yourself to the optional array of `maintainers`. For more information, see "[About teams](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams)".
 
     
     #### Parameters
@@ -5501,7 +5491,7 @@ When you create a new team, you automatically become a team maintainer without e
 
     To see many of the organization response values, you need to be an authenticated organization owner with the `admin:org` scope. When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
 
-GitHub Apps with the `Organization plan` permission can use this endpoint to retrieve information about an organization's GitHub plan. See "[Authenticating with GitHub Apps](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/)" for details. For an example response, see "[Response with GitHub plan information](https://developer.github.com/v3/orgs/#response-with-github-plan-information)."
+    GitHub Apps with the `Organization plan` permission can use this endpoint to retrieve information about an organization's GitHub plan. See "[Authenticating with GitHub Apps](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/)" for details. For an example response, see "[Response with GitHub plan information](https://developer.github.com/v3/orgs/#response-with-github-plan-information)."
 
     
     #### Parameters
@@ -5575,7 +5565,7 @@ GitHub Apps with the `Organization plan` permission can use this endpoint to ret
 
     **Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).
 
-Enables an authenticated organization owner with the `admin:org` scope to update the organization's profile and member privileges.
+    Enables an authenticated organization owner with the `admin:org` scope to update the organization's profile and member privileges.
 
     
     #### Parameters
@@ -6833,7 +6823,7 @@ Enables an authenticated organization owner with the `admin:org` scope to update
 
     Enables an authenticated GitHub App to find the organization's installation information.
 
-You must use a [JWT](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+    You must use a [JWT](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 
     
     #### Parameters
@@ -6975,22 +6965,17 @@ You must use a [JWT](https://developer.github.com/apps/building-github-apps/auth
 
     List issues in an organization assigned to the authenticated user.
 
-**Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
-reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
+    **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
+    reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
+    the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
+    request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
 
     
     #### Parameters
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `filter` | `string` | Yes | Indicates which sorts of issues to return. Can be one of:  
-\* `assigned`: Issues assigned to you  
-\* `created`: Issues created by you  
-\* `mentioned`: Issues mentioning you  
-\* `subscribed`: Issues you're subscribed to updates for  
-\* `all`: All issues the authenticated user can see, regardless of participation or creation | `assigned` |
+    | `filter` | `string` | Yes | Indicates which sorts of issues to return. Can be one of:  <br>\* `assigned`: Issues assigned to you  <br>\* `created`: Issues created by you  <br>\* `mentioned`: Issues mentioning you  <br>\* `subscribed`: Issues you're subscribed to updates for  <br>\* `all`: All issues the authenticated user can see, regardless of participation or creation | `assigned` |
     | `state` | `string` | Yes | Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`. | `open` |
     | `labels` | `string` | Yes | A list of comma separated label names. Example: `bug,ui,@high` | `<string>` |
     | `sort` | `string` | Yes | What to sort results by. Can be either `created`, `updated`, `comments`. | `created` |
@@ -7277,9 +7262,9 @@ request id, use the "[List pull requests](https://developer.github.com/v3/pulls/
 
     Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-List IdP groups available in an organization. You can limit your page results using the `per_page` parameter. GitHub generates a url-encoded `page` token using a cursor value for where the next page begins. For more information on cursor pagination, see "[Offset and Cursor Pagination explained](https://dev.to/jackmarchant/offset-and-cursor-pagination-explained-b89)."
+    List IdP groups available in an organization. You can limit your page results using the `per_page` parameter. GitHub generates a url-encoded `page` token using a cursor value for where the next page begins. For more information on cursor pagination, see "[Offset and Cursor Pagination explained](https://dev.to/jackmarchant/offset-and-cursor-pagination-explained-b89)."
 
-The `per_page` parameter provides pagination for a list of IdP groups the authenticated user can access in an organization. For example, if the user `octocat` wants to see two groups per page in `octo-org` via cURL, it would look like this:
+    The `per_page` parameter provides pagination for a list of IdP groups the authenticated user can access in an organization. For example, if the user `octocat` wants to see two groups per page in `octo-org` via cURL, it would look like this:
 
     
     #### Parameters

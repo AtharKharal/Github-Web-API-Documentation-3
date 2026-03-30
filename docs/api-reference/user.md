@@ -5,7 +5,7 @@
 
     If the user is blocked:
 
-If the user is not blocked:
+    If the user is not blocked:
 
     
     #### Parameters
@@ -248,7 +248,7 @@ If the user is not blocked:
 
     Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 
-Following a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
+    Following a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
 
     
     #### Parameters
@@ -546,7 +546,7 @@ Following a user requires the user to be logged in and authenticated with basic 
 
     Add a single repository to an installation. The authenticated user must have admin access to the repository.
 
-You must use a personal access token (which you can create via the [command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or the [OAuth Authorizations API](https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization)) or [Basic Authentication](https://developer.github.com/v3/auth/#basic-authentication) to access this endpoint.
+    You must use a personal access token (which you can create via the [command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or the [OAuth Authorizations API](https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization)) or [Basic Authentication](https://developer.github.com/v3/auth/#basic-authentication) to access this endpoint.
 
     
     #### Parameters
@@ -573,7 +573,7 @@ You must use a personal access token (which you can create via the [command line
 
     Remove a single repository from an installation. The authenticated user must have admin access to the repository.
 
-You must use a personal access token (which you can create via the [command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or the [OAuth Authorizations API](https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization)) or [Basic Authentication](https://developer.github.com/v3/auth/#basic-authentication) to access this endpoint.
+    You must use a personal access token (which you can create via the [command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or the [OAuth Authorizations API](https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization)) or [Basic Authentication](https://developer.github.com/v3/auth/#basic-authentication) to access this endpoint.
 
     
     #### Parameters
@@ -600,11 +600,11 @@ You must use a personal access token (which you can create via the [command line
 
     List repositories that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access for an installation.
 
-The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
+    The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
 
-You must use a [user-to-server OAuth access token](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#identifying-users-on-your-site), created for a user who has authorized your GitHub App, to access this endpoint.
+    You must use a [user-to-server OAuth access token](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#identifying-users-on-your-site), created for a user who has authorized your GitHub App, to access this endpoint.
 
-The access the user has to each repository is included in the hash under the `permissions` key.
+    The access the user has to each repository is included in the hash under the `permissions` key.
 
     
     #### Parameters
@@ -758,11 +758,11 @@ The access the user has to each repository is included in the hash under the `pe
 
     Lists installations of your GitHub App that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
 
-You must use a [user-to-server OAuth access token](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#identifying-users-on-your-site), created for a user who has authorized your GitHub App, to access this endpoint.
+    You must use a [user-to-server OAuth access token](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#identifying-users-on-your-site), created for a user who has authorized your GitHub App, to access this endpoint.
 
-The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
+    The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
 
-You can find the permissions for the installation under the `permissions` key.
+    You can find the permissions for the installation under the `permissions` key.
 
     
     #### Parameters
@@ -1378,25 +1378,25 @@ You can find the permissions for the installation under the `permissions` key.
 
     Fetches the URL to download the migration archive as a `tar.gz` file. Depending on the resources your repository uses, the migration archive can contain JSON files with data for these objects:
 
-*   attachments
-*   bases
-*   commit\_comments
-*   issue\_comments
-*   issue\_events
-*   issues
-*   milestones
-*   organizations
-*   projects
-*   protected\_branches
-*   pull\_request\_reviews
-*   pull\_requests
-*   releases
-*   repositories
-*   review\_comments
-*   schema
-*   users
+    *   attachments
+    *   bases
+    *   commit\_comments
+    *   issue\_comments
+    *   issue\_events
+    *   issues
+    *   milestones
+    *   organizations
+    *   projects
+    *   protected\_branches
+    *   pull\_request\_reviews
+    *   pull\_requests
+    *   releases
+    *   repositories
+    *   review\_comments
+    *   schema
+    *   users
 
-The archive will also contain an `attachments` directory that includes all attachment files uploaded to GitHub.com and a `repositories` directory that contains the repository's Git data.
+    The archive will also contain an `attachments` directory that includes all attachment files uploaded to GitHub.com and a `repositories` directory that contains the repository's Git data.
 
     
     #### Parameters
@@ -1446,12 +1446,12 @@ The archive will also contain an `attachments` directory that includes all attac
 
     Fetches a single user migration. The response includes the `state` of the migration, which can be one of the following values:
 
-*   `pending` - the migration hasn't started yet.
-*   `exporting` - the migration is in progress.
-*   `exported` - the migration finished successfully.
-*   `failed` - the migration failed.
+    *   `pending` - the migration hasn't started yet.
+    *   `exporting` - the migration is in progress.
+    *   `exported` - the migration finished successfully.
+    *   `failed` - the migration failed.
 
-Once the migration has been `exported` you can [download the migration archive](https://developer.github.com/v3/migrations/users/#download-a-user-migration-archive).
+    Once the migration has been `exported` you can [download the migration archive](https://developer.github.com/v3/migrations/users/#download-a-user-migration-archive).
 
     
     #### Parameters
@@ -2169,7 +2169,7 @@ Once the migration has been `exported` you can [download the migration archive](
 
     Lists repositories that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
 
-The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
+    The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
 
     
     #### Parameters
@@ -2177,13 +2177,8 @@ The authenticated user has explicit permission to access repositories they own, 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
     | `visibility` | `string` | Yes | Can be one of `all`, `public`, or `private`. | `all` |
-    | `affiliation` | `string` | Yes | Comma-separated list of values. Can include:  
-\* `owner`: Repositories that are owned by the authenticated user.  
-\* `collaborator`: Repositories that the user has been added to as a collaborator.  
-\* `organization_member`: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on. | `owner,collaborator,organization_member` |
-    | `type` | `string` | Yes | Can be one of `all`, `owner`, `public`, `private`, `member`. Default: `all`  
-  
-Will cause a `422` error if used in the same request as **visibility** or **affiliation**. Will cause a `422` error if used in the same request as **visibility** or **affiliation**. | `all` |
+    | `affiliation` | `string` | Yes | Comma-separated list of values. Can include:  <br>\* `owner`: Repositories that are owned by the authenticated user.  <br>\* `collaborator`: Repositories that the user has been added to as a collaborator.  <br>\* `organization_member`: Repositories that the user has access to through being a member of an organization. This includes every repository on every team that the user is on. | `owner,collaborator,organization_member` |
+    | `type` | `string` | Yes | Can be one of `all`, `owner`, `public`, `private`, `member`. Default: `all`  <br>  <br>Will cause a `422` error if used in the same request as **visibility** or **affiliation**. Will cause a `422` error if used in the same request as **visibility** or **affiliation**. | `all` |
     | `sort` | `string` | Yes | Can be one of `created`, `updated`, `pushed`, `full_name`. | `full_name` |
     | `direction` | `string` | Yes | Can be one of `asc` or `desc`. Default: `asc` when using `full_name`, otherwise `desc` | `<string>` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
@@ -2331,12 +2326,12 @@ Will cause a `422` error if used in the same request as **visibility** or **affi
 
     Creates a new repository for the authenticated user.
 
-**OAuth scope requirements**
+    **OAuth scope requirements**
 
-When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
+    When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
 
-*   `public_repo` scope or `repo` scope to create a public repository
-*   `repo` scope to create a private repository
+    *   `public_repo` scope or `repo` scope to create a public repository
+    *   `repo` scope to create a private repository
 
     
 
@@ -2766,7 +2761,7 @@ When using [OAuth](https://developer.github.com/apps/building-oauth-apps/underst
 
     Lists repositories the authenticated user has starred.
 
-You can also find out _when_ stars were created by passing the following custom [media type](https://developer.github.com/v3/media/) via the `Accept` header:
+    You can also find out _when_ stars were created by passing the following custom [media type](https://developer.github.com/v3/media/) via the `Accept` header:
 
     
     #### Parameters
@@ -2918,7 +2913,7 @@ You can also find out _when_ stars were created by passing the following custom 
 
     If the authenticated user is authenticated through basic authentication or OAuth with the `user` scope, then the response lists public and private profile information.
 
-If the authenticated user is authenticated through OAuth without the `user` scope, then the response lists only public profile information.
+    If the authenticated user is authenticated through OAuth without the `user` scope, then the response lists only public profile information.
 
     
 
@@ -3138,22 +3133,17 @@ If the authenticated user is authenticated through OAuth without the `user` scop
 
     List issues across owned and member repositories assigned to the authenticated user.
 
-**Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
-reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
+    **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
+    reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
+    the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
+    request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
 
     
     #### Parameters
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `filter` | `string` | Yes | Indicates which sorts of issues to return. Can be one of:  
-\* `assigned`: Issues assigned to you  
-\* `created`: Issues created by you  
-\* `mentioned`: Issues mentioning you  
-\* `subscribed`: Issues you're subscribed to updates for  
-\* `all`: All issues the authenticated user can see, regardless of participation or creation | `assigned` |
+    | `filter` | `string` | Yes | Indicates which sorts of issues to return. Can be one of:  <br>\* `assigned`: Issues assigned to you  <br>\* `created`: Issues created by you  <br>\* `mentioned`: Issues mentioning you  <br>\* `subscribed`: Issues you're subscribed to updates for  <br>\* `all`: All issues the authenticated user can see, regardless of participation or creation | `assigned` |
     | `state` | `string` | Yes | Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`. | `open` |
     | `labels` | `string` | Yes | A list of comma separated label names. Example: `bug,ui,@high` | `<string>` |
     | `sort` | `string` | Yes | What to sort results by. Can be either `created`, `updated`, `comments`. | `created` |
@@ -3439,9 +3429,9 @@ request id, use the "[List pull requests](https://developer.github.com/v3/pulls/
 
     List organizations for the authenticated user.
 
-**OAuth scope requirements**
+    **OAuth scope requirements**
 
-This only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope. OAuth requests with insufficient scope receive a `403 Forbidden` response.
+    This only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope. OAuth requests with insufficient scope receive a `403 Forbidden` response.
 
     
     #### Parameters

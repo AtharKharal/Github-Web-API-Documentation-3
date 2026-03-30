@@ -67,9 +67,9 @@
 === "GET Download an artifact"
 
     Gets a redirect URL to download an archive for a repository. This URL expires after 1 minute. Look for `Location:` in
-the response header to find the URL for the download. The `:archive_format` must be `zip`. Anyone with read access to
-the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
-GitHub Apps must have the `actions:read` permission to use this endpoint.
+    the response header to find the URL for the download. The `:archive_format` must be `zip`. Anyone with read access to
+    the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+    GitHub Apps must have the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -178,9 +178,9 @@ GitHub Apps must have the `actions:read` permission to use this endpoint.
 === "GET Download job logs for a workflow run"
 
     Gets a redirect URL to download a plain text file of logs for a workflow job. This link expires after 1 minute. Look
-for `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can
-use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must
-have the `actions:read` permission to use this endpoint.
+    for `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can
+    use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must
+    have the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -363,15 +363,15 @@ have the `actions:read` permission to use this endpoint.
 === "POST Create a registration token for a repository"
 
     Returns a token that you can pass to the `config` script. The token expires after one hour. You must authenticate
-using an access token with the `repo` scope to use this endpoint.
+    using an access token with the `repo` scope to use this endpoint.
 
-#### Example using registration token
- 
-Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
+    #### Example using registration token
+     
+    Configure your self-hosted runner, replacing `TOKEN` with the registration token provided by this endpoint.
 
-```
-./config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN
-```
+    ```
+    ./config.sh --url https://github.com/octo-org/octo-repo-artifacts --token TOKEN
+    ```
 
     
     #### Parameters
@@ -400,15 +400,15 @@ Configure your self-hosted runner, replacing `TOKEN` with the registration token
 === "POST Create a remove token for a repository"
 
     Returns a token that you can pass to remove a self-hosted runner from a repository. The token expires after one hour.
-You must authenticate using an access token with the `repo` scope to use this endpoint.
+    You must authenticate using an access token with the `repo` scope to use this endpoint.
 
-#### Example using remove token
- 
-To remove your self-hosted runner from a repository, replace TOKEN with the remove token provided by this endpoint.
+    #### Example using remove token
+     
+    To remove your self-hosted runner from a repository, replace TOKEN with the remove token provided by this endpoint.
 
-```
-./config.sh remove --token TOKEN
-```
+    ```
+    ./config.sh remove --token TOKEN
+    ```
 
     
     #### Parameters
@@ -437,9 +437,9 @@ To remove your self-hosted runner from a repository, replace TOKEN with the remo
 === "GET Download workflow run logs"
 
     Gets a redirect URL to download an archive of log files for a workflow run. This link expires after 1 minute. Look for
-`Location:` in the response header to find the URL for the download. Anyone with read access to the repository can use
-this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have
-the `actions:read` permission to use this endpoint.
+    `Location:` in the response header to find the URL for the download. Anyone with read access to the repository can use
+    this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have
+    the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -690,8 +690,8 @@ the `actions:read` permission to use this endpoint.
 === "DELETE Delete a workflow run"
 
     Delete a specific workflow run. Anyone with write access to the repository can use this endpoint. If the repository is
-private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use
-this endpoint.
+    private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:write` permission to use
+    this endpoint.
 
     
     #### Parameters
@@ -806,9 +806,7 @@ this endpoint.
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `filter` | `string` | Yes | Filters jobs by their `completed_at` timestamp. Can be one of:  
-\* `latest`: Returns jobs from the most recent execution of the workflow run.  
-\* `all`: Returns all jobs for a workflow run, including from old executions of the workflow run. | `latest` |
+    | `filter` | `string` | Yes | Filters jobs by their `completed_at` timestamp. Can be one of:  <br>\* `latest`: Returns jobs from the most recent execution of the workflow run.  <br>\* `all`: Returns all jobs for a workflow run, including from old executions of the workflow run. | `latest` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:owner` | `string` | Yes | (Required)  | `<string>` |
@@ -959,9 +957,9 @@ this endpoint.
 
     **Warning:** This GitHub Actions usage endpoint is currently in public beta and subject to change. For more information, see "[GitHub Actions API workflow usage](https://developer.github.com/changes/2020-05-15-actions-api-workflow-usage)."
 
-Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+    Gets the number of billable minutes and total run time for a specific workflow run. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
 
-Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -1005,7 +1003,7 @@ Anyone with read access to the repository can use this endpoint. If the reposito
 
     Lists all workflow runs for a repository. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://developer.github.com/v3/#parameters).
 
-Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -1244,80 +1242,80 @@ Anyone with read access to the repository can use this endpoint. If the reposito
 === "PUT Create or update a repository secret"
 
     Creates or updates a repository secret with an encrypted value. Encrypt your secret using
-[LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). You must authenticate using an access
-token with the `repo` scope to use this endpoint. GitHub Apps must have the `secrets` repository permission to use
-this endpoint.
+    [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages). You must authenticate using an access
+    token with the `repo` scope to use this endpoint. GitHub Apps must have the `secrets` repository permission to use
+    this endpoint.
 
-#### Example encrypting a secret using Node.js
+    #### Example encrypting a secret using Node.js
 
-Encrypt your secret using the [tweetsodium](https://github.com/github/tweetsodium) library.
+    Encrypt your secret using the [tweetsodium](https://github.com/github/tweetsodium) library.
 
-```
-const sodium = require('tweetsodium');
+    ```
+    const sodium = require('tweetsodium');
 
-const key = "base64-encoded-public-key";
-const value = "plain-text-secret";
+    const key = "base64-encoded-public-key";
+    const value = "plain-text-secret";
 
-// Convert the message and key to Uint8Array's (Buffer implements that interface)
-const messageBytes = Buffer.from(value);
-const keyBytes = Buffer.from(key, 'base64');
+    // Convert the message and key to Uint8Array's (Buffer implements that interface)
+    const messageBytes = Buffer.from(value);
+    const keyBytes = Buffer.from(key, 'base64');
 
-// Encrypt using LibSodium.
-const encryptedBytes = sodium.seal(messageBytes, keyBytes);
+    // Encrypt using LibSodium.
+    const encryptedBytes = sodium.seal(messageBytes, keyBytes);
 
-// Base64 the encrypted secret
-const encrypted = Buffer.from(encryptedBytes).toString('base64');
+    // Base64 the encrypted secret
+    const encrypted = Buffer.from(encryptedBytes).toString('base64');
 
-console.log(encrypted);
-```
+    console.log(encrypted);
+    ```
 
 
-#### Example encrypting a secret using Python
+    #### Example encrypting a secret using Python
 
-Encrypt your secret using [pynacl](https://pynacl.readthedocs.io/en/stable/public/#nacl-public-sealedbox) with Python 3.
+    Encrypt your secret using [pynacl](https://pynacl.readthedocs.io/en/stable/public/#nacl-public-sealedbox) with Python 3.
 
-```
-from base64 import b64encode
-from nacl import encoding, public
+    ```
+    from base64 import b64encode
+    from nacl import encoding, public
 
-def encrypt(public_key: str, secret_value: str) -> str:
-  """Encrypt a Unicode string using the public key."""
-  public_key = public.PublicKey(public_key.encode("utf-8"), encoding.Base64Encoder())
-  sealed_box = public.SealedBox(public_key)
-  encrypted = sealed_box.encrypt(secret_value.encode("utf-8"))
-  return b64encode(encrypted).decode("utf-8")
-```
+    def encrypt(public_key: str, secret_value: str) -> str:
+      """Encrypt a Unicode string using the public key."""
+      public_key = public.PublicKey(public_key.encode("utf-8"), encoding.Base64Encoder())
+      sealed_box = public.SealedBox(public_key)
+      encrypted = sealed_box.encrypt(secret_value.encode("utf-8"))
+      return b64encode(encrypted).decode("utf-8")
+    ```
 
-#### Example encrypting a secret using C#
+    #### Example encrypting a secret using C#
 
-Encrypt your secret using the [Sodium.Core](https://www.nuget.org/packages/Sodium.Core/) package.
+    Encrypt your secret using the [Sodium.Core](https://www.nuget.org/packages/Sodium.Core/) package.
 
-```
-var secretValue = System.Text.Encoding.UTF8.GetBytes("mySecret");
-var publicKey = Convert.FromBase64String("2Sg8iYjAxxmI2LvUXpJjkYrMxURPc8r+dB7TJyvvcCU=");
+    ```
+    var secretValue = System.Text.Encoding.UTF8.GetBytes("mySecret");
+    var publicKey = Convert.FromBase64String("2Sg8iYjAxxmI2LvUXpJjkYrMxURPc8r+dB7TJyvvcCU=");
 
-var sealedPublicKeyBox = Sodium.SealedPublicKeyBox.Create(secretValue, publicKey);
+    var sealedPublicKeyBox = Sodium.SealedPublicKeyBox.Create(secretValue, publicKey);
 
-Console.WriteLine(Convert.ToBase64String(sealedPublicKeyBox));
-```
+    Console.WriteLine(Convert.ToBase64String(sealedPublicKeyBox));
+    ```
 
-#### Example encrypting a secret using Ruby
+    #### Example encrypting a secret using Ruby
 
-Encrypt your secret using the [rbnacl](https://github.com/RubyCrypto/rbnacl) gem.
+    Encrypt your secret using the [rbnacl](https://github.com/RubyCrypto/rbnacl) gem.
 
-```ruby
-require "rbnacl"
-require "base64"
+    ```ruby
+    require "rbnacl"
+    require "base64"
 
-key = Base64.decode64("+ZYvJDZMHUfBkJdyq5Zm9SKqeuBQ4sj+6sfjlH4CgG0=")
-public_key = RbNaCl::PublicKey.new(key)
+    key = Base64.decode64("+ZYvJDZMHUfBkJdyq5Zm9SKqeuBQ4sj+6sfjlH4CgG0=")
+    public_key = RbNaCl::PublicKey.new(key)
 
-box = RbNaCl::Boxes::Sealed.from_public_key(public_key)
-encrypted_secret = box.encrypt("my_secret")
+    box = RbNaCl::Boxes::Sealed.from_public_key(public_key)
+    encrypted_secret = box.encrypt("my_secret")
 
-# Print the base64 encoded secret
-puts Base64.strict_encode64(encrypted_secret)
-```
+    # Print the base64 encoded secret
+    puts Base64.strict_encode64(encrypted_secret)
+    ```
 
     
     #### Parameters
@@ -1486,9 +1484,9 @@ puts Base64.strict_encode64(encrypted_secret)
 
     You can use this endpoint to manually trigger a GitHub Actions workflow run. You can also replace `{workflow_id}` with the workflow file name. For example, you could use `main.yml`.
 
-You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
+    You must configure your GitHub Actions workflow to run when the [`workflow_dispatch` webhook](/developers/webhooks-and-events/webhook-events-and-payloads#workflow_dispatch) event occurs. The `inputs` are configured in the workflow file. For more information about how to configure the `workflow_dispatch` event in the workflow file, see "[Events that trigger workflows](/actions/reference/events-that-trigger-workflows#workflow_dispatch)."
 
-You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Creating a personal access token for the command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)."
+    You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint. For more information, see "[Creating a personal access token for the command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)."
 
     
     #### Parameters
@@ -1525,7 +1523,7 @@ You must authenticate using an access token with the `repo` scope to use this en
 
     List all workflow runs for a workflow. You can also replace `:workflow_id` with `:workflow_file_name`. For example, you could use `main.yml`. You can use parameters to narrow the list of results. For more information about using parameters, see [Parameters](https://developer.github.com/v3/#parameters).
 
-Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
+    Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope.
 
     
     #### Parameters
@@ -1736,9 +1734,9 @@ Anyone with read access to the repository can use this endpoint. If the reposito
 
     **Warning:** This GitHub Actions usage endpoint is currently in public beta and subject to change. For more information, see "[GitHub Actions API workflow usage](https://developer.github.com/changes/2020-05-15-actions-api-workflow-usage)."
 
-Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
+    Gets the number of billable minutes used by a specific workflow during the current billing cycle. Billable minutes only apply to workflows in private repositories that use GitHub-hosted runners. Usage is listed for each GitHub-hosted runner operating system in milliseconds. Any job re-runs are also included in the usage. The usage does not include the multiplier for macOS and Windows runners and is not rounded up to the nearest whole minute. For more information, see "[Managing billing for GitHub Actions](https://help.github.com/github/setting-up-and-managing-billing-and-payments-on-github/managing-billing-for-github-actions)".
 
-You can also replace `:workflow_id` with `:workflow_file_name`. For example, you could use `main.yml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
+    You can also replace `:workflow_id` with `:workflow_file_name`. For example, you could use `main.yml`. Anyone with read access to the repository can use this endpoint. If the repository is private you must use an access token with the `repo` scope. GitHub Apps must have the `actions:read` permission to use this endpoint.
 
     
     #### Parameters
@@ -1881,9 +1879,9 @@ You can also replace `:workflow_id` with `:workflow_file_name`. For example, you
 
     Checks if a user has permission to be assigned to an issue in this repository.
 
-If the `assignee` can be assigned to issues in the repository, a `204` header with no content is returned.
+    If the `assignee` can be assigned to issues in the repository, a `204` header with no content is returned.
 
-Otherwise a `404` status code is returned.
+    Otherwise a `404` status code is returned.
 
     
     #### Parameters
@@ -1990,7 +1988,7 @@ Otherwise a `404` status code is returned.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
+    Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
 
     
     #### Parameters
@@ -2021,7 +2019,7 @@ Adding admin enforcement requires admin or owner permissions to the repository a
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Removing admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
+    Removing admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
 
     
     #### Parameters
@@ -2123,9 +2121,9 @@ Removing admin enforcement requires admin or owner permissions to the repository
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
+    Updating pull request review enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
 
-**Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
 
     
     #### Parameters
@@ -2247,9 +2245,9 @@ Updating pull request review enforcement requires admin or owner permissions to 
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://help.github.com/articles/signing-commits-with-gpg) in GitHub Help.
+    When authenticated with admin or owner permissions to the repository, you can use this endpoint to check whether a branch requires signed commits. An enabled status of `true` indicates you must sign commits on this branch. For more information, see [Signing commits with GPG](https://help.github.com/articles/signing-commits-with-gpg) in GitHub Help.
 
-**Note**: You must enable branch protection to require signed commits.
+    **Note**: You must enable branch protection to require signed commits.
 
     
     #### Parameters
@@ -2280,7 +2278,7 @@ When authenticated with admin or owner permissions to the repository, you can us
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-When authenticated with admin or owner permissions to the repository, you can use this endpoint to require signed commits on a branch. You must enable branch protection to require signed commits.
+    When authenticated with admin or owner permissions to the repository, you can use this endpoint to require signed commits on a branch. You must enable branch protection to require signed commits.
 
     
     #### Parameters
@@ -2311,7 +2309,7 @@ When authenticated with admin or owner permissions to the repository, you can us
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-When authenticated with admin or owner permissions to the repository, you can use this endpoint to disable required signed commits on a branch. You must enable branch protection to require signed commits.
+    When authenticated with admin or owner permissions to the repository, you can use this endpoint to disable required signed commits on a branch. You must enable branch protection to require signed commits.
 
     
     #### Parameters
@@ -2512,7 +2510,7 @@ When authenticated with admin or owner permissions to the repository, you can us
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Updating required status checks requires admin or owner permissions to the repository and branch protection to be enabled.
+    Updating required status checks requires admin or owner permissions to the repository and branch protection to be enabled.
 
     
     #### Parameters
@@ -2585,7 +2583,7 @@ Updating required status checks requires admin or owner permissions to the repos
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
 
     
     #### Parameters
@@ -2655,11 +2653,11 @@ Lists the GitHub Apps that have push access to this branch. Only installed GitHu
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    Grants the specified apps push access for this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
 
-| Type    | Description                                                                                                                                                |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                                |
+    | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -2738,11 +2736,11 @@ Grants the specified apps push access for this branch. Only installed GitHub App
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    Replaces the list of apps that have push access to this branch. This removes all apps that previously had push access and grants push access to the new list of apps. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
 
-| Type    | Description                                                                                                                                                |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                                |
+    | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -2821,11 +2819,11 @@ Replaces the list of apps that have push access to this branch. This removes all
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
+    Removes the ability of an app to push to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
 
-| Type    | Description                                                                                                                                                |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                                |
+    | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -2904,7 +2902,7 @@ Removes the ability of an app to push to this branch. Only installed GitHub Apps
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Lists the teams who have push access to this branch. The list includes child teams.
+    Lists the teams who have push access to this branch. The list includes child teams.
 
     
     #### Parameters
@@ -2947,11 +2945,11 @@ Lists the teams who have push access to this branch. The list includes child tea
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Grants the specified teams push access for this branch. You can also give push access to child teams.
+    Grants the specified teams push access for this branch. You can also give push access to child teams.
 
-| Type    | Description                                                                                                                                |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                |
+    | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3003,11 +3001,11 @@ Grants the specified teams push access for this branch. You can also give push a
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Replaces the list of teams that have push access to this branch. This removes all teams that previously had push access and grants push access to the new list of teams. Team restrictions include child teams.
+    Replaces the list of teams that have push access to this branch. This removes all teams that previously had push access and grants push access to the new list of teams. Team restrictions include child teams.
 
-| Type    | Description                                                                                                                                |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                |
+    | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3059,11 +3057,11 @@ Replaces the list of teams that have push access to this branch. This removes al
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Removes the ability of a team to push to this branch. You can also remove push access for child teams.
+    Removes the ability of a team to push to this branch. You can also remove push access for child teams.
 
-| Type    | Description                                                                                                                                         |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `array` | Teams that should no longer have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                         |
+    | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | Teams that should no longer have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3115,7 +3113,7 @@ Removes the ability of a team to push to this branch. You can also remove push a
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Lists the people who have push access to this branch.
+    Lists the people who have push access to this branch.
 
     
     #### Parameters
@@ -3164,11 +3162,11 @@ Lists the people who have push access to this branch.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Grants the specified people push access for this branch.
+    Grants the specified people push access for this branch.
 
-| Type    | Description                                                                                                                   |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                   |
+    | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3226,11 +3224,11 @@ Grants the specified people push access for this branch.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Replaces the list of people that have push access to this branch. This removes all people that previously had push access and grants push access to the new list of people.
+    Replaces the list of people that have push access to this branch. This removes all people that previously had push access and grants push access to the new list of people.
 
-| Type    | Description                                                                                                                   |
-| ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                   |
+    | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3288,11 +3286,11 @@ Replaces the list of people that have push access to this branch. This removes a
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Removes the ability of a user to push to this branch.
+    Removes the ability of a user to push to this branch.
 
-| Type    | Description                                                                                                                                   |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `array` | Usernames of the people who should no longer have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
+    | Type    | Description                                                                                                                                   |
+    | ------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `array` | Usernames of the people who should no longer have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
 
     
     #### Parameters
@@ -3350,9 +3348,9 @@ Removes the ability of a user to push to this branch.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Lists who has access to this protected branch.
+    Lists who has access to this protected branch.
 
-**Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
+    **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
 
     
     #### Parameters
@@ -3460,7 +3458,7 @@ Lists who has access to this protected branch.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Disables the ability to restrict who can push to this branch.
+    Disables the ability to restrict who can push to this branch.
 
     
     #### Parameters
@@ -3668,11 +3666,11 @@ Disables the ability to restrict who can push to this branch.
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Protecting a branch requires admin or owner permissions to the repository.
+    Protecting a branch requires admin or owner permissions to the repository.
 
-**Note**: Passing new arrays of `users` and `teams` replaces their previous values.
+    **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
 
-**Note**: The list of users, apps, and teams in total is limited to 100 items.
+    **Note**: The list of users, apps, and teams in total is limited to 100 items.
 
     
     #### Parameters
@@ -4244,7 +4242,7 @@ Protecting a branch requires admin or owner permissions to the repository.
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
 
-Gets a single check run using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
+    Gets a single check run using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
 
     
     #### Parameters
@@ -4361,7 +4359,7 @@ Gets a single check run using its `id`. GitHub Apps must have the `checks:read` 
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
 
-Updates a check run for a specific commit in a repository. Your GitHub App must have the `checks:write` permission to edit check runs.
+    Updates a check run for a specific commit in a repository. Your GitHub App must have the `checks:write` permission to edit check runs.
 
     
     #### Parameters
@@ -4586,7 +4584,7 @@ Updates a check run for a specific commit in a repository. Your GitHub App must 
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
 
-Creates a new check run for a specific commit in a repository. Your GitHub App must have the `checks:write` permission to create check runs.
+    Creates a new check run for a specific commit in a repository. Your GitHub App must have the `checks:write` permission to create check runs.
 
     
     #### Parameters
@@ -4770,7 +4768,7 @@ Creates a new check run for a specific commit in a repository. Your GitHub App m
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
 
-Gets a single check suite using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check suites. OAuth Apps and authenticated users must have the `repo` scope to get check suites in a private repository.
+    Gets a single check suite using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check suites. OAuth Apps and authenticated users must have the `repo` scope to get check suites in a private repository.
 
     
     #### Parameters
@@ -4976,7 +4974,7 @@ Gets a single check suite using its `id`. GitHub Apps must have the `checks:read
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
 
-Lists check runs for a check suite using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
+    Lists check runs for a check suite using its `id`. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
 
     
     #### Parameters
@@ -5103,7 +5101,7 @@ Lists check runs for a check suite using its `id`. GitHub Apps must have the `ch
 
     Triggers GitHub to rerequest an existing check suite, without pushing new code to a repository. This endpoint will trigger the [`check_suite` webhook](https://developer.github.com/webhooks/event-payloads/#check_suite) event with the action `rerequested`. When a check suite is `rerequested`, its `status` is reset to `queued` and the `conclusion` is cleared.
 
-To rerequest a check suite, your GitHub App must have the `checks:read` permission on a private repository or pull access to a public repository.
+    To rerequest a check suite, your GitHub App must have the `checks:read` permission on a private repository or pull access to a public repository.
 
     
     #### Parameters
@@ -5131,7 +5129,7 @@ To rerequest a check suite, your GitHub App must have the `checks:read` permissi
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
 
-By default, check suites are automatically created when you create a [check run](https://developer.github.com/v3/checks/runs/). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://developer.github.com/v3/checks/suites/#update-repository-preferences-for-check-suites)". Your GitHub App must have the `checks:write` permission to create check suites.
+    By default, check suites are automatically created when you create a [check run](https://developer.github.com/v3/checks/runs/). You only need to use this endpoint for manually creating check suites when you've disabled automatic creation using "[Update repository preferences for check suites](https://developer.github.com/v3/checks/suites/#update-repository-preferences-for-check-suites)". Your GitHub App must have the `checks:write` permission to create check suites.
 
     
     #### Parameters
@@ -5575,7 +5573,7 @@ By default, check suites are automatically created when you create a [check run]
 
     Gets a single code scanning alert. You must use an access token with the `security_events` scope to use this endpoint. GitHub Apps must have the `security_events` read permission to use this endpoint.
 
-The security `alert_id` is found at the end of the security alert's URL. For example, the security alert ID for `https://github.com/Octo-org/octo-repo/security/code-scanning/88` is `88`.
+    The security `alert_id` is found at the end of the security alert's URL. For example, the security alert ID for `https://github.com/Octo-org/octo-repo/security/code-scanning/88` is `88`.
 
     
     #### Parameters
@@ -5614,7 +5612,7 @@ The security `alert_id` is found at the end of the security alert's URL. For exa
 
     For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
 
-Team members will include the members of child teams.
+    Team members will include the members of child teams.
 
     
     #### Parameters
@@ -5642,15 +5640,15 @@ Team members will include the members of child teams.
 
     This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
-For more information the permission levels, see "[Repository permission levels for an organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)".
+    For more information the permission levels, see "[Repository permission levels for an organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)".
 
-Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
+    Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 
-The invitee will receive a notification that they have been invited to the repository, which they must accept or decline. They may do this via the notifications page, the email they receive, or by using the [repository invitations API endpoints](https://developer.github.com/v3/repos/invitations/).
+    The invitee will receive a notification that they have been invited to the repository, which they must accept or decline. They may do this via the notifications page, the email they receive, or by using the [repository invitations API endpoints](https://developer.github.com/v3/repos/invitations/).
 
-**Rate limits**
+    **Rate limits**
 
-To prevent abuse, you are limited to sending 50 invitations to a repository per 24 hour period. Note there is no limit if you are inviting organization members to an organization repository.
+    To prevent abuse, you are limited to sending 50 invitations to a repository per 24 hour period. Note there is no limit if you are inviting organization members to an organization repository.
 
     
     #### Parameters
@@ -5877,17 +5875,14 @@ To prevent abuse, you are limited to sending 50 invitations to a repository per 
 
     For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
 
-Team members will include the members of child teams.
+    Team members will include the members of child teams.
 
     
     #### Parameters
 
     | Parameter | Type | Required | Description | Example |
     | --- | --- | --- | --- | --- |
-    | `affiliation` | `string` | Yes | Filter collaborators returned by their affiliation. Can be one of:  
-\* `outside`: All outside collaborators of an organization-owned repository.  
-\* `direct`: All collaborators with permissions to an organization-owned repository, regardless of organization membership status.  
-\* `all`: All collaborators the authenticated user can see. | `all` |
+    | `affiliation` | `string` | Yes | Filter collaborators returned by their affiliation. Can be one of:  <br>\* `outside`: All outside collaborators of an organization-owned repository.  <br>\* `direct`: All collaborators with permissions to an organization-owned repository, regardless of organization membership status.  <br>\* `all`: All collaborators the authenticated user can see. | `all` |
     | `per_page` | `string` | Yes | Results per page (max 100) | `30` |
     | `page` | `string` | Yes | Page number of the results to fetch. | `1` |
     | `:owner` | `string` | Yes | (Required)  | `<string>` |
@@ -6051,7 +6046,7 @@ Team members will include the members of child teams.
 
     **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/comments/:comment_id/reactions/:reaction_id`.
 
-Delete a reaction to a [commit comment](https://developer.github.com/v3/repos/comments/).
+    Delete a reaction to a [commit comment](https://developer.github.com/v3/repos/comments/).
 
     
     #### Parameters
@@ -6232,7 +6227,7 @@ Delete a reaction to a [commit comment](https://developer.github.com/v3/repos/co
 
     Commit Comments use [these custom media types](https://developer.github.com/v3/repos/comments/#custom-media-types). You can read more about the use of media types in the API [here](https://developer.github.com/v3/media/).
 
-Comments are ordered by ascending ID.
+    Comments are ordered by ascending ID.
 
     
     #### Parameters
@@ -6359,7 +6354,7 @@ Comments are ordered by ascending ID.
 
     Create a comment for a commit using its `:commit_sha`.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -6431,7 +6426,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Returns all branches where the given commit SHA is the HEAD, or latest commit for the branch.
+    Returns all branches where the given commit SHA is the HEAD, or latest commit for the branch.
 
     
     #### Parameters
@@ -7011,31 +7006,31 @@ Returns all branches where the given commit SHA is the HEAD, or latest commit fo
 
     Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
 
-You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
 
-To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
+    To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
 
-**Signature verification object**
+    **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -7157,7 +7152,7 @@ These are the possible values for `reason` in the `verification` object:
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array.
 
-Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
+    Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to get check runs. OAuth Apps and authenticated users must have the `repo` scope to get check runs in a private repository.
 
     
     #### Parameters
@@ -7284,7 +7279,7 @@ Lists check runs for a commit ref. The `ref` can be a SHA, branch name, or a tag
 
     **Note:** The Checks API only looks for pushes in the repository where the check suite or check run were created. Pushes to a branch in a forked repository are not detected and return an empty `pull_requests` array and a `null` value for `head_branch`.
 
-Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to list check suites. OAuth Apps and authenticated users must have the `repo` scope to get check suites in a private repository.
+    Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a tag name. GitHub Apps must have the `checks:read` permission on a private repository or pull access to a public repository to list check suites. OAuth Apps and authenticated users must have the `repo` scope to get check suites in a private repository.
 
     
     #### Parameters
@@ -7498,13 +7493,13 @@ Lists check suites for a commit `ref`. The `ref` can be a SHA, branch name, or a
 
     Users with pull access in a repository can access a combined view of commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name.
 
-The most recent status for each context is returned, up to 100. This field [paginates](https://developer.github.com/v3/#pagination) if there are over 100 contexts.
+    The most recent status for each context is returned, up to 100. This field [paginates](https://developer.github.com/v3/#pagination) if there are over 100 contexts.
 
-Additionally, a combined `state` is returned. The `state` is one of:
+    Additionally, a combined `state` is returned. The `state` is one of:
 
-*   **failure** if any of the contexts report as `error` or `failure`
-*   **pending** if there are no statuses or a context is `pending`
-*   **success** if the latest status for all contexts is `success`
+    *   **failure** if any of the contexts report as `error` or `failure`
+    *   **pending** if there are no statuses or a context is `pending`
+    *   **success** if the latest status for all contexts is `success`
 
     
     #### Parameters
@@ -7633,7 +7628,7 @@ Additionally, a combined `state` is returned. The `state` is one of:
 
     Users with pull access in a repository can view commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first status in the list will be the latest one.
 
-This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
+    This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
 
     
     #### Parameters
@@ -7696,25 +7691,25 @@ This resource is also available via a legacy route: `GET /repos/:owner/:repo/sta
 
     **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -7869,37 +7864,37 @@ These are the possible values for `reason` in the `verification` object:
 === "GET Get repository content"
 
     Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit
-`:path`, you will receive the contents of all files in the repository.
+    `:path`, you will receive the contents of all files in the repository.
 
-Files and symlinks support [a custom media type](https://developer.github.com/v3/repos/contents/#custom-media-types) for
-retrieving the raw content or rendered HTML (when supported). All content types support [a custom media
-type](https://developer.github.com/v3/repos/contents/#custom-media-types) to ensure the content is returned in a consistent
-object format.
+    Files and symlinks support [a custom media type](https://developer.github.com/v3/repos/contents/#custom-media-types) for
+    retrieving the raw content or rendered HTML (when supported). All content types support [a custom media
+    type](https://developer.github.com/v3/repos/contents/#custom-media-types) to ensure the content is returned in a consistent
+    object format.
 
-**Note**:
-*   To get a repository's contents recursively, you can [recursively get the tree](https://developer.github.com/v3/git/trees/).
-*   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees
-API](https://developer.github.com/v3/git/trees/#get-a-tree).
-*   This API supports files up to 1 megabyte in size.
+    **Note**:
+    *   To get a repository's contents recursively, you can [recursively get the tree](https://developer.github.com/v3/git/trees/).
+    *   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees
+    API](https://developer.github.com/v3/git/trees/#get-a-tree).
+    *   This API supports files up to 1 megabyte in size.
 
-#### If the content is a directory
-The response will be an array of objects, one object for each item in the directory.
-When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value
-_should_ be "submodule". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).
-In the next major version of the API, the type will be returned as "submodule".
+    #### If the content is a directory
+    The response will be an array of objects, one object for each item in the directory.
+    When listing the contents of a directory, submodules have their "type" specified as "file". Logically, the value
+    _should_ be "submodule". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).
+    In the next major version of the API, the type will be returned as "submodule".
 
-#### If the content is a symlink 
-If the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the
-API responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object 
-describing the symlink itself.
+    #### If the content is a symlink 
+    If the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the
+    API responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object 
+    describing the symlink itself.
 
-#### If the content is a submodule
-The `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies a specific
-commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out
-the submodule at that specific commit.
+    #### If the content is a submodule
+    The `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies a specific
+    commit within the submodule repository. Git uses the given URL when cloning the submodule repository, and checks out
+    the submodule at that specific commit.
 
-If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the
-github.com URLs (`html_url` and `_links["html"]`) will have null values.
+    If the submodule repository is not hosted on github.com, the Git URLs (`git_url` and `_links["git"]`) and the
+    github.com URLs (`html_url` and `_links["html"]`) will have null values.
 
     
     #### Parameters
@@ -8043,11 +8038,11 @@ github.com URLs (`html_url` and `_links["html"]`) will have null values.
 
     Deletes a file in a repository.
 
-You can provide an additional `committer` parameter, which is an object containing information about the committer. Or, you can provide an `author` parameter, which is an object containing information about the author.
+    You can provide an additional `committer` parameter, which is an object containing information about the committer. Or, you can provide an `author` parameter, which is an object containing information about the author.
 
-The `author` section is optional and is filled in with the `committer` information if omitted. If the `committer` information is omitted, the authenticated user's information is used.
+    The `author` section is optional and is filled in with the `committer` information if omitted. If the `committer` information is omitted, the authenticated user's information is used.
 
-You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
+    You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
 
     
     #### Parameters
@@ -8193,7 +8188,7 @@ You must provide values for both `name` and `email`, whether you choose to use `
 
     Users with `push` access can create deployment statuses for a given deployment.
 
-GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth Apps require the `repo_deployment` scope.
+    GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth Apps require the `repo_deployment` scope.
 
     
     #### Parameters
@@ -8393,12 +8388,12 @@ GitHub Apps require `read & write` access to "Deployments" and `read-only` acces
 
     To ensure there can always be an active deployment, you can only delete an _inactive_ deployment. Anyone with `repo` or `repo_deployment` scopes can delete an inactive deployment.
 
-To set a deployment as inactive, you must:
+    To set a deployment as inactive, you must:
 
-*   Create a new deployment that is active so that the system has a record of the current state, then delete the previously active deployment.
-*   Mark the active deployment as inactive by adding any non-successful deployment status.
+    *   Create a new deployment that is active so that the system has a record of the current state, then delete the previously active deployment.
+    *   Mark the active deployment as inactive by adding any non-successful deployment status.
 
-For more information, see "[Create a deployment](https://developer.github.com/v3/repos/deployments/#create-a-deployment)" and "[Create a deployment status](https://developer.github.com/v3/repos/deployments/#create-a-deployment-status)."
+    For more information, see "[Create a deployment](https://developer.github.com/v3/repos/deployments/#create-a-deployment)" and "[Create a deployment status](https://developer.github.com/v3/repos/deployments/#create-a-deployment-status)."
 
     
     #### Parameters
@@ -8496,49 +8491,49 @@ For more information, see "[Create a deployment](https://developer.github.com/v3
 
     Deployments offer a few configurable parameters with certain defaults.
 
-The `ref` parameter can be any named branch, tag, or SHA. At GitHub we often deploy branches and verify them
-before we merge a pull request.
+    The `ref` parameter can be any named branch, tag, or SHA. At GitHub we often deploy branches and verify them
+    before we merge a pull request.
 
-The `environment` parameter allows deployments to be issued to different runtime environments. Teams often have
-multiple environments for verifying their applications, such as `production`, `staging`, and `qa`. This parameter
-makes it easier to track which environments have requested deployments. The default environment is `production`.
+    The `environment` parameter allows deployments to be issued to different runtime environments. Teams often have
+    multiple environments for verifying their applications, such as `production`, `staging`, and `qa`. This parameter
+    makes it easier to track which environments have requested deployments. The default environment is `production`.
 
-The `auto_merge` parameter is used to ensure that the requested ref is not behind the repository's default branch. If
-the ref _is_ behind the default branch for the repository, we will attempt to merge it for you. If the merge succeeds,
-the API will return a successful merge commit. If merge conflicts prevent the merge from succeeding, the API will
-return a failure response.
+    The `auto_merge` parameter is used to ensure that the requested ref is not behind the repository's default branch. If
+    the ref _is_ behind the default branch for the repository, we will attempt to merge it for you. If the merge succeeds,
+    the API will return a successful merge commit. If merge conflicts prevent the merge from succeeding, the API will
+    return a failure response.
 
-By default, [commit statuses](https://developer.github.com/v3/repos/statuses) for every submitted context must be in a `success`
-state. The `required_contexts` parameter allows you to specify a subset of contexts that must be `success`, or to
-specify contexts that have not yet been submitted. You are not required to use commit statuses to deploy. If you do
-not require any contexts or create any commit statuses, the deployment will always succeed.
+    By default, [commit statuses](https://developer.github.com/v3/repos/statuses) for every submitted context must be in a `success`
+    state. The `required_contexts` parameter allows you to specify a subset of contexts that must be `success`, or to
+    specify contexts that have not yet been submitted. You are not required to use commit statuses to deploy. If you do
+    not require any contexts or create any commit statuses, the deployment will always succeed.
 
-The `payload` parameter is available for any extra information that a deployment system might need. It is a JSON text
-field that will be passed on when a deployment event is dispatched.
+    The `payload` parameter is available for any extra information that a deployment system might need. It is a JSON text
+    field that will be passed on when a deployment event is dispatched.
 
-The `task` parameter is used by the deployment system to allow different execution paths. In the web world this might
-be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
-application with debugging enabled.
+    The `task` parameter is used by the deployment system to allow different execution paths. In the web world this might
+    be `deploy:migrations` to run schema changes on the system. In the compiled world this could be a flag to compile an
+    application with debugging enabled.
 
-Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
+    Users with `repo` or `repo_deployment` scopes can create a deployment for a given ref.
 
-#### Merged branch response
-You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
-a deployment. This auto-merge happens when:
-*   Auto-merge option is enabled in the repository
-*   Topic branch does not include the latest changes on the base branch, which is `master` in the response example
-*   There are no merge conflicts
+    #### Merged branch response
+    You will see this response when GitHub automatically merges the base branch into the topic branch instead of creating
+    a deployment. This auto-merge happens when:
+    *   Auto-merge option is enabled in the repository
+    *   Topic branch does not include the latest changes on the base branch, which is `master` in the response example
+    *   There are no merge conflicts
 
-If there are no new commits in the base branch, a new request to create a deployment should give a successful
-response.
+    If there are no new commits in the base branch, a new request to create a deployment should give a successful
+    response.
 
-#### Merge conflict response
-This error happens when the `auto_merge` option is enabled and when the default branch (in this case `master`), can't
-be merged into the branch that's being deployed (in this case `topic-branch`), due to merge conflicts.
+    #### Merge conflict response
+    This error happens when the `auto_merge` option is enabled and when the default branch (in this case `master`), can't
+    be merged into the branch that's being deployed (in this case `topic-branch`), due to merge conflicts.
 
-#### Failed commit status checks
-This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
-status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
+    #### Failed commit status checks
+    This error happens when the `required_contexts` parameter indicates that one or more contexts need to have a `success`
+    status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
 
     
     #### Parameters
@@ -8765,7 +8760,7 @@ status for the commit to be deployed, but one or more of the required contexts d
 
     Create a fork for the authenticated user.
 
-**Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com).
+    **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com).
 
     
     #### Parameters
@@ -8837,7 +8832,7 @@ status for the commit to be deployed, but one or more of the required contexts d
 
     The `content` in the response will always be Base64 encoded.
 
-_Note_: This API supports blobs up to 100 megabytes in size.
+    _Note_: This API supports blobs up to 100 megabytes in size.
 
     
     #### Parameters
@@ -8872,31 +8867,31 @@ _Note_: This API supports blobs up to 100 megabytes in size.
 
     Creates a new Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
 
-In this example, the payload of the signature would be:
+    In this example, the payload of the signature would be:
 
 
 
-**Signature verification object**
+    **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -8978,27 +8973,27 @@ These are the possible values for `reason` in the `verification` object:
 
     Gets a Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
 
-**Signature verification object**
+    **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -9171,27 +9166,27 @@ These are the possible values for `reason` in the `verification` object:
 
     Note that creating a tag object does not create the reference that makes a tag in Git. If you want to create an annotated tag in Git, you have to do this call to create the tag object, and then [create](https://developer.github.com/v3/git/refs/#create-a-reference) the `refs/tags/[tag]` reference. If you want to create a lightweight tag, you only have to [create](https://developer.github.com/v3/git/refs/#create-a-reference) the tag reference - this call would be unnecessary.
 
-**Signature verification object**
+    **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -9256,25 +9251,25 @@ These are the possible values for `reason` in the `verification` object:
 
     **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -9324,7 +9319,7 @@ These are the possible values for `reason` in the `verification` object:
 
     The tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.
 
-If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://developer.github.com/v3/git/commits/#create-a-commit)" and "[Update a reference](https://developer.github.com/v3/git/refs/#update-a-reference)."
+    If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see "[Create a commit](https://developer.github.com/v3/git/commits/#create-a-commit)" and "[Update a reference](https://developer.github.com/v3/git/refs/#update-a-reference)."
 
     
     #### Parameters
@@ -9389,7 +9384,7 @@ If you use this endpoint to add, delete, or modify the file contents in a tree, 
 
     Returns a single tree using the SHA1 value for that tree.
 
-If `truncated` is `true` in the response then the number of items in the `tree` array exceeded our maximum limit. If you need to fetch more items, use the non-recursive method of fetching trees, and fetch one sub-tree at a time.
+    If `truncated` is `true` in the response then the number of items in the `tree` array exceeded our maximum limit. If you need to fetch more items, use the non-recursive method of fetching trees, and fetch one sub-tree at a time.
 
     
     #### Parameters
@@ -9447,11 +9442,11 @@ If `truncated` is `true` in the response then the number of items in the `tree` 
 
     Returns an array of references from your Git database that match the supplied name. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't exist in the repository, but existing refs start with `:ref`, they will be returned as an array.
 
-When you use this endpoint without providing a `:ref`, it will return an array of all the references from your Git database, including notes and stashes if they exist on the server. Anything in the namespace is returned, not just `heads` and `tags`.
+    When you use this endpoint without providing a `:ref`, it will return an array of all the references from your Git database, including notes and stashes if they exist on the server. Anything in the namespace is returned, not just `heads` and `tags`.
 
-**Note:** You need to explicitly [request a pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
+    **Note:** You need to explicitly [request a pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
 
-If you request matching references for a branch named `feature` but the branch `feature` doesn't exist, the response can still include other matching head refs that start with the word `feature`, such as `featureA` and `featureB`.
+    If you request matching references for a branch named `feature` but the branch `feature` doesn't exist, the response can still include other matching head refs that start with the word `feature`, such as `featureA` and `featureB`.
 
     
     #### Parameters
@@ -9502,7 +9497,7 @@ If you request matching references for a branch named `feature` but the branch `
 
     Returns a single reference from your Git database. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't match an existing ref, a `404` is returned.
 
-**Note:** You need to explicitly [request a pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
+    **Note:** You need to explicitly [request a pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
 
     
     #### Parameters
@@ -9718,7 +9713,7 @@ If you request matching references for a branch named `feature` but the branch `
 
     This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
 
-**Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
+    **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
 
     
     #### Parameters
@@ -9798,7 +9793,7 @@ If you request matching references for a branch named `feature` but the branch `
 === "POST Create a repository webhook"
 
     Repositories can have multiple webhooks installed. Each webhook should have a unique `config`. Multiple webhooks can
-share the same `config` as long as those webhooks do not have any `events` that overlap.
+    share the same `config` as long as those webhooks do not have any `events` that overlap.
 
     
     #### Parameters
@@ -9869,7 +9864,7 @@ share the same `config` as long as those webhooks do not have any `events` that 
 
     Each type of source control system represents authors in a different way. For example, a Git commit author has a display name and an email address, but a Subversion commit author just has a username. The GitHub Importer will make the author information valid, but the author might not be correct. For example, it will change the bare Subversion username `hubot` into something like `hubot <hubot@12341234-abab-fefe-8787-fedcba987654>`.
 
-This endpoint and the [Map a commit author](https://developer.github.com/v3/migrations/source_imports/#map-a-commit-author) endpoint allow you to provide correct Git author information.
+    This endpoint and the [Map a commit author](https://developer.github.com/v3/migrations/source_imports/#map-a-commit-author) endpoint allow you to provide correct Git author information.
 
     
     #### Parameters
@@ -9969,38 +9964,38 @@ This endpoint and the [Map a commit author](https://developer.github.com/v3/migr
 
     View the progress of an import.
 
-**Import status**
+    **Import status**
 
-This section includes details about the possible values of the `status` field of the Import Progress response.
+    This section includes details about the possible values of the `status` field of the Import Progress response.
 
-An import that does not have errors will progress through these steps:
+    An import that does not have errors will progress through these steps:
 
-*   `detecting` - the "detection" step of the import is in progress because the request did not include a `vcs` parameter. The import is identifying the type of source control present at the URL.
-*   `importing` - the "raw" step of the import is in progress. This is where commit data is fetched from the original repository. The import progress response will include `commit_count` (the total number of raw commits that will be imported) and `percent` (0 - 100, the current progress through the import).
-*   `mapping` - the "rewrite" step of the import is in progress. This is where SVN branches are converted to Git branches, and where author updates are applied. The import progress response does not include progress information.
-*   `pushing` - the "push" step of the import is in progress. This is where the importer updates the repository on GitHub. The import progress response will include `push_percent`, which is the percent value reported by `git push` when it is "Writing objects".
-*   `complete` - the import is complete, and the repository is ready on GitHub.
+    *   `detecting` - the "detection" step of the import is in progress because the request did not include a `vcs` parameter. The import is identifying the type of source control present at the URL.
+    *   `importing` - the "raw" step of the import is in progress. This is where commit data is fetched from the original repository. The import progress response will include `commit_count` (the total number of raw commits that will be imported) and `percent` (0 - 100, the current progress through the import).
+    *   `mapping` - the "rewrite" step of the import is in progress. This is where SVN branches are converted to Git branches, and where author updates are applied. The import progress response does not include progress information.
+    *   `pushing` - the "push" step of the import is in progress. This is where the importer updates the repository on GitHub. The import progress response will include `push_percent`, which is the percent value reported by `git push` when it is "Writing objects".
+    *   `complete` - the import is complete, and the repository is ready on GitHub.
 
-If there are problems, you will see one of these in the `status` field:
+    If there are problems, you will see one of these in the `status` field:
 
-*   `auth_failed` - the import requires authentication in order to connect to the original repository. To update authentication for the import, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
-*   `error` - the import encountered an error. The import progress response will include the `failed_step` and an error message. Contact [GitHub Support](https://github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com) for more information.
-*   `detection_needs_auth` - the importer requires authentication for the originating repository to continue detection. To update authentication for the import, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
-*   `detection_found_nothing` - the importer didn't recognize any source control at the URL. To resolve, [Cancel the import](https://developer.github.com/v3/migrations/source_imports/#cancel-an-import) and [retry](https://developer.github.com/v3/migrations/source_imports/#start-an-import) with the correct URL.
-*   `detection_found_multiple` - the importer found several projects or repositories at the provided URL. When this is the case, the Import Progress response will also include a `project_choices` field with the possible project choices as values. To update project choice, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
+    *   `auth_failed` - the import requires authentication in order to connect to the original repository. To update authentication for the import, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
+    *   `error` - the import encountered an error. The import progress response will include the `failed_step` and an error message. Contact [GitHub Support](https://github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com) for more information.
+    *   `detection_needs_auth` - the importer requires authentication for the originating repository to continue detection. To update authentication for the import, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
+    *   `detection_found_nothing` - the importer didn't recognize any source control at the URL. To resolve, [Cancel the import](https://developer.github.com/v3/migrations/source_imports/#cancel-an-import) and [retry](https://developer.github.com/v3/migrations/source_imports/#start-an-import) with the correct URL.
+    *   `detection_found_multiple` - the importer found several projects or repositories at the provided URL. When this is the case, the Import Progress response will also include a `project_choices` field with the possible project choices as values. To update project choice, please see the [Update an import](https://developer.github.com/v3/migrations/source_imports/#update-an-import) section.
 
-**The project_choices field**
+    **The project_choices field**
 
-When multiple projects are found at the provided URL, the response hash will include a `project_choices` field, the value of which is an array of hashes each representing a project choice. The exact key/value pairs of the project hashes will differ depending on the version control type.
+    When multiple projects are found at the provided URL, the response hash will include a `project_choices` field, the value of which is an array of hashes each representing a project choice. The exact key/value pairs of the project hashes will differ depending on the version control type.
 
-**Git LFS related fields**
+    **Git LFS related fields**
 
-This section includes details about Git LFS related fields that may be present in the Import Progress response.
+    This section includes details about Git LFS related fields that may be present in the Import Progress response.
 
-*   `use_lfs` - describes whether the import has been opted in or out of using Git LFS. The value can be `opt_in`, `opt_out`, or `undecided` if no action has been taken.
-*   `has_large_files` - the boolean value describing whether files larger than 100MB were found during the `importing` step.
-*   `large_files_size` - the total size in gigabytes of files larger than 100MB found in the originating repository.
-*   `large_files_count` - the total number of files larger than 100MB found in the originating repository. To see a list of these files, make a "Get Large Files" request.
+    *   `use_lfs` - describes whether the import has been opted in or out of using Git LFS. The value can be `opt_in`, `opt_out`, or `undecided` if no action has been taken.
+    *   `has_large_files` - the boolean value describing whether files larger than 100MB were found during the `importing` step.
+    *   `large_files_size` - the total size in gigabytes of files larger than 100MB found in the originating repository.
+    *   `large_files_count` - the total number of files larger than 100MB found in the originating repository. To see a list of these files, make a "Get Large Files" request.
 
     
     #### Parameters
@@ -10092,7 +10087,7 @@ This section includes details about Git LFS related fields that may be present i
 === "PATCH Update an import"
 
     An import can be updated with credentials or a project choice by passing in the appropriate parameters in this API
-request. If no parameters are provided, the import will be restarted.
+    request. If no parameters are provided, the import will be restarted.
 
     
     #### Parameters
@@ -10782,7 +10777,7 @@ request. If no parameters are provided, the import will be restarted.
 
     **Note:** You can also specify a repository by `repository_id` using the route `DELETE delete /repositories/:repository_id/issues/comments/:comment_id/reactions/:reaction_id`.
 
-Delete a reaction to an [issue comment](https://developer.github.com/v3/issues/comments/).
+    Delete a reaction to an [issue comment](https://developer.github.com/v3/issues/comments/).
 
     
     #### Parameters
@@ -12177,7 +12172,7 @@ Delete a reaction to an [issue comment](https://developer.github.com/v3/issues/c
 
     Users with push access can lock an issue or pull request's conversation.
 
-Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
+    Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 
     
     #### Parameters
@@ -12354,7 +12349,7 @@ Note that, if you choose not to pass any parameters, you'll need to set `Content
 
     **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/issues/:issue_number/reactions/:reaction_id`.
 
-Delete a reaction to an [issue](https://developer.github.com/v3/issues/).
+    Delete a reaction to an [issue](https://developer.github.com/v3/issues/).
 
     
     #### Parameters
@@ -12382,16 +12377,16 @@ Delete a reaction to an [issue](https://developer.github.com/v3/issues/).
 === "GET Get an issue"
 
     The API returns a [`301 Moved Permanently` status](https://developer.github.com/v3/#http-redirects) if the issue was
-[transferred](https://help.github.com/articles/transferring-an-issue-to-another-repository/) to another repository. If
-the issue was transferred to or deleted from a repository where the authenticated user lacks read access, the API
-returns a `404 Not Found` status. If the issue was deleted from a repository where the authenticated user has read
-access, the API returns a `410 Gone` status. To receive webhook events for transferred and deleted issues, subscribe
-to the [`issues`](https://developer.github.com/webhooks/event-payloads/#issues) webhook.
+    [transferred](https://help.github.com/articles/transferring-an-issue-to-another-repository/) to another repository. If
+    the issue was transferred to or deleted from a repository where the authenticated user lacks read access, the API
+    returns a `404 Not Found` status. If the issue was deleted from a repository where the authenticated user has read
+    access, the API returns a `410 Gone` status. To receive webhook events for transferred and deleted issues, subscribe
+    to the [`issues`](https://developer.github.com/webhooks/event-payloads/#issues) webhook.
 
-**Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
-reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
+    **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
+    reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
+    the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
+    request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
 
     
     #### Parameters
@@ -12893,10 +12888,10 @@ request id, use the "[List pull requests](https://developer.github.com/v3/pulls/
 
     List issues in a repository.
 
-**Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
-reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
-the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
-request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
+    **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this
+    reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by
+    the `pull_request` key. Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull
+    request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
 
     
     #### Parameters
@@ -13072,7 +13067,7 @@ request id, use the "[List pull requests](https://developer.github.com/v3/pulls/
 
     Any user with pull access to a repository can create an issue. If [issues are disabled in the repository](https://help.github.com/articles/disabling-issues/), the API returns a `410 Gone` status.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -14162,7 +14157,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     You can request that your site be built from the latest revision on the default branch. This has the same effect as pushing a commit to your default branch, but does not require an additional commit. Manually triggering page builds can be helpful when diagnosing build warnings and failures.
 
-Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.
+    Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.
 
     
     #### Parameters
@@ -14688,7 +14683,7 @@ Build requests are limited to one concurrent build per repository and one concur
 
     **Note:** You can also specify a repository by `repository_id` using the route `DELETE /repositories/:repository_id/pulls/comments/:comment_id/reactions/:reaction_id.`
 
-Delete a reaction to a [pull request review comment](https://developer.github.com/v3/pulls/comments/).
+    Delete a reaction to a [pull request review comment](https://developer.github.com/v3/pulls/comments/).
 
     
     #### Parameters
@@ -14717,25 +14712,25 @@ Delete a reaction to a [pull request review comment](https://developer.github.co
 
     **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
 
-Provides details for a review comment.
+    Provides details for a review comment.
 
-**Multi-line comment summary**
+    **Multi-line comment summary**
 
-**Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
+    **Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
 
-Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
+    Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
 
-If you use the `comfort-fade` preview header, your response will show:
+    If you use the `comfort-fade` preview header, your response will show:
 
-*   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
-*   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
+    *   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
+    *   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
 
-If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
+    If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
 
-*   For multi-line comments, the last line of the comment range for the `position` attribute.
-*   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
+    *   For multi-line comments, the last line of the comment range for the `position` attribute.
+    *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
 
-The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
+    The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
 
     
     #### Parameters
@@ -14818,23 +14813,23 @@ The `reactions` key will have the following payload where `url` can be used to c
 
     **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
 
-Enables you to edit a review comment.
+    Enables you to edit a review comment.
 
-**Multi-line comment summary**
+    **Multi-line comment summary**
 
-**Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
+    **Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
 
-Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
+    Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
 
-If you use the `comfort-fade` preview header, your response will show:
+    If you use the `comfort-fade` preview header, your response will show:
 
-*   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
-*   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
+    *   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
+    *   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
 
-If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
+    If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
 
-*   For multi-line comments, the last line of the comment range for the `position` attribute.
-*   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
+    *   For multi-line comments, the last line of the comment range for the `position` attribute.
+    *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
 
     
     #### Parameters
@@ -14951,25 +14946,25 @@ If you don't use the `comfort-fade` preview header, multi-line and single-line c
 
     **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
 
-Lists review comments for all pull requests in a repository. By default, review comments are in ascending order by ID.
+    Lists review comments for all pull requests in a repository. By default, review comments are in ascending order by ID.
 
-**Multi-line comment summary**
+    **Multi-line comment summary**
 
-**Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
+    **Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
 
-Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
+    Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
 
-If you use the `comfort-fade` preview header, your response will show:
+    If you use the `comfort-fade` preview header, your response will show:
 
-*   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
-*   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
+    *   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
+    *   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
 
-If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
+    If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
 
-*   For multi-line comments, the last line of the comment range for the `position` attribute.
-*   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
+    *   For multi-line comments, the last line of the comment range for the `position` attribute.
+    *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
 
-The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
+    The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
 
     
     #### Parameters
@@ -15058,25 +15053,25 @@ The `reactions` key will have the following payload where `url` can be used to c
 
     **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
 
-Lists all review comments for a pull request. By default, review comments are in ascending order by ID.
+    Lists all review comments for a pull request. By default, review comments are in ascending order by ID.
 
-**Multi-line comment summary**
+    **Multi-line comment summary**
 
-**Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
+    **Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
 
-Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
+    Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
 
-If you use the `comfort-fade` preview header, your response will show:
+    If you use the `comfort-fade` preview header, your response will show:
 
-*   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
-*   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
+    *   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
+    *   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
 
-If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
+    If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
 
-*   For multi-line comments, the last line of the comment range for the `position` attribute.
-*   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
+    *   For multi-line comments, the last line of the comment range for the `position` attribute.
+    *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
 
-The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
+    The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
 
     
     #### Parameters
@@ -15166,29 +15161,29 @@ The `reactions` key will have the following payload where `url` can be used to c
 
     **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
 
-Creates a review comment in the pull request diff. To add a regular comment to a pull request timeline, see "[Create an issue comment](https://developer.github.com/v3/issues/comments/#create-an-issue-comment)." We recommend creating a review comment using `line`, `side`, and optionally `start_line` and `start_side` if your comment applies to more than one line in the pull request diff.
+    Creates a review comment in the pull request diff. To add a regular comment to a pull request timeline, see "[Create an issue comment](https://developer.github.com/v3/issues/comments/#create-an-issue-comment)." We recommend creating a review comment using `line`, `side`, and optionally `start_line` and `start_side` if your comment applies to more than one line in the pull request diff.
 
-You can still create a review comment using the `position` parameter. When you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required. For more information, see [Multi-line comment summary](https://developer.github.com/v3/pulls/comments/#multi-line-comment-summary-3).
+    You can still create a review comment using the `position` parameter. When you use `position`, the `line`, `side`, `start_line`, and `start_side` parameters are not required. For more information, see [Multi-line comment summary](https://developer.github.com/v3/pulls/comments/#multi-line-comment-summary-3).
 
-**Note:** The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+    **Note:** The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
-**Multi-line comment summary**
+    **Multi-line comment summary**
 
-**Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
+    **Note:** New parameters and response fields are available for developers to preview. During the preview period, these response fields may change without advance notice. Please see the [blog post](https://developer.github.com/changes/2019-10-03-multi-line-comments) for full details.
 
-Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
+    Use the `comfort-fade` preview header and the `line` parameter to show multi-line comment-supported fields in the response.
 
-If you use the `comfort-fade` preview header, your response will show:
+    If you use the `comfort-fade` preview header, your response will show:
 
-*   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
-*   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
+    *   For multi-line comments, values for `start_line`, `original_start_line`, `start_side`, `line`, `original_line`, and `side`.
+    *   For single-line comments, values for `line`, `original_line`, and `side` and a `null` value for `start_line`, `original_start_line`, and `start_side`.
 
-If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
+    If you don't use the `comfort-fade` preview header, multi-line and single-line comments will appear the same way in the response with a single `position` attribute. Your response will show:
 
-*   For multi-line comments, the last line of the comment range for the `position` attribute.
-*   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
+    *   For multi-line comments, the last line of the comment range for the `position` attribute.
+    *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
 
     
     #### Parameters
@@ -15287,7 +15282,7 @@ If you don't use the `comfort-fade` preview header, multi-line and single-line c
 
     Creates a reply to a review comment for a pull request. For the `comment_id`, provide the ID of the review comment you are replying to. This must be the ID of a _top-level review comment_, not a reply to that comment. Replies to replies are not supported.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -16647,11 +16642,11 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
-Pull request reviews created in the `PENDING` state do not include the `submitted_at` property in the response.
+    Pull request reviews created in the `PENDING` state do not include the `submitted_at` property in the response.
 
-**Note:** To comment on a specific line in a file, you need to first determine the _position_ of that line in the diff. The GitHub REST API v3 offers the `application/vnd.github.v3.diff` [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests). To see a pull request diff, add this media type to the `Accept` header of a call to the [single pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) endpoint.
+    **Note:** To comment on a specific line in a file, you need to first determine the _position_ of that line in the diff. The GitHub REST API v3 offers the `application/vnd.github.v3.diff` [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests). To see a pull request diff, add this media type to the `Accept` header of a call to the [single pull request](https://developer.github.com/v3/pulls/#get-a-pull-request) endpoint.
 
-The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+    The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
 
     
     #### Parameters
@@ -16747,19 +16742,19 @@ The `position` value equals the number of lines down from the first "@@" hunk he
 
     Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-Lists details of a pull request by providing its number.
+    Lists details of a pull request by providing its number.
 
-When you get, [create](https://developer.github.com/v3/pulls/#create-a-pull-request), or [edit](https://developer.github.com/v3/pulls/#update-a-pull-request) a pull request, GitHub creates a merge commit to test whether the pull request can be automatically merged into the base branch. This test commit is not added to the base branch or the head branch. You can review the status of the test commit using the `mergeable` key. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
+    When you get, [create](https://developer.github.com/v3/pulls/#create-a-pull-request), or [edit](https://developer.github.com/v3/pulls/#update-a-pull-request) a pull request, GitHub creates a merge commit to test whether the pull request can be automatically merged into the base branch. This test commit is not added to the base branch or the head branch. You can review the status of the test commit using the `mergeable` key. For more information, see "[Checking mergeability of pull requests](https://developer.github.com/v3/git/#checking-mergeability-of-pull-requests)".
 
-The value of the `mergeable` attribute can be `true`, `false`, or `null`. If the value is `null`, then GitHub has started a background job to compute the mergeability. After giving the job time to complete, resubmit the request. When the job finishes, you will see a non-`null` value for the `mergeable` attribute in the response. If `mergeable` is `true`, then `merge_commit_sha` will be the SHA of the _test_ merge commit.
+    The value of the `mergeable` attribute can be `true`, `false`, or `null`. If the value is `null`, then GitHub has started a background job to compute the mergeability. After giving the job time to complete, resubmit the request. When the job finishes, you will see a non-`null` value for the `mergeable` attribute in the response. If `mergeable` is `true`, then `merge_commit_sha` will be the SHA of the _test_ merge commit.
 
-The value of the `merge_commit_sha` attribute changes depending on the state of the pull request. Before merging a pull request, the `merge_commit_sha` attribute holds the SHA of the _test_ merge commit. After merging a pull request, the `merge_commit_sha` attribute changes depending on how you merged the pull request:
+    The value of the `merge_commit_sha` attribute changes depending on the state of the pull request. Before merging a pull request, the `merge_commit_sha` attribute holds the SHA of the _test_ merge commit. After merging a pull request, the `merge_commit_sha` attribute changes depending on how you merged the pull request:
 
-*   If merged as a [merge commit](https://help.github.com/articles/about-merge-methods-on-github/), `merge_commit_sha` represents the SHA of the merge commit.
-*   If merged via a [squash](https://help.github.com/articles/about-merge-methods-on-github/#squashing-your-merge-commits), `merge_commit_sha` represents the SHA of the squashed commit on the base branch.
-*   If [rebased](https://help.github.com/articles/about-merge-methods-on-github/#rebasing-and-merging-your-commits), `merge_commit_sha` represents the commit that the base branch was updated to.
+    *   If merged as a [merge commit](https://help.github.com/articles/about-merge-methods-on-github/), `merge_commit_sha` represents the SHA of the merge commit.
+    *   If merged via a [squash](https://help.github.com/articles/about-merge-methods-on-github/#squashing-your-merge-commits), `merge_commit_sha` represents the SHA of the squashed commit on the base branch.
+    *   If [rebased](https://help.github.com/articles/about-merge-methods-on-github/#rebasing-and-merging-your-commits), `merge_commit_sha` represents the commit that the base branch was updated to.
 
-Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+    Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
 
     
     #### Parameters
@@ -17317,7 +17312,7 @@ Pass the appropriate [media type](https://developer.github.com/v3/media/#commits
 
     Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-To open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.
+    To open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.
 
     
     #### Parameters
@@ -18566,11 +18561,11 @@ To open or update a pull request in a public repository, you must have write acc
 
     Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
 
-To open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.
+    To open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.
 
-You can create a new pull request.
+    You can create a new pull request.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -19357,23 +19352,23 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 === "POST Upload a release asset"
 
     This endpoint makes use of [a Hypermedia relation](https://developer.github.com/v3/#hypermedia) to determine which URL to access. The endpoint you call to upload release assets is specific to your release. Use the `upload_url` returned in
-the response of the [Create a release endpoint](https://developer.github.com/v3/repos/releases/#create-a-release) to upload a release asset.
+    the response of the [Create a release endpoint](https://developer.github.com/v3/repos/releases/#create-a-release) to upload a release asset.
 
-You need to use an HTTP client which supports [SNI](http://en.wikipedia.org/wiki/Server_Name_Indication) to make calls to this endpoint.
+    You need to use an HTTP client which supports [SNI](http://en.wikipedia.org/wiki/Server_Name_Indication) to make calls to this endpoint.
 
-Most libraries will set the required `Content-Length` header automatically. Use the required `Content-Type` header to provide the media type of the asset. For a list of media types, see [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). For example: 
+    Most libraries will set the required `Content-Length` header automatically. Use the required `Content-Type` header to provide the media type of the asset. For a list of media types, see [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml). For example: 
 
-`application/zip`
+    `application/zip`
 
-GitHub expects the asset data in its raw binary form, rather than JSON. You will send the raw binary content of the asset as the request body. Everything else about the endpoint is the same as the rest of the API. For example,
-you'll still need to pass your authentication to be able to upload an asset.
+    GitHub expects the asset data in its raw binary form, rather than JSON. You will send the raw binary content of the asset as the request body. Everything else about the endpoint is the same as the rest of the API. For example,
+    you'll still need to pass your authentication to be able to upload an asset.
 
-When an upstream failure occurs, you will receive a `502 Bad Gateway` status. This may leave an empty asset with a state of `starter`. It can be safely deleted.
+    When an upstream failure occurs, you will receive a `502 Bad Gateway` status. This may leave an empty asset with a state of `starter`. It can be safely deleted.
 
-**Notes:**
-*   GitHub renames asset filenames that have special characters, non-alphanumeric characters, and leading or trailing periods. The "[List assets for a release](https://developer.github.com/v3/repos/releases/#list-assets-for-a-release)"
-endpoint lists the renamed filenames. For more information and help, contact [GitHub Support](https://github.com/contact).
-*   If you upload an asset with the same filename as another uploaded asset, you'll receive an error and must delete the old file before you can re-upload the new asset.
+    **Notes:**
+    *   GitHub renames asset filenames that have special characters, non-alphanumeric characters, and leading or trailing periods. The "[List assets for a release](https://developer.github.com/v3/repos/releases/#list-assets-for-a-release)"
+    endpoint lists the renamed filenames. For more information and help, contact [GitHub Support](https://github.com/contact).
+    *   If you upload an asset with the same filename as another uploaded asset, you'll receive an error and must delete the old file before you can re-upload the new asset.
 
     
     #### Parameters
@@ -19679,7 +19674,7 @@ endpoint lists the renamed filenames. For more information and help, contact [Gi
 
     This returns a list of releases, which does not include regular Git tags that have not been associated with a release. To get a list of Git tags, use the [Repository Tags API](https://developer.github.com/v3/repos/#list-repository-tags).
 
-Information about published releases are available to everyone. Only users with push access will receive listings for draft releases.
+    Information about published releases are available to everyone. Only users with push access will receive listings for draft releases.
 
     
     #### Parameters
@@ -19783,7 +19778,7 @@ Information about published releases are available to everyone. Only users with 
 
     Users with push access to the repository can create a release.
 
-This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
+    This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
 
     
     #### Parameters
@@ -19896,7 +19891,7 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
 
     View the latest published full release for the repository.
 
-The latest release is the most recent non-prerelease, non-draft release, sorted by the `created_at` attribute. The `created_at` attribute is the date of the commit used for the release, and not the date when the release was drafted or published.
+    The latest release is the most recent non-prerelease, non-draft release, sorted by the `created_at` attribute. The `created_at` attribute is the date of the commit used for the release, and not the date when the release was drafted or published.
 
     
     #### Parameters
@@ -20164,12 +20159,12 @@ The latest release is the most recent non-prerelease, non-draft release, sorted 
 === "GET Get all contributor commit activity"
 
     
-Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
+    Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
 
-*   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
-*   `a` - Number of additions
-*   `d` - Number of deletions
-*   `c` - Number of commits
+    *   `w` - Start of the week, given as a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_time).
+    *   `a` - Number of additions
+    *   `d` - Number of deletions
+    *   `c` - Number of commits
 
     
     #### Parameters
@@ -20228,7 +20223,7 @@ Returns the `total` number of commits authored by the contributor. In addition, 
 
     Returns the total commit counts for the `owner` and total commit counts in `all`. `all` is everyone combined, including the `owner` in the last 52 weeks. If you'd like to get the commit counts for non-owners, you can subtract `owner` from `all`.
 
-The array order is oldest week (index 0) to most recent week.
+    The array order is oldest week (index 0) to most recent week.
 
     
     #### Parameters
@@ -20364,11 +20359,11 @@ The array order is oldest week (index 0) to most recent week.
 
     Each array contains the day number, hour number, and number of commits:
 
-*   `0-6`: Sunday - Saturday
-*   `0-23`: Hour of day
-*   Number of commits
+    *   `0-6`: Sunday - Saturday
+    *   `0-23`: Hour of day
+    *   Number of commits
 
-For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.
+    For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.
 
     
     #### Parameters
@@ -21003,7 +20998,7 @@ For example, `[2, 14, 25]` indicates that there were 25 total commits, during th
 
     When you pass the `scarlet-witch-preview` media type, requests to get a repository will also return the repository's code of conduct if it can be detected from the repository's code of conduct file.
 
-The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
+    The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
 
     
     #### Parameters
@@ -21846,8 +21841,8 @@ The `parent` and `source` objects are present when the repository is a fork. `pa
 
     Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
 
-If an organization owner has configured the organization to prevent members from deleting organization-owned
-repositories, you will get a `403 Forbidden` response.
+    If an organization owner has configured the organization to prevent members from deleting organization-owned
+    repositories, you will get a `403 Forbidden` response.
 
     
     #### Parameters
@@ -21874,37 +21869,37 @@ repositories, you will get a `403 Forbidden` response.
 
     Both `:base` and `:head` must be branch names in `:repo`. To compare branches across other repositories in the same network as `:repo`, use the format `<USERNAME>:branch`.
 
-The response from the API is equivalent to running the `git log base..head` command; however, commits are returned in chronological order. Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
+    The response from the API is equivalent to running the `git log base..head` command; however, commits are returned in chronological order. Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
 
-The response also includes details on the files that were changed between the two commits. This includes the status of the change (for example, if a file was added, removed, modified, or renamed), and details of the change itself. For example, files with a `renamed` status have a `previous_filename` field showing the previous filename of the file, and files with a `modified` status have a `patch` field showing the changes made to the file.
+    The response also includes details on the files that were changed between the two commits. This includes the status of the change (for example, if a file was added, removed, modified, or renamed), and details of the change itself. For example, files with a `renamed` status have a `previous_filename` field showing the previous filename of the file, and files with a `modified` status have a `patch` field showing the changes made to the file.
 
-**Working with large comparisons**
+    **Working with large comparisons**
 
-The response will include a comparison of up to 250 commits. If you are working with a larger commit range, you can use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) to enumerate all commits in the range.
+    The response will include a comparison of up to 250 commits. If you are working with a larger commit range, you can use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) to enumerate all commits in the range.
 
-For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long to generate. You can typically resolve this error by using a smaller commit range.
+    For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long to generate. You can typically resolve this error by using a smaller commit range.
 
-**Signature verification object**
+    **Signature verification object**
 
-The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+    The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
 
-These are the possible values for `reason` in the `verification` object:
+    These are the possible values for `reason` in the `verification` object:
 
-| Value                    | Description                                                                                                                       |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| `expired_key`            | The key that made the signature is expired.                                                                                       |
-| `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-| `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-| `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-| `unsigned`               | The object does not include a signature.                                                                                          |
-| `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-| `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-| `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-| `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-| `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-| `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-| `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-| `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    | Value                    | Description                                                                                                                       |
+    | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+    | `expired_key`            | The key that made the signature is expired.                                                                                       |
+    | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
+    | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
+    | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
+    | `unsigned`               | The object does not include a signature.                                                                                          |
+    | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
+    | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
+    | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
+    | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
+    | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
+    | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
+    | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
 
     
     #### Parameters
@@ -22191,7 +22186,7 @@ These are the possible values for `reason` in the `verification` object:
 
     Lists contributors to the specified repository and sorts them by the number of commits per contributor in descending order. This endpoint may return information that is a few hours old because the GitHub REST API v3 caches contributor data to improve performance.
 
-GitHub identifies contributors by author email address. This endpoint groups contribution counts by GitHub user, which includes all associated email addresses. To improve performance, only the first 500 author email addresses in the repository link to GitHub users. The rest will appear as anonymous contributors without associated GitHub user information.
+    GitHub identifies contributors by author email address. This endpoint groups contribution counts by GitHub user, which includes all associated email addresses. To improve performance, only the first 500 author email addresses in the repository link to GitHub users. The rest will appear as anonymous contributors without associated GitHub user information.
 
     
     #### Parameters
@@ -22243,11 +22238,11 @@ GitHub identifies contributors by author email address. This endpoint groups con
 
     You can use this endpoint to trigger a webhook event called `repository_dispatch` when you want activity that happens outside of GitHub to trigger a GitHub Actions workflow or GitHub App webhook. You must configure your GitHub Actions workflow or GitHub App to run when the `repository_dispatch` event occurs. For an example `repository_dispatch` webhook payload, see "[RepositoryDispatchEvent](https://developer.github.com/webhooks/event-payloads/#repository_dispatch)."
 
-The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow. For a test example, see the [input example](https://developer.github.com/v3/repos/#example-4).
+    The `client_payload` parameter is available for any extra information that your workflow might need. This parameter is a JSON payload that will be passed on when the webhook event is dispatched. For example, the `client_payload` can include a message that a user would like to send using a GitHub Actions workflow. Or the `client_payload` can be used as a test to debug your workflow. For a test example, see the [input example](https://developer.github.com/v3/repos/#example-4).
 
-To give you write access to the repository, you must use a personal access token with the `repo` scope. For more information, see "[Creating a personal access token for the command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
+    To give you write access to the repository, you must use a personal access token with the `repo` scope. For more information, see "[Creating a personal access token for the command line](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line)" in the GitHub Help documentation.
 
-This input example shows how you can use the `client_payload` as a test to debug your workflow.
+    This input example shows how you can use the `client_payload` as a test to debug your workflow.
 
     
     #### Parameters
@@ -23445,7 +23440,7 @@ This input example shows how you can use the `client_payload` as a test to debug
 
     Enables an authenticated GitHub App to find the repository's installation information. The installation's account type will be either an organization or a user account, depending which account the repository belongs to.
 
-You must use a [JWT](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
+    You must use a [JWT](https://developer.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app) to access this endpoint.
 
     
     #### Parameters
@@ -23542,7 +23537,7 @@ You must use a [JWT](https://developer.github.com/apps/building-github-apps/auth
 
     This method returns the contents of the repository's license file, if one is detected.
 
-Similar to [Get repository content](https://developer.github.com/v3/repos/contents/#get-repository-content), this method also supports [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw license content or rendered license HTML.
+    Similar to [Get repository content](https://developer.github.com/v3/repos/contents/#get-repository-content), this method also supports [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw license content or rendered license HTML.
 
     
     #### Parameters
@@ -23722,7 +23717,7 @@ Similar to [Get repository content](https://developer.github.com/v3/repos/conten
 
     Gets the preferred README for a repository.
 
-READMEs support [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw content or rendered HTML.
+    READMEs support [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw content or rendered HTML.
 
     
     #### Parameters
@@ -23767,7 +23762,7 @@ READMEs support [custom media types](https://developer.github.com/v3/repos/conte
 
     Lists the people that have starred the repository.
 
-You can also find out _when_ stars were created by passing the following custom [media type](https://developer.github.com/v3/media/) via the `Accept` header:
+    You can also find out _when_ stars were created by passing the following custom [media type](https://developer.github.com/v3/media/) via the `Accept` header:
 
     
     #### Parameters
@@ -23817,7 +23812,7 @@ You can also find out _when_ stars were created by passing the following custom 
 
     Users with push access in a repository can create commit statuses for a given SHA.
 
-Note: there is a limit of 1000 statuses per `sha` and `context` within a repository. Attempts to create more than 1000 statuses will result in a validation error.
+    Note: there is a limit of 1000 statuses per `sha` and `context` within a repository. Attempts to create more than 1000 statuses will result in a validation error.
 
     
     #### Parameters
@@ -23972,9 +23967,9 @@ Note: there is a limit of 1000 statuses per `sha` and `context` within a reposit
 === "GET Download a repository archive (tar)"
 
     Gets a redirect URL to download a tar archive for a repository. If you omit `:ref`, the repository’s default branch (usually
-`master`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
-the `Location` header to make a second `GET` request.
-**Note**: For private repositories, these links are temporary and expire after five minutes.
+    `master`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
+    the `Location` header to make a second `GET` request.
+    **Note**: For private repositories, these links are temporary and expire after five minutes.
 
     
     #### Parameters
@@ -24080,9 +24075,9 @@ the `Location` header to make a second `GET` request.
 === "GET Download a repository archive (zip)"
 
     Gets a redirect URL to download a zip archive for a repository. If you omit `:ref`, the repository’s default branch (usually
-`master`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
-the `Location` header to make a second `GET` request.
-**Note**: For private repositories, these links are temporary and expire after five minutes.
+    `master`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use
+    the `Location` header to make a second `GET` request.
+    **Note**: For private repositories, these links are temporary and expire after five minutes.
 
     
     #### Parameters
@@ -24110,12 +24105,12 @@ the `Location` header to make a second `GET` request.
 
     Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. The authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://developer.github.com/v3/repos/#get-a-repository) endpoint and check that the `is_template` key is `true`.
 
-**OAuth scope requirements**
+    **OAuth scope requirements**
 
-When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
+    When using [OAuth](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/), authorizations must include:
 
-*   `public_repo` scope or `repo` scope to create a public repository
-*   `repo` scope to create a private repository
+    *   `public_repo` scope or `repo` scope to create a public repository
+    *   `repo` scope to create a private repository
 
     
     #### Parameters

@@ -15,7 +15,7 @@ def extract_parameters(request_url):
             'name': q.get('key'),
             'type': 'string', # Postman default to string for query
             'required': True if q.get('disabled') is not True else False,
-            'description': q.get('description', 'No description.'),
+            'description': q.get('description', 'No description.').replace('\n', '<br>').replace('\r', ''),
             'example': q.get('value', '')
         })
         
@@ -25,7 +25,7 @@ def extract_parameters(request_url):
             'name': f":{v.get('key')}",
             'type': 'string',
             'required': True, # Path variables are typically required
-            'description': v.get('description', 'No description.'),
+            'description': v.get('description', 'No description.').replace('\n', '<br>').replace('\r', ''),
             'example': v.get('value', '')
         })
         

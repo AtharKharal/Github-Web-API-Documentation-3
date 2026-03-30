@@ -1,7 +1,7 @@
 {% for item in items %}
 === "{{ item.method }} {{ item.name }}"
 
-    {{ item.description }}
+    {{ item.description | indent(4, False) }}
 
     {% if item.parameters %}
     #### Parameters
@@ -28,7 +28,7 @@
 
     {% if item.notes %}
     > [!NOTE]
-    > {{ item.notes }}
+    > {{ item.notes | indent(4, False) }}
     {% endif %}
 
 {% endfor %}
