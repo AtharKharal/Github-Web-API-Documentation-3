@@ -1,0 +1,34 @@
+{% for item in items %}
+=== "{{ item.method }} {{ item.name }}"
+
+    {{ item.description }}
+
+    {% if item.parameters %}
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    {% for param in item.parameters %}| `{{ param.name }}` | `{{ param.type }}` | {{ "Yes" if param.required else "No" }} | {{ param.description }} | `{{ param.example }}` |
+    {% endfor %}
+    {% endif %}
+
+    {% if item.request_body %}
+    #### Request Body
+    
+    ```json
+    {{ item.request_body | tojson(indent=2) }}
+    ```
+    {% endif %}
+
+    #### Response Example
+    
+    ```json
+    {{ item.response_body | tojson(indent=2) }}
+    ```
+
+    {% if item.notes %}
+    > [!NOTE]
+    > {{ item.notes }}
+    {% endif %}
+
+{% endfor %}

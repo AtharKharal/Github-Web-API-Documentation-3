@@ -1,0 +1,61 @@
+site_name: GitHub Docs Swarm
+site_description: Authoritative, developer-focused documentation for GitHub API.
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Welcome: index.md
+  - API Reference:
+      - Apps: api-reference/app.md
+      - Applications: api-reference/applications.md
+      - Authorizations: api-reference/authorizations.md
+      - Codes of Conduct: api-reference/codes-of-conduct.md
+      - Gists: api-reference/gists.md
+      - Gitignore Templates: api-reference/gitignore-templates.md
+      - Installation: api-reference/installation.md
+      - Licenses: api-reference/licenses.md
+      - Marketplace: api-reference/marketplace-listing.md
+      - Notifications: api-reference/notifications.md
+      - Organizations: api-reference/orgs-org.md
+      - Projects: api-reference/projects.md
+      - Repositories: api-reference/repos.md
+      - Search: api-reference/search.md
+      - Teams: api-reference/teams-team-id.md
+      - User: api-reference/user.md
+      - Users: api-reference/users.md
+      - System:
+          - Markdown: api-reference/markdown.md
+          - Billing: api-reference/enterprises-enterprise-id-settings-billing.md
+          - SCIM: api-reference/scim-v2-organizations-org-users.md

@@ -1,0 +1,431 @@
+# scim/v2/organizations/{org}/Users API
+
+
+=== "GET Get SCIM provisioning information for a user"
+
+    No description.
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    | `:scim_user_id` | `string` | Yes | (Required) scim_user_id parameter | `<string>` |
+    
+    
+
+    
+
+    #### Response Example
+    
+    ```json
+    {
+  "active": true,
+  "displayName": "Monalisa Octocat",
+  "emails": [
+    {
+      "primary": true,
+      "value": "mona.octocat@okta.example.com"
+    },
+    {
+      "value": "monalisa@octocat.github.com"
+    }
+  ],
+  "externalId": "a7d0f98382",
+  "id": "edefdfedf-050c-11e7-8d32",
+  "meta": {
+    "created": "2017-03-09T16:11:13-05:00",
+    "lastModified": "2017-03-09T16:11:13-05:00",
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
+    "resourceType": "User"
+  },
+  "name": {
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat",
+    "givenName": "Monalisa"
+  },
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "userName": "mona.octocat@okta.example.com"
+}
+    ```
+
+    
+
+
+=== "PUT Update a provisioned organization membership"
+
+    Replaces an existing provisioned user's information. You must provide all the information required for the user as if you were provisioning them for the first time. Any existing user information that you don't provide will be removed. If you want to only update a specific attribute, use the [Update an attribute for a SCIM user](https://developer.github.com/v3/scim/#update-an-attribute-for-a-scim-user) endpoint instead.
+
+You must at least provide the required values for the user: `userName`, `name`, and `emails`.
+
+**Warning:** Setting `active: false` removes the user from the organization, deletes the external identity, and deletes the associated `{scim_user_id}`.
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    | `:scim_user_id` | `string` | Yes | (Required) scim_user_id parameter | `<string>` |
+    
+    
+
+    
+    #### Request Body
+    
+    ```json
+    {
+  "active": "\u003cboolean\u003e",
+  "displayName": "\u003cstring\u003e",
+  "emails": [
+    {
+      "primary": "\u003cboolean\u003e",
+      "type": "\u003cstring\u003e",
+      "value": "\u003cstring\u003e"
+    }
+  ],
+  "externalId": "\u003cstring\u003e",
+  "groups": [
+    "\u003cstring\u003e",
+    "\u003cstring\u003e"
+  ],
+  "name": {
+    "familyName": "\u003cstring\u003e",
+    "formatted": "\u003cstring\u003e",
+    "givenName": "\u003cstring\u003e"
+  },
+  "schemas": [
+    "\u003cstring\u003e",
+    "\u003cstring\u003e"
+  ],
+  "userName": "\u003cstring\u003e"
+}
+    ```
+    
+
+    #### Response Example
+    
+    ```json
+    {
+  "active": true,
+  "displayName": "Monalisa Octocat",
+  "emails": [
+    {
+      "primary": true,
+      "value": "mona.octocat@okta.example.com"
+    },
+    {
+      "value": "monalisa@octocat.github.com"
+    }
+  ],
+  "externalId": "a7d0f98382",
+  "id": "edefdfedf-050c-11e7-8d32",
+  "meta": {
+    "created": "2017-03-09T16:11:13-05:00",
+    "lastModified": "2017-03-09T16:11:13-05:00",
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
+    "resourceType": "User"
+  },
+  "name": {
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat",
+    "givenName": "Monalisa"
+  },
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "userName": "mona.octocat@okta.example.com"
+}
+    ```
+
+    
+
+
+=== "PATCH Update an attribute for a SCIM user"
+
+    Allows you to change a provisioned user's individual attributes. To change a user's values, you must provide a specific `Operations` JSON format that contains at least one of the `add`, `remove`, or `replace` operations. For examples and more information on the SCIM operations format, see the [SCIM specification](https://tools.ietf.org/html/rfc7644#section-3.5.2).
+
+**Note:** Complicated SCIM `path` selectors that include filters are not supported. For example, a `path` selector defined as `"path": "emails[type eq \"work\"]"` will not work.
+
+**Warning:** If you set `active:false` using the `replace` operation (as shown in the JSON example below), it removes the user from the organization, deletes the external identity, and deletes the associated `:scim_user_id`.
+
+```
+{
+  "Operations":[{
+    "op":"replace",
+    "value":{
+      "active":false
+    }
+  }]
+}
+```
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    | `:scim_user_id` | `string` | Yes | (Required) scim_user_id parameter | `<string>` |
+    
+    
+
+    
+    #### Request Body
+    
+    ```json
+    {
+  "Operations": [
+    {
+      "op": "\u003cstring\u003e",
+      "path": "\u003cstring\u003e",
+      "value": {
+        "active": "\u003cboolean\u003e",
+        "externalId": "\u003cstring\u003e",
+        "familyName": "\u003cstring\u003e",
+        "givenName": "\u003cstring\u003e",
+        "userName": "\u003cstring\u003e"
+      }
+    }
+  ],
+  "schemas": [
+    "\u003cstring\u003e",
+    "\u003cstring\u003e"
+  ]
+}
+    ```
+    
+
+    #### Response Example
+    
+    ```json
+    {
+  "active": true,
+  "displayName": "Monalisa Octocat",
+  "emails": [
+    {
+      "primary": true,
+      "value": "mona.octocat@okta.example.com"
+    },
+    {
+      "value": "monalisa@octocat.github.com"
+    }
+  ],
+  "externalId": "a7d0f98382",
+  "id": "edefdfedf-050c-11e7-8d32",
+  "meta": {
+    "created": "2017-03-09T16:11:13-05:00",
+    "lastModified": "2017-03-09T16:11:13-05:00",
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
+    "resourceType": "User"
+  },
+  "name": {
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat",
+    "givenName": "Monalisa"
+  },
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "userName": "mona.octocat@okta.example.com"
+}
+    ```
+
+    
+
+
+=== "DELETE Delete a SCIM user from an organization"
+
+    No description.
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    | `:scim_user_id` | `string` | Yes | (Required) scim_user_id parameter | `<string>` |
+    
+    
+
+    
+
+    #### Response Example
+    
+    ```json
+    {}
+    ```
+
+    
+
+
+=== "GET List SCIM provisioned identities"
+
+    Retrieves a paginated list of all provisioned organization members, including pending invitations. If you provide the `filter` parameter, the resources for all matching provisions members are returned.
+
+When a user with a SAML-provisioned external identity leaves (or is removed from) an organization, the account's metadata is immediately removed. However, the returned list of user accounts might not always match the organization or enterprise member list you see on GitHub. This can happen in certain cases where an external identity associated with an organization will not match an organization member:
+  - When a user with a SCIM-provisioned external identity is removed from an organization, the account's metadata is preserved to allow the user to re-join the organization in the future.
+  - When inviting a user to join an organization, you can expect to see their external identity in the results before they accept the invitation, or if the invitation is cancelled (or never accepted).
+  - When a user is invited over SCIM, an external identity is created that matches with the invitee's email address. However, this identity is only linked to a user account when the user accepts the invitation by going through SAML SSO.
+
+The returned list of external identities can include an entry for a `null` user. These are unlinked SAML identities that are created when a user goes through the following Single Sign-On (SSO) process but does not sign in to their GitHub account after completing SSO:
+
+1. The user is granted access by the IdP and is not a member of the GitHub organization.
+
+1. The user attempts to access the GitHub organization and initiates the SAML SSO process, and is not currently signed in to their GitHub account.
+
+1. After successfully authenticating with the SAML SSO IdP, the `null` external identity entry is created and the user is prompted to sign in to their GitHub account:
+   - If the user signs in, their GitHub account is linked to this entry.
+   - If the user does not sign in (or does not create a new account when prompted), they are not added to the GitHub organization, and the external identity `null` entry remains in place.
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `startIndex` | `string` | Yes | Used for pagination: the index of the first result to return. | `<integer>` |
+    | `count` | `string` | Yes | Used for pagination: the number of results to return. | `<integer>` |
+    | `filter` | `string` | Yes | Filters results using the equals query parameter operator (`eq`). You can filter results that are equal to `id`, `userName`, `emails`, and `external_id`. For example, to search for an identity with the `userName` Octocat, you would use this query:
+
+`?filter=userName%20eq%20\"Octocat\"`.
+
+To filter results for for the identity with the email `octocat@github.com`, you would use this query:
+
+`?filter=emails%20eq%20\"octocat@github.com\"`. | `<string>` |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    
+    
+
+    
+
+    #### Response Example
+    
+    ```json
+    {
+  "Resources": [
+    {
+      "active": true,
+      "displayName": "Mona Octocat",
+      "emails": [
+        {
+          "primary": true,
+          "value": "octocat@github.com"
+        }
+      ],
+      "externalId": "00u1dhhb1fkIGP7RL1d8",
+      "id": "5fc0c238-1112-11e8-8e45-920c87bdbd75",
+      "meta": {
+        "created": "2018-02-13T15:05:24.000-08:00",
+        "lastModified": "2018-02-13T15:05:55.000-08:00",
+        "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/5fc0c238-1112-11e8-8e45-920c87bdbd75",
+        "resourceType": "User"
+      },
+      "name": {
+        "familyName": "Octocat",
+        "formatted": "Mona Octocat",
+        "givenName": "Mona"
+      },
+      "schemas": [
+        "urn:ietf:params:scim:schemas:core:2.0:User"
+      ],
+      "userName": "octocat@github.com"
+    }
+  ],
+  "itemsPerPage": 1,
+  "schemas": [
+    "urn:ietf:params:scim:api:messages:2.0:ListResponse"
+  ],
+  "startIndex": 1,
+  "totalResults": 1
+}
+    ```
+
+    
+
+
+=== "POST Provision and invite a SCIM user"
+
+    Provision organization membership for a user, and send an activation email to the email address.
+
+    
+    #### Parameters
+
+    | Parameter | Type | Required | Description | Example |
+    | --- | --- | --- | --- | --- |
+    | `:org` | `string` | Yes | (Required)  | `<string>` |
+    
+    
+
+    
+    #### Request Body
+    
+    ```json
+    {
+  "active": "\u003cboolean\u003e",
+  "displayName": "\u003cstring\u003e",
+  "emails": [
+    {
+      "primary": "\u003cboolean\u003e",
+      "type": "\u003cstring\u003e",
+      "value": "\u003cstring\u003e"
+    }
+  ],
+  "externalId": "\u003cstring\u003e",
+  "groups": [
+    "\u003cstring\u003e",
+    "\u003cstring\u003e"
+  ],
+  "name": {
+    "familyName": "\u003cstring\u003e",
+    "formatted": "\u003cstring\u003e",
+    "givenName": "\u003cstring\u003e"
+  },
+  "schemas": [
+    "\u003cstring\u003e",
+    "\u003cstring\u003e"
+  ],
+  "userName": "\u003cstring\u003e"
+}
+    ```
+    
+
+    #### Response Example
+    
+    ```json
+    {
+  "active": true,
+  "displayName": "Monalisa Octocat",
+  "emails": [
+    {
+      "primary": true,
+      "value": "mona.octocat@okta.example.com"
+    },
+    {
+      "value": "monalisa@octocat.github.com"
+    }
+  ],
+  "externalId": "a7d0f98382",
+  "id": "edefdfedf-050c-11e7-8d32",
+  "meta": {
+    "created": "2017-03-09T16:11:13-05:00",
+    "lastModified": "2017-03-09T16:11:13-05:00",
+    "location": "https://api.github.com/scim/v2/organizations/octo-org/Users/edefdfedf-050c-11e7-8d32",
+    "resourceType": "User"
+  },
+  "name": {
+    "familyName": "Octocat",
+    "formatted": "Monalisa Octocat",
+    "givenName": "Monalisa"
+  },
+  "schemas": [
+    "urn:ietf:params:scim:schemas:core:2.0:User"
+  ],
+  "userName": "mona.octocat@okta.example.com"
+}
+    ```
+
+    
+
