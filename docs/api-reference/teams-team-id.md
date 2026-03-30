@@ -27,33 +27,33 @@ List the reactions to a [team discussion comment](https://developer.github.com/v
     
     ```json
     [
-  {
-    "id": 1,
-    "node_id": "MDg6UmVhY3Rpb24x",
-    "user": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "content": "heart",
-    "created_at": "2016-05-20T20:09:31Z"
-  }
-]
+      {
+        "id": 1,
+        "node_id": "MDg6UmVhY3Rpb24x",
+        "user": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content": "heart",
+        "created_at": "2016-05-20T20:09:31Z"
+      }
+    ]
     ```
 
     
@@ -81,8 +81,8 @@ Create a reaction to a [team discussion comment](https://developer.github.com/v3
     
     ```json
     {
-  "content": "<string>"
-}
+      "content": "<string>"
+    }
     ```
     
 
@@ -90,31 +90,31 @@ Create a reaction to a [team discussion comment](https://developer.github.com/v3
     
     ```json
     {
-  "id": 1,
-  "node_id": "MDg6UmVhY3Rpb24x",
-  "user": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "content": "heart",
-  "created_at": "2016-05-20T20:09:31Z"
-}
+      "id": 1,
+      "node_id": "MDg6UmVhY3Rpb24x",
+      "user": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "content": "heart",
+      "created_at": "2016-05-20T20:09:31Z"
+    }
     ```
 
     
@@ -143,50 +143,50 @@ Get a specific comment on a team discussion. OAuth access tokens require the `re
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Do you like apples?",
-  "body_html": "<p>Do you like apples?</p>",
-  "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
-  "created_at": "2018-01-15T23:53:58Z",
-  "last_edited_at": null,
-  "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
-  "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
-  "number": 1,
-  "updated_at": "2018-01-15T23:53:58Z",
-  "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Do you like apples?",
+      "body_html": "<p>Do you like apples?</p>",
+      "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
+      "created_at": "2018-01-15T23:53:58Z",
+      "last_edited_at": null,
+      "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
+      "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
+      "number": 1,
+      "updated_at": "2018-01-15T23:53:58Z",
+      "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -214,8 +214,8 @@ Edits the body text of a discussion comment. OAuth access tokens require the `wr
     
     ```json
     {
-  "body": "<string>"
-}
+      "body": "<string>"
+    }
     ```
     
 
@@ -223,50 +223,50 @@ Edits the body text of a discussion comment. OAuth access tokens require the `wr
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Do you like pineapples?",
-  "body_html": "<p>Do you like pineapples?</p>",
-  "body_version": "e6907b24d9c93cc0c5024a7af5888116",
-  "created_at": "2018-01-15T23:53:58Z",
-  "last_edited_at": "2018-01-26T18:22:20Z",
-  "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
-  "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
-  "number": 1,
-  "updated_at": "2018-01-26T18:22:20Z",
-  "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Do you like pineapples?",
+      "body_html": "<p>Do you like pineapples?</p>",
+      "body_version": "e6907b24d9c93cc0c5024a7af5888116",
+      "created_at": "2018-01-15T23:53:58Z",
+      "last_edited_at": "2018-01-26T18:22:20Z",
+      "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
+      "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
+      "number": 1,
+      "updated_at": "2018-01-26T18:22:20Z",
+      "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -325,52 +325,52 @@ List all comments on a team discussion. OAuth access tokens require the `read:di
     
     ```json
     [
-  {
-    "author": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "body": "Do you like apples?",
-    "body_html": "<p>Do you like apples?</p>",
-    "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
-    "created_at": "2018-01-15T23:53:58Z",
-    "last_edited_at": null,
-    "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
-    "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
-    "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
-    "number": 1,
-    "updated_at": "2018-01-15T23:53:58Z",
-    "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
-    "reactions": {
-      "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
-      "total_count": 5,
-      "+1": 3,
-      "-1": 1,
-      "laugh": 0,
-      "confused": 0,
-      "heart": 1,
-      "hooray": 0,
-      "eyes": 1,
-      "rocket": 1
-    }
-  }
-]
+      {
+        "author": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Do you like apples?",
+        "body_html": "<p>Do you like apples?</p>",
+        "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
+        "created_at": "2018-01-15T23:53:58Z",
+        "last_edited_at": null,
+        "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
+        "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
+        "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
+        "number": 1,
+        "updated_at": "2018-01-15T23:53:58Z",
+        "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
+        "reactions": {
+          "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
+          "total_count": 5,
+          "+1": 3,
+          "-1": 1,
+          "laugh": 0,
+          "confused": 0,
+          "heart": 1,
+          "hooray": 0,
+          "eyes": 1,
+          "rocket": 1
+        }
+      }
+    ]
     ```
 
     
@@ -399,8 +399,8 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
     
     ```json
     {
-  "body": "<string>"
-}
+      "body": "<string>"
+    }
     ```
     
 
@@ -408,50 +408,50 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Do you like apples?",
-  "body_html": "<p>Do you like apples?</p>",
-  "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
-  "created_at": "2018-01-15T23:53:58Z",
-  "last_edited_at": null,
-  "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
-  "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
-  "number": 1,
-  "updated_at": "2018-01-15T23:53:58Z",
-  "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Do you like apples?",
+      "body_html": "<p>Do you like apples?</p>",
+      "body_version": "5eb32b219cdc6a5a9b29ba5d6caa9c51",
+      "created_at": "2018-01-15T23:53:58Z",
+      "last_edited_at": null,
+      "discussion_url": "https://api.github.com/teams/2403582/discussions/1",
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1/comments/1",
+      "node_id": "MDIxOlRlYW1EaXNjdXNzaW9uQ29tbWVudDE=",
+      "number": 1,
+      "updated_at": "2018-01-15T23:53:58Z",
+      "url": "https://api.github.com/teams/2403582/discussions/1/comments/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2403582/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -482,33 +482,33 @@ List the reactions to a [team discussion](https://developer.github.com/v3/teams/
     
     ```json
     [
-  {
-    "id": 1,
-    "node_id": "MDg6UmVhY3Rpb24x",
-    "user": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "content": "heart",
-    "created_at": "2016-05-20T20:09:31Z"
-  }
-]
+      {
+        "id": 1,
+        "node_id": "MDg6UmVhY3Rpb24x",
+        "user": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "content": "heart",
+        "created_at": "2016-05-20T20:09:31Z"
+      }
+    ]
     ```
 
     
@@ -535,8 +535,8 @@ Create a reaction to a [team discussion](https://developer.github.com/v3/teams/d
     
     ```json
     {
-  "content": "<string>"
-}
+      "content": "<string>"
+    }
     ```
     
 
@@ -544,31 +544,31 @@ Create a reaction to a [team discussion](https://developer.github.com/v3/teams/d
     
     ```json
     {
-  "id": 1,
-  "node_id": "MDg6UmVhY3Rpb24x",
-  "user": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "content": "heart",
-  "created_at": "2016-05-20T20:09:31Z"
-}
+      "id": 1,
+      "node_id": "MDg6UmVhY3Rpb24x",
+      "user": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "content": "heart",
+      "created_at": "2016-05-20T20:09:31Z"
+    }
     ```
 
     
@@ -596,55 +596,55 @@ Get a specific discussion on a team's page. OAuth access tokens require the `rea
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Hi! This is an area for us to collaborate as a team.",
-  "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
-  "body_version": "0d495416a700fb06133c612575d92bfb",
-  "comments_count": 0,
-  "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
-  "created_at": "2018-01-25T18:56:31Z",
-  "last_edited_at": null,
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
-  "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
-  "number": 1,
-  "pinned": false,
-  "private": false,
-  "team_url": "https://api.github.com/teams/2343027",
-  "title": "Our first team post",
-  "updated_at": "2018-01-25T18:56:31Z",
-  "url": "https://api.github.com/teams/2343027/discussions/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Hi! This is an area for us to collaborate as a team.",
+      "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
+      "body_version": "0d495416a700fb06133c612575d92bfb",
+      "comments_count": 0,
+      "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
+      "created_at": "2018-01-25T18:56:31Z",
+      "last_edited_at": null,
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
+      "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
+      "number": 1,
+      "pinned": false,
+      "private": false,
+      "team_url": "https://api.github.com/teams/2343027",
+      "title": "Our first team post",
+      "updated_at": "2018-01-25T18:56:31Z",
+      "url": "https://api.github.com/teams/2343027/discussions/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -671,9 +671,9 @@ Edits the title and body text of a discussion post. Only the parameters you prov
     
     ```json
     {
-  "title": "<string>",
-  "body": "<string>"
-}
+      "title": "<string>",
+      "body": "<string>"
+    }
     ```
     
 
@@ -681,55 +681,55 @@ Edits the title and body text of a discussion post. Only the parameters you prov
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Hi! This is an area for us to collaborate as a team.",
-  "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
-  "body_version": "0d495416a700fb06133c612575d92bfb",
-  "comments_count": 1,
-  "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
-  "created_at": "2018-01-25T18:56:31Z",
-  "last_edited_at": "2018-01-26T18:22:20Z",
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
-  "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
-  "number": 1,
-  "pinned": false,
-  "private": false,
-  "team_url": "https://api.github.com/teams/2343027",
-  "title": "Welcome to our first team post",
-  "updated_at": "2018-01-26T18:22:20Z",
-  "url": "https://api.github.com/teams/2343027/discussions/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Hi! This is an area for us to collaborate as a team.",
+      "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
+      "body_version": "0d495416a700fb06133c612575d92bfb",
+      "comments_count": 1,
+      "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
+      "created_at": "2018-01-25T18:56:31Z",
+      "last_edited_at": "2018-01-26T18:22:20Z",
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
+      "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
+      "number": 1,
+      "pinned": false,
+      "private": false,
+      "team_url": "https://api.github.com/teams/2343027",
+      "title": "Welcome to our first team post",
+      "updated_at": "2018-01-26T18:22:20Z",
+      "url": "https://api.github.com/teams/2343027/discussions/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -786,57 +786,57 @@ List all discussions on a team's page. OAuth access tokens require the `read:dis
     
     ```json
     [
-  {
-    "author": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "body": "Hi! This is an area for us to collaborate as a team.",
-    "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
-    "body_version": "0d495416a700fb06133c612575d92bfb",
-    "comments_count": 0,
-    "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
-    "created_at": "2018-01-25T18:56:31Z",
-    "last_edited_at": null,
-    "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
-    "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
-    "number": 1,
-    "pinned": false,
-    "private": false,
-    "team_url": "https://api.github.com/teams/2343027",
-    "title": "Our first team post",
-    "updated_at": "2018-01-25T18:56:31Z",
-    "url": "https://api.github.com/teams/2343027/discussions/1",
-    "reactions": {
-      "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
-      "total_count": 5,
-      "+1": 3,
-      "-1": 1,
-      "laugh": 0,
-      "confused": 0,
-      "heart": 1,
-      "hooray": 0,
-      "eyes": 1,
-      "rocket": 1
-    }
-  }
-]
+      {
+        "author": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Hi! This is an area for us to collaborate as a team.",
+        "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
+        "body_version": "0d495416a700fb06133c612575d92bfb",
+        "comments_count": 0,
+        "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
+        "created_at": "2018-01-25T18:56:31Z",
+        "last_edited_at": null,
+        "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
+        "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
+        "number": 1,
+        "pinned": false,
+        "private": false,
+        "team_url": "https://api.github.com/teams/2343027",
+        "title": "Our first team post",
+        "updated_at": "2018-01-25T18:56:31Z",
+        "url": "https://api.github.com/teams/2343027/discussions/1",
+        "reactions": {
+          "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
+          "total_count": 5,
+          "+1": 3,
+          "-1": 1,
+          "laugh": 0,
+          "confused": 0,
+          "heart": 1,
+          "hooray": 0,
+          "eyes": 1,
+          "rocket": 1
+        }
+      }
+    ]
     ```
 
     
@@ -864,10 +864,10 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
     
     ```json
     {
-  "title": "<string>",
-  "body": "<string>",
-  "private": false
-}
+      "title": "<string>",
+      "body": "<string>",
+      "private": false
+    }
     ```
     
 
@@ -875,55 +875,55 @@ This endpoint triggers [notifications](https://help.github.com/articles/about-no
     
     ```json
     {
-  "author": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "body": "Hi! This is an area for us to collaborate as a team.",
-  "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
-  "body_version": "0d495416a700fb06133c612575d92bfb",
-  "comments_count": 0,
-  "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
-  "created_at": "2018-01-25T18:56:31Z",
-  "last_edited_at": null,
-  "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
-  "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
-  "number": 1,
-  "pinned": false,
-  "private": false,
-  "team_url": "https://api.github.com/teams/2343027",
-  "title": "Our first team post",
-  "updated_at": "2018-01-25T18:56:31Z",
-  "url": "https://api.github.com/teams/2343027/discussions/1",
-  "reactions": {
-    "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
-    "total_count": 5,
-    "+1": 3,
-    "-1": 1,
-    "laugh": 0,
-    "confused": 0,
-    "heart": 1,
-    "hooray": 0,
-    "eyes": 1,
-    "rocket": 1
-  }
-}
+      "author": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "body": "Hi! This is an area for us to collaborate as a team.",
+      "body_html": "<p>Hi! This is an area for us to collaborate as a team</p>",
+      "body_version": "0d495416a700fb06133c612575d92bfb",
+      "comments_count": 0,
+      "comments_url": "https://api.github.com/teams/2343027/discussions/1/comments",
+      "created_at": "2018-01-25T18:56:31Z",
+      "last_edited_at": null,
+      "html_url": "https://github.com/orgs/github/teams/justice-league/discussions/1",
+      "node_id": "MDE0OlRlYW1EaXNjdXNzaW9uMQ==",
+      "number": 1,
+      "pinned": false,
+      "private": false,
+      "team_url": "https://api.github.com/teams/2343027",
+      "title": "Our first team post",
+      "updated_at": "2018-01-25T18:56:31Z",
+      "url": "https://api.github.com/teams/2343027/discussions/1",
+      "reactions": {
+        "url": "https://api.github.com/teams/2343027/discussions/1/reactions",
+        "total_count": 5,
+        "+1": 3,
+        "-1": 1,
+        "laugh": 0,
+        "confused": 0,
+        "heart": 1,
+        "hooray": 0,
+        "eyes": 1,
+        "rocket": 1
+      }
+    }
     ```
 
     
@@ -1053,27 +1053,27 @@ Team members will include the members of child teams.
     
     ```json
     [
-  {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  }
-]
+      {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ]
     ```
 
     
@@ -1105,10 +1105,10 @@ To get a user's membership with a team, the team must be visible to the authenti
     
     ```json
     {
-  "url": "https://api.github.com/teams/1/memberships/octocat",
-  "role": "member",
-  "state": "active"
-}
+      "url": "https://api.github.com/teams/1/memberships/octocat",
+      "role": "member",
+      "state": "active"
+    }
     ```
 
     
@@ -1143,8 +1143,8 @@ If the user is already a member of the team, this endpoint will update the role 
     
     ```json
     {
-  "role": "member"
-}
+      "role": "member"
+    }
     ```
     
 
@@ -1152,10 +1152,10 @@ If the user is already a member of the team, this endpoint will update the role 
     
     ```json
     {
-  "url": "https://api.github.com/teams/1/memberships/octocat",
-  "role": "member",
-  "state": "active"
-}
+      "url": "https://api.github.com/teams/1/memberships/octocat",
+      "role": "member",
+      "state": "active"
+    }
     ```
 
     
@@ -1214,46 +1214,46 @@ Checks whether a team has `read`, `write`, or `admin` permissions for an organiz
     
     ```json
     {
-  "owner_url": "https://api.github.com/orgs/octocat",
-  "url": "https://api.github.com/projects/1002605",
-  "html_url": "https://github.com/orgs/api-playground/projects/1",
-  "columns_url": "https://api.github.com/projects/1002605/columns",
-  "id": 1002605,
-  "node_id": "MDc6UHJvamVjdDEwMDI2MDU=",
-  "name": "Organization Roadmap",
-  "body": "High-level roadmap for the upcoming year.",
-  "number": 1,
-  "state": "open",
-  "creator": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "created_at": "2011-04-11T20:09:31Z",
-  "updated_at": "2014-03-04T18:58:10Z",
-  "organization_permission": "write",
-  "private": false,
-  "permissions": {
-    "read": true,
-    "write": true,
-    "admin": false
-  }
-}
+      "owner_url": "https://api.github.com/orgs/octocat",
+      "url": "https://api.github.com/projects/1002605",
+      "html_url": "https://github.com/orgs/api-playground/projects/1",
+      "columns_url": "https://api.github.com/projects/1002605/columns",
+      "id": 1002605,
+      "node_id": "MDc6UHJvamVjdDEwMDI2MDU=",
+      "name": "Organization Roadmap",
+      "body": "High-level roadmap for the upcoming year.",
+      "number": 1,
+      "state": "open",
+      "creator": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "created_at": "2011-04-11T20:09:31Z",
+      "updated_at": "2014-03-04T18:58:10Z",
+      "organization_permission": "write",
+      "private": false,
+      "permissions": {
+        "read": true,
+        "write": true,
+        "admin": false
+      }
+    }
     ```
 
     
@@ -1280,8 +1280,8 @@ Adds an organization project to a team. To add a project to a team or update the
     
     ```json
     {
-  "permission": "<string>"
-}
+      "permission": "<string>"
+    }
     ```
     
 
@@ -1344,48 +1344,48 @@ Lists the organization projects for a team.
     
     ```json
     [
-  {
-    "owner_url": "https://api.github.com/orgs/octocat",
-    "url": "https://api.github.com/projects/1002605",
-    "html_url": "https://github.com/orgs/api-playground/projects/1",
-    "columns_url": "https://api.github.com/projects/1002605/columns",
-    "id": 1002605,
-    "node_id": "MDc6UHJvamVjdDEwMDI2MDU=",
-    "name": "Organization Roadmap",
-    "body": "High-level roadmap for the upcoming year.",
-    "number": 1,
-    "state": "open",
-    "creator": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "created_at": "2011-04-11T20:09:31Z",
-    "updated_at": "2014-03-04T18:58:10Z",
-    "organization_permission": "write",
-    "private": false,
-    "permissions": {
-      "read": true,
-      "write": true,
-      "admin": false
-    }
-  }
-]
+      {
+        "owner_url": "https://api.github.com/orgs/octocat",
+        "url": "https://api.github.com/projects/1002605",
+        "html_url": "https://github.com/orgs/api-playground/projects/1",
+        "columns_url": "https://api.github.com/projects/1002605/columns",
+        "id": 1002605,
+        "node_id": "MDc6UHJvamVjdDEwMDI2MDU=",
+        "name": "Organization Roadmap",
+        "body": "High-level roadmap for the upcoming year.",
+        "number": 1,
+        "state": "open",
+        "creator": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "created_at": "2011-04-11T20:09:31Z",
+        "updated_at": "2014-03-04T18:58:10Z",
+        "organization_permission": "write",
+        "private": false,
+        "permissions": {
+          "read": true,
+          "write": true,
+          "admin": false
+        }
+      }
+    ]
     ```
 
     
@@ -1416,127 +1416,127 @@ You can also get information about the specified repository, including what perm
     
     ```json
     {
-  "id": 1296269,
-  "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
-  "name": "Hello-World",
-  "full_name": "octocat/Hello-World",
-  "owner": {
-    "login": "octocat",
-    "id": 1,
-    "node_id": "MDQ6VXNlcjE=",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/octocat",
-    "html_url": "https://github.com/octocat",
-    "followers_url": "https://api.github.com/users/octocat/followers",
-    "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url": "https://api.github.com/users/octocat/orgs",
-    "repos_url": "https://api.github.com/users/octocat/repos",
-    "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/octocat/received_events",
-    "type": "User",
-    "site_admin": false
-  },
-  "private": false,
-  "html_url": "https://github.com/octocat/Hello-World",
-  "description": "This your first repo!",
-  "fork": false,
-  "url": "https://api.github.com/repos/octocat/Hello-World",
-  "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
-  "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
-  "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
-  "branches_url": "https://api.github.com/repos/octocat/Hello-World/branches{/branch}",
-  "collaborators_url": "https://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}",
-  "comments_url": "https://api.github.com/repos/octocat/Hello-World/comments{/number}",
-  "commits_url": "https://api.github.com/repos/octocat/Hello-World/commits{/sha}",
-  "compare_url": "https://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}",
-  "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
-  "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
-  "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
-  "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
-  "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
-  "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
-  "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
-  "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
-  "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
-  "git_url": "git:github.com/octocat/Hello-World.git",
-  "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
-  "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
-  "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
-  "keys_url": "https://api.github.com/repos/octocat/Hello-World/keys{/key_id}",
-  "labels_url": "https://api.github.com/repos/octocat/Hello-World/labels{/name}",
-  "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
-  "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
-  "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
-  "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
-  "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
-  "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
-  "ssh_url": "git@github.com:octocat/Hello-World.git",
-  "stargazers_url": "https://api.github.com/repos/octocat/Hello-World/stargazers",
-  "statuses_url": "https://api.github.com/repos/octocat/Hello-World/statuses/{sha}",
-  "subscribers_url": "https://api.github.com/repos/octocat/Hello-World/subscribers",
-  "subscription_url": "https://api.github.com/repos/octocat/Hello-World/subscription",
-  "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
-  "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
-  "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
-  "clone_url": "https://github.com/octocat/Hello-World.git",
-  "mirror_url": "git:git.example.com/octocat/Hello-World",
-  "hooks_url": "https://api.github.com/repos/octocat/Hello-World/hooks",
-  "svn_url": "https://svn.github.com/octocat/Hello-World",
-  "homepage": "https://github.com",
-  "language": null,
-  "forks_count": 9,
-  "stargazers_count": 80,
-  "watchers_count": 80,
-  "size": 108,
-  "default_branch": "master",
-  "open_issues_count": 0,
-  "is_template": true,
-  "topics": [
-    "octocat",
-    "atom",
-    "electron",
-    "api"
-  ],
-  "has_issues": true,
-  "has_projects": true,
-  "has_wiki": true,
-  "has_pages": false,
-  "has_downloads": true,
-  "archived": false,
-  "disabled": false,
-  "visibility": "public",
-  "pushed_at": "2011-01-26T19:06:43Z",
-  "created_at": "2011-01-26T19:01:12Z",
-  "updated_at": "2011-01-26T19:14:43Z",
-  "permissions": {
-    "admin": false,
-    "push": false,
-    "pull": true
-  },
-  "allow_rebase_merge": true,
-  "template_repository": null,
-  "temp_clone_token": "ABTLWHOULUVAXGTRYU7OC2876QJ2O",
-  "allow_squash_merge": true,
-  "delete_branch_on_merge": true,
-  "allow_merge_commit": true,
-  "subscribers_count": 42,
-  "network_count": 0,
-  "license": {
-    "key": "mit",
-    "name": "MIT License",
-    "url": "https://api.github.com/licenses/mit",
-    "spdx_id": "MIT",
-    "node_id": "MDc6TGljZW5zZW1pdA==",
-    "html_url": "https://api.github.com/licenses/mit"
-  },
-  "forks": 1,
-  "open_issues": 1,
-  "watchers": 1
-}
+      "id": 1296269,
+      "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
+      "name": "Hello-World",
+      "full_name": "octocat/Hello-World",
+      "owner": {
+        "login": "octocat",
+        "id": 1,
+        "node_id": "MDQ6VXNlcjE=",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/octocat",
+        "html_url": "https://github.com/octocat",
+        "followers_url": "https://api.github.com/users/octocat/followers",
+        "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+        "organizations_url": "https://api.github.com/users/octocat/orgs",
+        "repos_url": "https://api.github.com/users/octocat/repos",
+        "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/octocat/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "private": false,
+      "html_url": "https://github.com/octocat/Hello-World",
+      "description": "This your first repo!",
+      "fork": false,
+      "url": "https://api.github.com/repos/octocat/Hello-World",
+      "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
+      "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
+      "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
+      "branches_url": "https://api.github.com/repos/octocat/Hello-World/branches{/branch}",
+      "collaborators_url": "https://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}",
+      "comments_url": "https://api.github.com/repos/octocat/Hello-World/comments{/number}",
+      "commits_url": "https://api.github.com/repos/octocat/Hello-World/commits{/sha}",
+      "compare_url": "https://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}",
+      "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
+      "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
+      "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
+      "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
+      "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
+      "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
+      "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
+      "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
+      "git_url": "git:github.com/octocat/Hello-World.git",
+      "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
+      "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
+      "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
+      "keys_url": "https://api.github.com/repos/octocat/Hello-World/keys{/key_id}",
+      "labels_url": "https://api.github.com/repos/octocat/Hello-World/labels{/name}",
+      "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
+      "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
+      "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
+      "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
+      "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
+      "ssh_url": "git@github.com:octocat/Hello-World.git",
+      "stargazers_url": "https://api.github.com/repos/octocat/Hello-World/stargazers",
+      "statuses_url": "https://api.github.com/repos/octocat/Hello-World/statuses/{sha}",
+      "subscribers_url": "https://api.github.com/repos/octocat/Hello-World/subscribers",
+      "subscription_url": "https://api.github.com/repos/octocat/Hello-World/subscription",
+      "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
+      "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
+      "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
+      "clone_url": "https://github.com/octocat/Hello-World.git",
+      "mirror_url": "git:git.example.com/octocat/Hello-World",
+      "hooks_url": "https://api.github.com/repos/octocat/Hello-World/hooks",
+      "svn_url": "https://svn.github.com/octocat/Hello-World",
+      "homepage": "https://github.com",
+      "language": null,
+      "forks_count": 9,
+      "stargazers_count": 80,
+      "watchers_count": 80,
+      "size": 108,
+      "default_branch": "master",
+      "open_issues_count": 0,
+      "is_template": true,
+      "topics": [
+        "octocat",
+        "atom",
+        "electron",
+        "api"
+      ],
+      "has_issues": true,
+      "has_projects": true,
+      "has_wiki": true,
+      "has_pages": false,
+      "has_downloads": true,
+      "archived": false,
+      "disabled": false,
+      "visibility": "public",
+      "pushed_at": "2011-01-26T19:06:43Z",
+      "created_at": "2011-01-26T19:01:12Z",
+      "updated_at": "2011-01-26T19:14:43Z",
+      "permissions": {
+        "admin": false,
+        "push": false,
+        "pull": true
+      },
+      "allow_rebase_merge": true,
+      "template_repository": null,
+      "temp_clone_token": "ABTLWHOULUVAXGTRYU7OC2876QJ2O",
+      "allow_squash_merge": true,
+      "delete_branch_on_merge": true,
+      "allow_merge_commit": true,
+      "subscribers_count": 42,
+      "network_count": 0,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "spdx_id": "MIT",
+        "node_id": "MDc6TGljZW5zZW1pdA==",
+        "html_url": "https://api.github.com/licenses/mit"
+      },
+      "forks": 1,
+      "open_issues": 1,
+      "watchers": 1
+    }
     ```
 
     
@@ -1566,8 +1566,8 @@ Note that, if you choose not to pass any parameters, you'll need to set `Content
     
     ```json
     {
-  "permission": "<string>"
-}
+      "permission": "<string>"
+    }
     ```
     
 
@@ -1629,122 +1629,122 @@ If the authenticated user is an organization owner or a team maintainer, they ca
     
     ```json
     [
-  {
-    "id": 1296269,
-    "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
-    "name": "Hello-World",
-    "full_name": "octocat/Hello-World",
-    "owner": {
-      "login": "octocat",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/octocat",
-      "html_url": "https://github.com/octocat",
-      "followers_url": "https://api.github.com/users/octocat/followers",
-      "following_url": "https://api.github.com/users/octocat/following{/other_user}",
-      "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
-      "organizations_url": "https://api.github.com/users/octocat/orgs",
-      "repos_url": "https://api.github.com/users/octocat/repos",
-      "events_url": "https://api.github.com/users/octocat/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/octocat/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "private": false,
-    "html_url": "https://github.com/octocat/Hello-World",
-    "description": "This your first repo!",
-    "fork": false,
-    "url": "https://api.github.com/repos/octocat/Hello-World",
-    "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
-    "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
-    "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
-    "branches_url": "https://api.github.com/repos/octocat/Hello-World/branches{/branch}",
-    "collaborators_url": "https://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}",
-    "comments_url": "https://api.github.com/repos/octocat/Hello-World/comments{/number}",
-    "commits_url": "https://api.github.com/repos/octocat/Hello-World/commits{/sha}",
-    "compare_url": "https://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}",
-    "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
-    "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
-    "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
-    "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
-    "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
-    "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
-    "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
-    "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
-    "git_url": "git:github.com/octocat/Hello-World.git",
-    "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
-    "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
-    "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
-    "keys_url": "https://api.github.com/repos/octocat/Hello-World/keys{/key_id}",
-    "labels_url": "https://api.github.com/repos/octocat/Hello-World/labels{/name}",
-    "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
-    "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
-    "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
-    "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
-    "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
-    "ssh_url": "git@github.com:octocat/Hello-World.git",
-    "stargazers_url": "https://api.github.com/repos/octocat/Hello-World/stargazers",
-    "statuses_url": "https://api.github.com/repos/octocat/Hello-World/statuses/{sha}",
-    "subscribers_url": "https://api.github.com/repos/octocat/Hello-World/subscribers",
-    "subscription_url": "https://api.github.com/repos/octocat/Hello-World/subscription",
-    "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
-    "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
-    "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
-    "clone_url": "https://github.com/octocat/Hello-World.git",
-    "mirror_url": "git:git.example.com/octocat/Hello-World",
-    "hooks_url": "https://api.github.com/repos/octocat/Hello-World/hooks",
-    "svn_url": "https://svn.github.com/octocat/Hello-World",
-    "homepage": "https://github.com",
-    "language": null,
-    "forks_count": 9,
-    "stargazers_count": 80,
-    "watchers_count": 80,
-    "size": 108,
-    "default_branch": "master",
-    "open_issues_count": 0,
-    "is_template": true,
-    "topics": [
-      "octocat",
-      "atom",
-      "electron",
-      "api"
-    ],
-    "has_issues": true,
-    "has_projects": true,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_downloads": true,
-    "archived": false,
-    "disabled": false,
-    "visibility": "public",
-    "pushed_at": "2011-01-26T19:06:43Z",
-    "created_at": "2011-01-26T19:01:12Z",
-    "updated_at": "2011-01-26T19:14:43Z",
-    "permissions": {
-      "admin": false,
-      "push": false,
-      "pull": true
-    },
-    "template_repository": "octocat/template",
-    "temp_clone_token": "ABTLWHOULUVAXGTRYU7OC2876QJ2O",
-    "delete_branch_on_merge": true,
-    "subscribers_count": 42,
-    "network_count": 0,
-    "license": {
-      "key": "mit",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://api.github.com/licenses/mit",
-      "node_id": "MDc6TGljZW5zZW1pdA=="
-    }
-  }
-]
+      {
+        "id": 1296269,
+        "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
+        "name": "Hello-World",
+        "full_name": "octocat/Hello-World",
+        "owner": {
+          "login": "octocat",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/octocat",
+          "html_url": "https://github.com/octocat",
+          "followers_url": "https://api.github.com/users/octocat/followers",
+          "following_url": "https://api.github.com/users/octocat/following{/other_user}",
+          "gists_url": "https://api.github.com/users/octocat/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/octocat/subscriptions",
+          "organizations_url": "https://api.github.com/users/octocat/orgs",
+          "repos_url": "https://api.github.com/users/octocat/repos",
+          "events_url": "https://api.github.com/users/octocat/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/octocat/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "private": false,
+        "html_url": "https://github.com/octocat/Hello-World",
+        "description": "This your first repo!",
+        "fork": false,
+        "url": "https://api.github.com/repos/octocat/Hello-World",
+        "archive_url": "https://api.github.com/repos/octocat/Hello-World/{archive_format}{/ref}",
+        "assignees_url": "https://api.github.com/repos/octocat/Hello-World/assignees{/user}",
+        "blobs_url": "https://api.github.com/repos/octocat/Hello-World/git/blobs{/sha}",
+        "branches_url": "https://api.github.com/repos/octocat/Hello-World/branches{/branch}",
+        "collaborators_url": "https://api.github.com/repos/octocat/Hello-World/collaborators{/collaborator}",
+        "comments_url": "https://api.github.com/repos/octocat/Hello-World/comments{/number}",
+        "commits_url": "https://api.github.com/repos/octocat/Hello-World/commits{/sha}",
+        "compare_url": "https://api.github.com/repos/octocat/Hello-World/compare/{base}...{head}",
+        "contents_url": "https://api.github.com/repos/octocat/Hello-World/contents/{+path}",
+        "contributors_url": "https://api.github.com/repos/octocat/Hello-World/contributors",
+        "deployments_url": "https://api.github.com/repos/octocat/Hello-World/deployments",
+        "downloads_url": "https://api.github.com/repos/octocat/Hello-World/downloads",
+        "events_url": "https://api.github.com/repos/octocat/Hello-World/events",
+        "forks_url": "https://api.github.com/repos/octocat/Hello-World/forks",
+        "git_commits_url": "https://api.github.com/repos/octocat/Hello-World/git/commits{/sha}",
+        "git_refs_url": "https://api.github.com/repos/octocat/Hello-World/git/refs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/octocat/Hello-World/git/tags{/sha}",
+        "git_url": "git:github.com/octocat/Hello-World.git",
+        "issue_comment_url": "https://api.github.com/repos/octocat/Hello-World/issues/comments{/number}",
+        "issue_events_url": "https://api.github.com/repos/octocat/Hello-World/issues/events{/number}",
+        "issues_url": "https://api.github.com/repos/octocat/Hello-World/issues{/number}",
+        "keys_url": "https://api.github.com/repos/octocat/Hello-World/keys{/key_id}",
+        "labels_url": "https://api.github.com/repos/octocat/Hello-World/labels{/name}",
+        "languages_url": "https://api.github.com/repos/octocat/Hello-World/languages",
+        "merges_url": "https://api.github.com/repos/octocat/Hello-World/merges",
+        "milestones_url": "https://api.github.com/repos/octocat/Hello-World/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/octocat/Hello-World/notifications{?since,all,participating}",
+        "pulls_url": "https://api.github.com/repos/octocat/Hello-World/pulls{/number}",
+        "releases_url": "https://api.github.com/repos/octocat/Hello-World/releases{/id}",
+        "ssh_url": "git@github.com:octocat/Hello-World.git",
+        "stargazers_url": "https://api.github.com/repos/octocat/Hello-World/stargazers",
+        "statuses_url": "https://api.github.com/repos/octocat/Hello-World/statuses/{sha}",
+        "subscribers_url": "https://api.github.com/repos/octocat/Hello-World/subscribers",
+        "subscription_url": "https://api.github.com/repos/octocat/Hello-World/subscription",
+        "tags_url": "https://api.github.com/repos/octocat/Hello-World/tags",
+        "teams_url": "https://api.github.com/repos/octocat/Hello-World/teams",
+        "trees_url": "https://api.github.com/repos/octocat/Hello-World/git/trees{/sha}",
+        "clone_url": "https://github.com/octocat/Hello-World.git",
+        "mirror_url": "git:git.example.com/octocat/Hello-World",
+        "hooks_url": "https://api.github.com/repos/octocat/Hello-World/hooks",
+        "svn_url": "https://svn.github.com/octocat/Hello-World",
+        "homepage": "https://github.com",
+        "language": null,
+        "forks_count": 9,
+        "stargazers_count": 80,
+        "watchers_count": 80,
+        "size": 108,
+        "default_branch": "master",
+        "open_issues_count": 0,
+        "is_template": true,
+        "topics": [
+          "octocat",
+          "atom",
+          "electron",
+          "api"
+        ],
+        "has_issues": true,
+        "has_projects": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "has_downloads": true,
+        "archived": false,
+        "disabled": false,
+        "visibility": "public",
+        "pushed_at": "2011-01-26T19:06:43Z",
+        "created_at": "2011-01-26T19:01:12Z",
+        "updated_at": "2011-01-26T19:14:43Z",
+        "permissions": {
+          "admin": false,
+          "push": false,
+          "pull": true
+        },
+        "template_repository": "octocat/template",
+        "temp_clone_token": "ABTLWHOULUVAXGTRYU7OC2876QJ2O",
+        "delete_branch_on_merge": true,
+        "subscribers_count": 42,
+        "network_count": 0,
+        "license": {
+          "key": "mit",
+          "name": "MIT License",
+          "spdx_id": "MIT",
+          "url": "https://api.github.com/licenses/mit",
+          "node_id": "MDc6TGljZW5zZW1pdA=="
+        }
+      }
+    ]
     ```
 
     
@@ -1773,19 +1773,19 @@ List IdP groups connected to a team on GitHub.
     
     ```json
     {
-  "groups": [
-    {
-      "group_id": "123",
-      "group_name": "Octocat admins",
-      "group_description": "The people who configure your octoworld."
-    },
-    {
-      "group_id": "456",
-      "group_name": "Octocat docs members",
-      "group_description": "The people who make your octoworld come to life."
+      "groups": [
+        {
+          "group_id": "123",
+          "group_name": "Octocat admins",
+          "group_description": "The people who configure your octoworld."
+        },
+        {
+          "group_id": "456",
+          "group_name": "Octocat docs members",
+          "group_description": "The people who make your octoworld come to life."
+        }
+      ]
     }
-  ]
-}
     ```
 
     
@@ -1813,26 +1813,26 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
     
     ```json
     {
-  "groups": [
-    {
-      "group_id": "<string>",
-      "group_name": "<string>",
-      "group_description": "<string>",
-      "id": "<string>",
-      "name": "<string>",
-      "description": "<string>"
-    },
-    {
-      "group_id": "<string>",
-      "group_name": "<string>",
-      "group_description": "<string>",
-      "id": "<string>",
-      "name": "<string>",
-      "description": "<string>"
+      "groups": [
+        {
+          "group_id": "<string>",
+          "group_name": "<string>",
+          "group_description": "<string>",
+          "id": "<string>",
+          "name": "<string>",
+          "description": "<string>"
+        },
+        {
+          "group_id": "<string>",
+          "group_name": "<string>",
+          "group_description": "<string>",
+          "id": "<string>",
+          "name": "<string>",
+          "description": "<string>"
+        }
+      ],
+      "synced_at": "<string>"
     }
-  ],
-  "synced_at": "<string>"
-}
     ```
     
 
@@ -1840,14 +1840,14 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
     
     ```json
     {
-  "groups": [
-    {
-      "group_id": "123",
-      "group_name": "Octocat admins",
-      "group_description": "The people who configure your octoworld."
+      "groups": [
+        {
+          "group_id": "123",
+          "group_name": "Octocat admins",
+          "group_description": "The people who configure your octoworld."
+        }
+      ]
     }
-  ]
-}
     ```
 
     
@@ -1872,53 +1872,53 @@ Creates, updates, or removes a connection between a team and an IdP group. When 
     
     ```json
     {
-  "id": 1,
-  "node_id": "MDQ6VGVhbTE=",
-  "url": "https://api.github.com/teams/1",
-  "html_url": "https://api.github.com/teams/justice-league",
-  "name": "Justice League",
-  "slug": "justice-league",
-  "description": "A great team.",
-  "privacy": "closed",
-  "permission": "admin",
-  "members_url": "https://api.github.com/teams/1/members{/member}",
-  "repositories_url": "https://api.github.com/teams/1/repos",
-  "parent": null,
-  "members_count": 3,
-  "repos_count": 10,
-  "created_at": "2017-07-14T16:53:42Z",
-  "updated_at": "2017-08-17T12:37:15Z",
-  "organization": {
-    "login": "github",
-    "id": 1,
-    "node_id": "MDEyOk9yZ2FuaXphdGlvbjE=",
-    "url": "https://api.github.com/orgs/github",
-    "repos_url": "https://api.github.com/orgs/github/repos",
-    "events_url": "https://api.github.com/orgs/github/events",
-    "hooks_url": "https://api.github.com/orgs/github/hooks",
-    "issues_url": "https://api.github.com/orgs/github/issues",
-    "members_url": "https://api.github.com/orgs/github/members{/member}",
-    "public_members_url": "https://api.github.com/orgs/github/public_members{/member}",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "description": "A great organization",
-    "name": "github",
-    "company": "GitHub",
-    "blog": "https://github.com/blog",
-    "location": "San Francisco",
-    "email": "octocat@github.com",
-    "is_verified": true,
-    "has_organization_projects": true,
-    "has_repository_projects": true,
-    "public_repos": 2,
-    "public_gists": 1,
-    "followers": 20,
-    "following": 0,
-    "html_url": "https://github.com/octocat",
-    "created_at": "2008-01-14T04:33:35Z",
-    "updated_at": "2017-08-17T12:37:15Z",
-    "type": "Organization"
-  }
-}
+      "id": 1,
+      "node_id": "MDQ6VGVhbTE=",
+      "url": "https://api.github.com/teams/1",
+      "html_url": "https://api.github.com/teams/justice-league",
+      "name": "Justice League",
+      "slug": "justice-league",
+      "description": "A great team.",
+      "privacy": "closed",
+      "permission": "admin",
+      "members_url": "https://api.github.com/teams/1/members{/member}",
+      "repositories_url": "https://api.github.com/teams/1/repos",
+      "parent": null,
+      "members_count": 3,
+      "repos_count": 10,
+      "created_at": "2017-07-14T16:53:42Z",
+      "updated_at": "2017-08-17T12:37:15Z",
+      "organization": {
+        "login": "github",
+        "id": 1,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjE=",
+        "url": "https://api.github.com/orgs/github",
+        "repos_url": "https://api.github.com/orgs/github/repos",
+        "events_url": "https://api.github.com/orgs/github/events",
+        "hooks_url": "https://api.github.com/orgs/github/hooks",
+        "issues_url": "https://api.github.com/orgs/github/issues",
+        "members_url": "https://api.github.com/orgs/github/members{/member}",
+        "public_members_url": "https://api.github.com/orgs/github/public_members{/member}",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "description": "A great organization",
+        "name": "github",
+        "company": "GitHub",
+        "blog": "https://github.com/blog",
+        "location": "San Francisco",
+        "email": "octocat@github.com",
+        "is_verified": true,
+        "has_organization_projects": true,
+        "has_repository_projects": true,
+        "public_repos": 2,
+        "public_gists": 1,
+        "followers": 20,
+        "following": 0,
+        "html_url": "https://github.com/octocat",
+        "created_at": "2008-01-14T04:33:35Z",
+        "updated_at": "2017-08-17T12:37:15Z",
+        "type": "Organization"
+      }
+    }
     ```
 
     
@@ -1946,12 +1946,12 @@ To edit a team, the authenticated user must either be an organization owner or a
     
     ```json
     {
-  "name": "<string>",
-  "description": "<string>",
-  "privacy": "<string>",
-  "permission": "pull",
-  "parent_team_id": "<integer>"
-}
+      "name": "<string>",
+      "description": "<string>",
+      "privacy": "<string>",
+      "permission": "pull",
+      "parent_team_id": "<integer>"
+    }
     ```
     
 
@@ -1959,53 +1959,53 @@ To edit a team, the authenticated user must either be an organization owner or a
     
     ```json
     {
-  "id": 1,
-  "node_id": "MDQ6VGVhbTE=",
-  "url": "https://api.github.com/teams/1",
-  "html_url": "https://api.github.com/teams/justice-league",
-  "name": "Justice League",
-  "slug": "justice-league",
-  "description": "A great team.",
-  "privacy": "closed",
-  "permission": "admin",
-  "members_url": "https://api.github.com/teams/1/members{/member}",
-  "repositories_url": "https://api.github.com/teams/1/repos",
-  "parent": null,
-  "members_count": 3,
-  "repos_count": 10,
-  "created_at": "2017-07-14T16:53:42Z",
-  "updated_at": "2017-08-17T12:37:15Z",
-  "organization": {
-    "login": "github",
-    "id": 1,
-    "node_id": "MDEyOk9yZ2FuaXphdGlvbjE=",
-    "url": "https://api.github.com/orgs/github",
-    "repos_url": "https://api.github.com/orgs/github/repos",
-    "events_url": "https://api.github.com/orgs/github/events",
-    "hooks_url": "https://api.github.com/orgs/github/hooks",
-    "issues_url": "https://api.github.com/orgs/github/issues",
-    "members_url": "https://api.github.com/orgs/github/members{/member}",
-    "public_members_url": "https://api.github.com/orgs/github/public_members{/member}",
-    "avatar_url": "https://github.com/images/error/octocat_happy.gif",
-    "description": "A great organization",
-    "name": "github",
-    "company": "GitHub",
-    "blog": "https://github.com/blog",
-    "location": "San Francisco",
-    "email": "octocat@github.com",
-    "is_verified": true,
-    "has_organization_projects": true,
-    "has_repository_projects": true,
-    "public_repos": 2,
-    "public_gists": 1,
-    "followers": 20,
-    "following": 0,
-    "html_url": "https://github.com/octocat",
-    "created_at": "2008-01-14T04:33:35Z",
-    "updated_at": "2017-08-17T12:37:15Z",
-    "type": "Organization"
-  }
-}
+      "id": 1,
+      "node_id": "MDQ6VGVhbTE=",
+      "url": "https://api.github.com/teams/1",
+      "html_url": "https://api.github.com/teams/justice-league",
+      "name": "Justice League",
+      "slug": "justice-league",
+      "description": "A great team.",
+      "privacy": "closed",
+      "permission": "admin",
+      "members_url": "https://api.github.com/teams/1/members{/member}",
+      "repositories_url": "https://api.github.com/teams/1/repos",
+      "parent": null,
+      "members_count": 3,
+      "repos_count": 10,
+      "created_at": "2017-07-14T16:53:42Z",
+      "updated_at": "2017-08-17T12:37:15Z",
+      "organization": {
+        "login": "github",
+        "id": 1,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjE=",
+        "url": "https://api.github.com/orgs/github",
+        "repos_url": "https://api.github.com/orgs/github/repos",
+        "events_url": "https://api.github.com/orgs/github/events",
+        "hooks_url": "https://api.github.com/orgs/github/hooks",
+        "issues_url": "https://api.github.com/orgs/github/issues",
+        "members_url": "https://api.github.com/orgs/github/members{/member}",
+        "public_members_url": "https://api.github.com/orgs/github/public_members{/member}",
+        "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+        "description": "A great organization",
+        "name": "github",
+        "company": "GitHub",
+        "blog": "https://github.com/blog",
+        "location": "San Francisco",
+        "email": "octocat@github.com",
+        "is_verified": true,
+        "has_organization_projects": true,
+        "has_repository_projects": true,
+        "public_repos": 2,
+        "public_gists": 1,
+        "followers": 20,
+        "following": 0,
+        "html_url": "https://github.com/octocat",
+        "created_at": "2008-01-14T04:33:35Z",
+        "updated_at": "2017-08-17T12:37:15Z",
+        "type": "Organization"
+      }
+    }
     ```
 
     
@@ -2062,36 +2062,36 @@ The return hash contains a `role` field which refers to the Organization Invitat
     
     ```json
     [
-  {
-    "id": 1,
-    "login": "monalisa",
-    "email": "octocat@github.com",
-    "role": "direct_member",
-    "created_at": "2016-11-30T06:46:10-08:00",
-    "inviter": {
-      "login": "other_user",
-      "id": 1,
-      "node_id": "MDQ6VXNlcjE=",
-      "avatar_url": "https://github.com/images/error/other_user_happy.gif",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/other_user",
-      "html_url": "https://github.com/other_user",
-      "followers_url": "https://api.github.com/users/other_user/followers",
-      "following_url": "https://api.github.com/users/other_user/following{/other_user}",
-      "gists_url": "https://api.github.com/users/other_user/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/other_user/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/other_user/subscriptions",
-      "organizations_url": "https://api.github.com/users/other_user/orgs",
-      "repos_url": "https://api.github.com/users/other_user/repos",
-      "events_url": "https://api.github.com/users/other_user/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/other_user/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "team_count": 2,
-    "invitation_team_url": "https://api.github.com/organizations/2/invitations/1/teams"
-  }
-]
+      {
+        "id": 1,
+        "login": "monalisa",
+        "email": "octocat@github.com",
+        "role": "direct_member",
+        "created_at": "2016-11-30T06:46:10-08:00",
+        "inviter": {
+          "login": "other_user",
+          "id": 1,
+          "node_id": "MDQ6VXNlcjE=",
+          "avatar_url": "https://github.com/images/error/other_user_happy.gif",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/other_user",
+          "html_url": "https://github.com/other_user",
+          "followers_url": "https://api.github.com/users/other_user/followers",
+          "following_url": "https://api.github.com/users/other_user/following{/other_user}",
+          "gists_url": "https://api.github.com/users/other_user/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/other_user/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/other_user/subscriptions",
+          "organizations_url": "https://api.github.com/users/other_user/orgs",
+          "repos_url": "https://api.github.com/users/other_user/repos",
+          "events_url": "https://api.github.com/users/other_user/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/other_user/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "team_count": 2,
+        "invitation_team_url": "https://api.github.com/organizations/2/invitations/1/teams"
+      }
+    ]
     ```
 
     
@@ -2118,33 +2118,33 @@ The return hash contains a `role` field which refers to the Organization Invitat
     
     ```json
     [
-  {
-    "id": 2,
-    "node_id": "MDQ6VGVhbTI=",
-    "url": "https://api.github.com/teams/2",
-    "name": "Original Roster",
-    "slug": "original-roster",
-    "description": "Started it all.",
-    "privacy": "closed",
-    "permission": "admin",
-    "members_url": "https://api.github.com/teams/2/members{/member}",
-    "repositories_url": "https://api.github.com/teams/2/repos",
-    "parent": {
-      "id": 1,
-      "node_id": "MDQ6VGVhbTE=",
-      "url": "https://api.github.com/teams/1",
-      "html_url": "https://api.github.com/teams/justice-league",
-      "name": "Justice League",
-      "slug": "justice-league",
-      "description": "A great team.",
-      "privacy": "closed",
-      "permission": "admin",
-      "members_url": "https://api.github.com/teams/1/members{/member}",
-      "repositories_url": "https://api.github.com/teams/1/repos"
-    },
-    "html_url": "https://github.com/orgs/rails/teams/core"
-  }
-]
+      {
+        "id": 2,
+        "node_id": "MDQ6VGVhbTI=",
+        "url": "https://api.github.com/teams/2",
+        "name": "Original Roster",
+        "slug": "original-roster",
+        "description": "Started it all.",
+        "privacy": "closed",
+        "permission": "admin",
+        "members_url": "https://api.github.com/teams/2/members{/member}",
+        "repositories_url": "https://api.github.com/teams/2/repos",
+        "parent": {
+          "id": 1,
+          "node_id": "MDQ6VGVhbTE=",
+          "url": "https://api.github.com/teams/1",
+          "html_url": "https://api.github.com/teams/justice-league",
+          "name": "Justice League",
+          "slug": "justice-league",
+          "description": "A great team.",
+          "privacy": "closed",
+          "permission": "admin",
+          "members_url": "https://api.github.com/teams/1/members{/member}",
+          "repositories_url": "https://api.github.com/teams/1/repos"
+        },
+        "html_url": "https://github.com/orgs/rails/teams/core"
+      }
+    ]
     ```
 
     

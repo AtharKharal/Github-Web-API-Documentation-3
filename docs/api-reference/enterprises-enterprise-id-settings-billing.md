@@ -26,15 +26,15 @@ The authenticated user must be an enterprise admin.
     
     ```json
     {
-  "total_minutes_used": 305,
-  "total_paid_minutes_used": 0,
-  "included_minutes": 3000,
-  "minutes_used_breakdown": {
-    "UBUNTU": 205,
-    "MACOS": 10,
-    "WINDOWS": 90
-  }
-}
+      "total_minutes_used": 305,
+      "total_paid_minutes_used": 0,
+      "included_minutes": 3000,
+      "minutes_used_breakdown": {
+        "UBUNTU": 205,
+        "MACOS": 10,
+        "WINDOWS": 90
+      }
+    }
     ```
 
     
@@ -65,10 +65,10 @@ The authenticated user must be an enterprise admin.
     
     ```json
     {
-  "total_gigabytes_bandwidth_used": 50,
-  "total_paid_gigabytes_bandwidth_used": 40,
-  "included_gigabytes_bandwidth": 10
-}
+      "total_gigabytes_bandwidth_used": 50,
+      "total_paid_gigabytes_bandwidth_used": 40,
+      "included_gigabytes_bandwidth": 10
+    }
     ```
 
     
@@ -99,10 +99,10 @@ The authenticated user must be an enterprise admin.
     
     ```json
     {
-  "days_left_in_billing_cycle": 20,
-  "estimated_paid_storage_for_month": 15,
-  "estimated_storage_for_month": 40
-}
+      "days_left_in_billing_cycle": 20,
+      "estimated_paid_storage_for_month": 15,
+      "estimated_storage_for_month": 40
+    }
     ```
 
     
