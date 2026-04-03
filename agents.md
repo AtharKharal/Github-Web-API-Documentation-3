@@ -1,7 +1,7 @@
 
 # Primary Task: Developer Documentation Authority
 
-This agent swarm is responsible for producing and maintaining developer-focused documentation for a manually supplied API Postman Collection or GitHub repository. All output must be authored for the MkDocs ecosystem using the Material theme. The final DX-focused documentation website is to be published to GitHub Pages.
+This automated system is responsible for producing and maintaining developer-focused documentation for a manually supplied API Postman Collection or GitHub codebase repository. All output must be authored for the MkDocs ecosystem using the Material theme. The final DX-focused documentation website is to be published to GitHub Pages.
 
 The documentation system exists solely to represent the actual state of the repository, API surface, schemas, and architectural intent. Documentation is not an independent artifact. Every documented statement, endpoint, parameter, schema, workflow, or architectural claim must be traceable to a verifiable source within the codebase, repository assets, specifications, or manually supplied Postman collection.
 
@@ -12,7 +12,7 @@ The documentation system exists solely to represent the actual state of the repo
 - If documentation diverges from the executable code, specifications, or repository structure, the documentation is considered invalid and must either:
   - be suppressed from publication, or
   - be updated to restore consistency.
-- The agent swarm must never invent endpoints, features, workflows, configuration values, architectural assumptions, or implementation details.
+- The automated system must never invent endpoints, features, workflows, configuration values, architectural assumptions, or implementation details.
 
 ## Scope of Jurisdiction
 
@@ -67,6 +67,7 @@ The following are prohibited:
 - Informal or non-technical language
 - Marketing-oriented prose
 - Redundant formatting used solely for visual effect
+- Any mention or indication of use of AI, LPA, practitioners, agents, apparatus. 
 
 All writing must:
 
@@ -167,7 +168,7 @@ No free-form page generation is permitted when a corresponding template exists.
 
 ## Required Operational Behavior
 
-The agent swarm must always:
+The documentation system must always:
 
 - analyze the repository before generating documentation
 - map source artifacts to the documentation hierarchy
@@ -178,13 +179,13 @@ The agent swarm must always:
 
 When ambiguity cannot be resolved from the authoritative sources, the content must be flagged for human review rather than inferred.
 
-# Orchesteration LPA the Tri-Layer Hierarchy for Deterministic Brand Fidelity
+# Tiered Architecture for Deterministic Brand Fidelity
 
-The AI system is to be orchestrated under a tri-layer hierarchy designed to eliminate stochastic drift and ensure absolute brand fidelity through deterministic execution.
+The documentation system is to be orchestrated under a tri-layer hierarchy designed to eliminate stochastic drift and ensure absolute brand fidelity through deterministic execution.
 
-## Law (Layer I: The Nomological Layer)
+## Governance (Layer I: The Policy Layer)
 
-The Law represents the constitutional boundaries and cognitive constraints of the system. It is the primary orchestrator that interprets intent and enforces compliance across all sub-processes.
+Governance represents the constitutional boundaries and cognitive constraints of the system. It is the primary orchestrator that interprets intent and enforces compliance across all sub-processes.
 
 ### 1.1 System Initialization and Bootstrapping
 
@@ -192,42 +193,42 @@ Upon the first invocation of this orchestration, the system must execute a manda
 
 - Environment Isolation: Create and activate a dedicated virtual environment.
 - Dependency Synchronization: Install all required libraries as specified in the system manifest to ensure a reproducible state.
-- Integrity Check: Verify the presence of the `practitioners/` and `apparatus/` directories before proceeding.
+- Integrity Check: Verify the presence of the `expert-modules/` and `automation-tier/` directories before proceeding.
 
 ### 1.2 Cognitive Constraints
 
-- Constitutional Authority: This file (`agents.md`) serves as the terminal authority. No agent action may contradict the directives herein.
-- Orchestration Logic: The system must function as a recursive and self-healing interpreter. It identifies the goal, selects the appropriate Practitioner, and validates the output against the Law.
+- Constitutional Authority: This file (`governance.md`) serves as the terminal authority. No system action may contradict the directives herein.
+- Orchestration Logic: The system must function as a recursive and self-healing interpreter. It identifies the goal, selects the appropriate Expert Module, and validates the output against Governance.
 
-## Practitioners (Layer II: The Teleological Layer)
+## Expert Modules (Layer II: The Logic Layer)
 
-Located in `practitioners/`, this layer houses the expertise-based capability manifests of the AI skills. Practitioners act as the logical bridge between legal constraints and mechanical execution.
+Located in `expert-modules/`, this layer houses the expertise-based capability manifests of the automation skills. Expert Modules act as the logical bridge between legal constraints and mechanical execution.
 
 ### 2.1 Role and Scope
 
-- Declarative Logic: Practitioners define the what and the how, but never the action. They store the specific logic, required inputs, and the mapping to the relevant Python scripts.
-- Knowledge Assets: Private libraries and reference materials, including standards, style guides, and templates, are maintained within `practitioners/lib/`. These assets serve as the ground truth for brand-specific formatting and technical standards.
-- Statelessness: Practitioners are logic repositories. They do not maintain session state; they provide the blueprint for a specific goal.
+- Declarative Logic: Expert Modules define the what and the how, but never the action. They store the specific logic, required inputs, and the mapping to the relevant Python scripts.
+- Knowledge Assets: Private libraries and reference materials, including standards, style guides, and templates, are maintained within `expert-modules/lib/`. These assets serve as the ground truth for brand-specific formatting and technical standards.
+- Statelessness: Expert Modules are logic repositories. They do not maintain session state; they provide the blueprint for a specific goal.
 
-## Apparatus (Layer III: The Mechanical Layer)
+## Automation Tier (Layer III: The Mechanical Layer)
 
-Located in `apparatus/`, this layer consists of deterministic Python scripts responsible for state changes and external interactions.
+Located in `automation-tier/`, this layer consists of deterministic Python scripts responsible for state changes and external interactions.
 
 ### 3.1 Execution Standards
 
-- Deterministic Output: All scripts must be designed for 1:1 fidelity. Given the same input and state, the apparatus must produce the identical output.
-- Restricted Side Effects: All file manipulations, Git operations, and JSON parsing are exclusively reserved for this layer. No cognitive or logic-heavy operations should occur here; the apparatus is a "blind" executor of the Practitioner’s logic.
-- Validation: Every apparatus execution must return a structured exit code or status report to the Law to confirm successful completion of the mechanical task.
+- Deterministic Output: All scripts must be designed for 1:1 fidelity. Given the same input and state, the automation tier must produce the identical output.
+- Restricted Side Effects: All file manipulations, Git operations, and JSON parsing are exclusively reserved for this layer. No logic-heavy operations should occur here; the automation tier is a "blind" executor of the Expert Module’s logic.
+- Validation: Every tier execution must return a structured exit code or status report to Governance to confirm successful completion of the mechanical task.
 
 ## Execution Flow
 
 The system follows a linear, non-ambiguous execution path:
 
-1. Law receives a task and identifies the governing domain.
-2. Law invokes the relevant Practitioner from `practitioners/`.
-3. Practitioner provides the logic and selects the necessary Apparatus from `apparatus/`.
-4. Apparatus executes the deterministic script.
-5. Law verifies the outcome against the Domain-Specific Rules and terminates the cycle.
+1. Governance receives a task and identifies the governing domain.
+2. Governance invokes the relevant Expert Module from `expert-modules/`.
+3. Expert Module provides the logic and selects the necessary Automation script from `automation-tier/`.
+4. Automation script executes the deterministic logic.
+5. Governance verifies the outcome against the Domain-Specific Rules and terminates the cycle.
 
 ## Self-Healing Loop
 
@@ -244,7 +245,8 @@ The system follows a linear, non-ambiguous execution path:
 
 ## Directory Structure
 
-- `practitioners/` for skills and expert personas
-- `apparatus/` for scripts
+- `expert-modules/` for skills and expert personas
+- `automation-tier/` for scripts
 - `.tmp/` for intermediates
 - `.env` for credentials
+ls

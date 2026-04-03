@@ -1,5 +1,5 @@
-site_name: GitHub Docs Swarm
-site_description: Authoritative, developer-focused documentation for GitHub API.
+site_name: GitHub Documentation Core
+site_description: Authoritative, developer-focused documentation for the GitHub REST API — including Quick Start, Tutorials, How-to Guides, Explanations, and full API Reference.
 theme:
   name: material
   custom_dir: overrides
@@ -49,6 +49,22 @@ plugins:
 
 nav:
   - Welcome: index.md
+  - Quick Start: quickstart.md
+  - Tutorials:
+      - Overview: tutorials/index.md
+      - Hello World: tutorials/hello-world.md
+      - Resource Interlinking: tutorials/resource-interlinking.md
+  - How-to Guides:
+      - Overview: how-to/index.md
+      - Manage Repositories: how-to/manage-repositories.md
+      - Automate Issues: how-to/automate-issues.md
+      - Manage Organizations: how-to/manage-organizations.md
+      - Search and Discover: how-to/search-and-discover.md
+  - Explanations:
+      - Overview: explanations/index.md
+      - Authentication: explanations/authentication.md
+      - Rate Limiting: explanations/rate-limiting.md
+      - System Architecture: explanations/system-architecture.md
   - API Reference:
       - Apps: api-reference/app.md
       - Applications: api-reference/applications.md
