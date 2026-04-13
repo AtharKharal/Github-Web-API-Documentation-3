@@ -1,6 +1,6 @@
 ---
 hero:
-  title: GitHub DocS Core
+  title: GitHub Docs Core
   subtitle: Authoritative, developer-focused documentation for the GitHub REST API.
   link:
     text: Quick Start
