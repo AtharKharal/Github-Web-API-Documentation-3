@@ -1,3 +1,21 @@
+---
+title: How-to Guides
+description: Practical task-based guides for GitHub API - manage repositories, automate issues, organizations, search, and GitHub Actions.
+meta:
+  - name: description
+    content: Step-by-step guides to accomplish specific tasks with GitHub API - repositories, issues, organizations, search, and Actions.
+  - name: keywords
+    content: GitHub API how-to, automate GitHub, API recipes, GitHub automation, CI/CD automation
+tags:
+  - how-to
+  - automation
+  - recipes
+  - tasks
+related:
+  - tutorials/index.md
+  - explanations/index.md
+---
+
 # How-to Guides
 
 How-to guides are problem-oriented. They assume you know what you want to achieve and provide a direct, verified path to doing it. Each guide targets a specific operational task.

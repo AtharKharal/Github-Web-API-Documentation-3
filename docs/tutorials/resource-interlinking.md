@@ -1,3 +1,22 @@
+---
+title: Tutorial - Resource Interlinking
+description: Master GitHub API resource linking. Chain calls from repositories to issues to search results.
+meta:
+  - name: description
+    content: Learn to chain GitHub API calls - repos to issues, to comments, to search - with Python examples.
+  - name: keywords
+    content: GitHub API resource linking, chain API calls, GitHub issues API, repository graph
+tags:
+  - tutorial
+  - intermediate
+  - resource-linking
+  - data-chaining
+related:
+  - tutorials/hello-world.md
+  - how-to/manage-repositories.md
+  - api-reference/search.md
+---
+
 # Tutorial: Resource Interlinking — Repos, Issues, and Search
 
 !!! info "Learning Objective"

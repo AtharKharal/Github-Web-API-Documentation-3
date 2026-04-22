@@ -1,3 +1,23 @@
+---
+title: Authentication
+description: Complete guide to GitHub REST API authentication - PATs, GitHub Apps, OAuth tokens, scopes, and security best practices.
+meta:
+  - name: description
+    content: Learn GitHub API authentication - Personal Access Tokens, GitHub Apps, OAuth, token scopes, and security best practices.
+  - name: keywords
+    content: GitHub API authentication, PAT, Personal Access Token, GitHub App, OAuth, token scopes, API security
+tags:
+  - authentication
+  - security
+  - PAT
+  - OAuth
+  - GitHub App
+related:
+  - quickstart.md
+  - explanations/rate-limiting.md
+  - api-reference/app.md
+---
+
 # Authentication
 
 This page explains how the GitHub REST API authenticates requests, what credential types exist, how scopes determine access, and what the API returns when authentication fails or is insufficient.

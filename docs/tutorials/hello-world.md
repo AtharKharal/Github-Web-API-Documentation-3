@@ -1,3 +1,22 @@
+---
+title: Tutorial - Hello World
+description: Make your first authenticated API call to GitHub. Learn request structure, authentication headers, and response parsing.
+meta:
+  - name: description
+    content: Step-by-step tutorial to make your first authenticated call to GitHub REST API with Python, cURL, or JavaScript.
+  - name: keywords
+    content: GitHub API tutorial, first API call, authenticated request, Octokit, requests library
+tags:
+  - tutorial
+  - beginner
+  - authentication
+  - hello-world
+related:
+  - quickstart.md
+  - tutorials/resource-interlinking.md
+  - api-reference/repos.md
+---
+
 # Tutorial: Hello World — Your First Authenticated API Call
 
 !!! info "Learning Objective"

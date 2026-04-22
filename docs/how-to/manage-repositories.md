@@ -1,3 +1,22 @@
+---
+title: Manage Repositories
+description: Create, update, configure, and delete GitHub repositories using the REST API with complete code examples.
+meta:
+  - name: description
+    content: Complete guide to manage GitHub repositories via API - create, update, configure, delete, transfer ownership.
+  - name: keywords
+    content: GitHub API create repository, update repo, delete repo, repo settings, transfer repo ownership
+tags:
+  - how-to
+  - repositories
+  - automation
+  - CRUD
+related:
+  - api-reference/repos.md
+  - tutorials/hello-world.md
+  - how-to/automate-issues.md
+---
+
 # How to Manage Repositories
 
 !!! abstract "Goal"

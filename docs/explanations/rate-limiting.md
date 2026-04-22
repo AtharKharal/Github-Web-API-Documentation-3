@@ -1,3 +1,22 @@
+---
+title: Rate Limiting
+description: Comprehensive guide to GitHub REST API rate limits - primary vs secondary limits, response headers, and retry patterns.
+meta:
+  - name: description
+    content: Understand GitHub API rate limiting - primary (5000/hr), secondary limits, response headers, and safe retry implementation.
+  - name: keywords
+    content: GitHub API rate limit, rate limiting, X-RateLimit-Remaining, secondary rate limit, API throttling
+tags:
+  - rate-limiting
+  - authentication
+  - api-limits
+  - best-practices
+related:
+  - quickstart.md
+  - explanations/authentication.md
+  - how-to/search-and-discover.md
+---
+
 # Rate Limiting
 
 This page explains how the GitHub REST API enforces usage limits, what the relevant response headers mean, how primary and secondary limits differ, and how to implement safe retry logic.

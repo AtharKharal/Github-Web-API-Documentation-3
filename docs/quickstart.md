@@ -1,3 +1,22 @@
+---
+title: Quick Start Guide
+description: Get started with the GitHub REST API in under 10 minutes. Generate a token, make your first authenticated request, and understand rate limits.
+meta:
+  - name: description
+    content: Step-by-step guide to authenticate with GitHub API, make your first request, and understand rate limiting.
+  - name: keywords
+    content: GitHub API quickstart, GitHub API tutorial, authenticate GitHub API, Personal Access Token, PAT
+tags:
+  - quickstart
+  - authentication
+  - tutorial
+  - getting-started
+related:
+  - explanations/authentication.md
+  - explanations/rate-limiting.md
+  - tutorials/hello-world.md
+---
+
 # Quick Start
 
 This guide takes you from zero to a verified GitHub API response in under 10 minutes. No prior knowledge of the GitHub API is assumed.

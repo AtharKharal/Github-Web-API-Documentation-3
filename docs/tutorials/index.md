@@ -1,3 +1,21 @@
+---
+title: Tutorials
+description: Step-by-step learning tutorials for GitHub API - from first API call to security automation.
+meta:
+  - name: description
+    content: Learning-oriented tutorials for GitHub API - Hello World, resource linking, security hardening, and more.
+  - name: keywords
+    content: GitHub API tutorials, learn GitHub API, API tutorial, beginner guide, hands-on learning
+tags:
+  - tutorials
+  - learning
+  - beginner
+  - hands-on
+related:
+  - quickstart.md
+  - how-to/index.md
+---
+
 # Tutorials
 
 Tutorials are learning-oriented. They guide you through a complete, working task to build understanding through doing. Each tutorial produces a verifiable outcome.

@@ -1,3 +1,20 @@
+---
+title: Repositories API
+description: Complete reference for the GitHub Repositories REST API - 80+ endpoints for repository management.
+meta:
+  - name: description
+    content: Complete GitHub Repositories API reference - create, update, manage branches, workflows, actions, and deployments.
+  - name: keywords
+    content: GitHub Repositories API, repo API, GitHub Actions API, branches API, deployments API, repository management
+tags:
+  - API Reference
+  - Repositories
+  - GitHub Actions
+related:
+  - api-reference/users.md
+  - how-to/manage-repositories.md
+---
+
 # repos API
 
 

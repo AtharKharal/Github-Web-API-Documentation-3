@@ -1,3 +1,21 @@
+---
+title: Explanations
+description: Conceptual guides for GitHub API - authentication, rate limiting, and system architecture.
+meta:
+  - name: description
+    content: Understanding-oriented documentation - authentication flows, rate limiting mechanics, and system architecture.
+  - name: keywords
+    content: GitHub API concepts, authentication explanation, rate limiting explanation, API architecture
+tags:
+  - explanations
+  - concepts
+  - architecture
+  - theory
+related:
+  - tutorials/index.md
+  - how-to/index.md
+---
+
 # Explanations
 
 Explanations are understanding-oriented. They provide the "why" and "how it works" context that sits beneath the operational instructions in tutorials and how-to guides.

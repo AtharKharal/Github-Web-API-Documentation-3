@@ -1,3 +1,20 @@
+---
+title: Users API
+description: Reference for the GitHub Users API - manage user profiles, emails, followers, and GPG keys.
+meta:
+  - name: description
+    content: GitHub Users API reference - user profile, emails, followers, GPG keys, and SSH keys management endpoints.
+  - name: keywords
+    content: GitHub Users API, user profile API, emails API, followers API, GPG keys, SSH keys
+tags:
+  - API Reference
+  - Users
+  - Profile
+related:
+  - api-reference/user.md
+  - explanations/authentication.md
+---
+
 # users API
 
 

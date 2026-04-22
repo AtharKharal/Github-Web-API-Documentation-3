@@ -1,3 +1,21 @@
+---
+title: Security Hardening
+description: Identify, audit, and remediate security alerts across GitHub repositories using the REST API.
+meta:
+  - name: description
+    content: Learn to secure GitHub API integration - Dependabot alerts, secret scanning, branch protection, and security automation.
+  - name: keywords
+    content: GitHub security, Dependabot API, secret scanning, branch protection, security automation, vulnerability remediation
+tags:
+  - security
+  - dependabot
+  - secret-scanning
+  - automation
+related:
+  - explanations/authentication.md
+  - how-to/manage-repositories.md
+---
+
 # Tutorial: Security Hardening
 
 This tutorial guides you through identifying, auditing, and remediating security alerts across your GitHub repositories using the REST API. You will build a workflow that identifies open Dependabot alerts and triggers a repository-wide security scan.

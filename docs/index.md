@@ -1,11 +1,37 @@
 ---
+title: GitHub REST API Documentation
+description: Authoritative, developer-focused documentation for the GitHub REST API with 288+ endpoints, tutorials, how-to guides, and conceptual explanations.
+meta:
+  - name: description
+    content: Complete developer documentation for GitHub REST API v3. Covers authentication, rate limiting, repositories, issues, PRs, actions, and more.
+  - name: keywords
+    content: GitHub API, REST API, GitHub REST v3, API documentation, GitHub developer, GitHub Actions, GitHub CLI
+  - name: author
+    content: Documentation Authority System
+  - property: og:title
+    content: GitHub REST API Documentation
+  - property: og:description
+    content: Authoritative developer documentation for the GitHub REST API
+  - property: og:type
+    content: website
+tags:
+  - GitHub API
+  - REST API
+  - Developer Documentation
+  - Authentication
+  - API Reference
+related:
+  - quickstart.md
+  - explanations/authentication.md
+  - explanations/rate-limiting.md
+---
+
 hero:
   title: GitHub Docs Core
   subtitle: Authoritative, developer-focused documentation for the GitHub REST API.
   link:
     text: Quick Start
     url: quickstart/
----
 
 Authoritative, developer-focused documentation for 288+ GitHub REST API endpoints. All content is generated directly from the Postman collection and repository source — nothing is speculated or invented.
 
